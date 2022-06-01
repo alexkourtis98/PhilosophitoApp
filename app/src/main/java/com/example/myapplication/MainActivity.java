@@ -1,20 +1,16 @@
 package com.example.myapplication;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
-
-import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import com.example.myapplication.ui.main.SectionsPagerAdapter;
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.ui.main.AboutFragment;
+import com.example.myapplication.ui.main.SectionsPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,5 +28,18 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
+
+        binding.infoBtn.setOnClickListener(click -> {
+            System.out.println("ASDADASDADASDASDASADSDASDAS");
+//            Toast.makeText(getApplicationContext(),
+//                    "The favorite list would appear on clicking this icon",
+//                    Toast.LENGTH_LONG).show();
+
+            Fragment someFragment = new AboutFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.layout_fragment_main, someFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
     }
 }

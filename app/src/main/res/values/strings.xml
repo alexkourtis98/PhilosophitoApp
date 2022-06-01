@@ -1,6 +1,20 @@
 <resources>
-    <string name="app_name">Business Ethics</string>
+    <string name="app_name">Philosophito - Business Ethics, ACG</string>
     <string name="tab_text_1">Moral Theories</string>
     <string name="tab_text_2">Dictionary</string>
     <string name="tab_text_3">About</string>
+    <string name="about_title">About</string>
+    <string name="about_developer_details">Developer details</string>
+    <string name="about_developer_name">Alexandros Kourtis</string>
+    <string name="about_developer_email">alexandros.kourtis@acg.edu</string>
+    <string name="about_contributors">Contributors</string>
+    <string name="about_contributors_elly_pirocacos">Elly Pirocacos</string>
+    <string name="about_contributors_sass">SASS</string>
+    <string name="dictionary_search_placeholder">Search term...</string>
+    <string name="about_update">Update</string>
+    <string name="about_searching">Looking for updates</string>
+    <string name="about_download">Download and install now</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="about_description">FULL DESC</string>
 </resources>

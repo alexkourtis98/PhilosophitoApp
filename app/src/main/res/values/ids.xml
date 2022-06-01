@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="infoBtn" type="id" />
+    <item name="appTitle" type="id" />
+    <item name="aboutDescriptionTitle" type="id" />
+    <item name="aboutDescriptionText" type="id" />
+    <item name="aboutContributorsTitle" type="id" />
+    <item name="aboutContributorSASS" type="id" />
+    <item name="aboutContributorProfessor" type="id" />
+    <item name="aboutEmailTitle" type="id" />
+    <item name="aboutEmail" type="id" />
+    <item name="aboutNameTitle" type="id" />
+    <item name="aboutName" type="id" />
+    <item name="tabMoralTheories" type="id" />
+    <item name="tabDictionaries" type="id" />
+</resources>
