@@ -3,13 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.178" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2095" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/icons8_info_24.xml" value="0.1415" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/philosophylogo.xml" value="0.1765" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/philosophylogosm.xml" value="0.22" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1415" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_about.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.178" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/icons8_info_24.xml" value="0.2095" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogo.xml" value="0.2095" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogosm.xml" value="0.3475" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/about_activity.xml" value="0.20208333333333334" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_about.xml" value="0.20260416666666667" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_csr.xml" value="0.3125" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_dictionary_item.xml" value="0.3125" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_main.xml" value="0.378125" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_moral_theories_item.xml" value="0.3125" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_moral_theories_item_activitiy.xml" value="0.5" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.3442028985507246" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/content_splash_screen.xml" value="0.27853260869565216" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_about.xml" value="0.33" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_csr.xml" value="0.3125" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionary.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionary_item.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_first.xml" value="0.3125" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_main.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_moral_theories.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_moral_theories_item.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_second.xml" value="0.20208333333333334" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_whistleblowing.xml" value="0.20208333333333334" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_item.xml" value="0.3442028985507246" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/menu/menu.xml" value="0.33" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3475" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3475" />

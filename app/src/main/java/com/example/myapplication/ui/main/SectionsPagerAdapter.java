@@ -11,14 +11,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.R;
 
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_Moral_Theories, R.string.tab_text_CSR, R.string.tab_text_Whistle_Blowing, R.string.tab_text_Dictionary};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -29,12 +25,18 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-//        if (position == 1) {
-//            return AboutFragment.newInstance(position);
-//        } else
-        return PlaceholderFragment.newInstance(position);
+        switch (position) {
+            case 0:
+                return new MoralTheoriesFragment();
+            case 1:
+                return new CsrFragment();
+            case 2:
+                return new WhistleBlowingFragment();
+            case 3:
+                return new DictionaryFragment();
+            default:
+                return new Fragment();
+        }
     }
 
     @Nullable
@@ -45,7 +47,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
-        return 2;
+        return 4;
     }
 }

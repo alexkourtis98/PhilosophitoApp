@@ -1,57 +1,87 @@
 package com.example.myapplication.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myapplication.databinding.FragmentMainBinding;
+import com.example.myapplication.R;
+import com.example.myapplication.databinding.FragmentDictionaryBinding;
+import com.example.myapplication.ui.main.data.DictionaryItem;
+import com.example.myapplication.ui.main.data.State;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class DictionaryFragment extends Fragment {
 
-    private static final String ARG_SECTION_NUMBER = "section_number";
+    ListView listView;
+    private FragmentDictionaryBinding binding;
 
-    private PageViewModel pageViewModel;
-    private FragmentMainBinding binding;
-
-    public static DictionaryFragment newInstance(int index) {
-        DictionaryFragment fragment = new DictionaryFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(ARG_SECTION_NUMBER, index);
-        fragment.setArguments(bundle);
-        return fragment;
-    }
+    private ArrayList<DictionaryItem> localCopyOfDictionary = State.dictionary;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageViewModel = new ViewModelProvider(this).get(PageViewModel.class);
-        int index = 1;
-        if (getArguments() != null) {
-            index = getArguments().getInt(ARG_SECTION_NUMBER);
-        }
-        pageViewModel.setIndex(index);
     }
 
     @Override
-    public View onCreateView(
-            @NonNull LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        binding = FragmentDictionaryBinding.inflate(inflater, container, false);
+        this.listView = binding.allTerms;
+        addTermsToList();
 
-        binding = FragmentMainBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        return binding.getRoot();
+    }
 
-        final TextView textView = binding.sectionLabel;
-        pageViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText("AdasdDADASDADADASDADAD"));
-        return root;
+    private void addTermsToList() {
+        ListAdapterDictionary listAdapter = new ListAdapterDictionary(getContext(), R.layout.list_item, localCopyOfDictionary);
+        listView.setAdapter(listAdapter);
+        listView.setClickable(true);
+        listView.setFastScrollEnabled(true);
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
+            intent.putExtra("title", localCopyOfDictionary.get(i).getTitle());
+            intent.putExtra("content", localCopyOfDictionary.get(i).getDefinition());
+            startActivity(intent);
+        });
+        binding.searchterm.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                ArrayList<DictionaryItem> newArray = new ArrayList<>();
+
+                for (DictionaryItem dictionaryItem :
+                        localCopyOfDictionary) {
+                    if (dictionaryItem.getTitle().toLowerCase(Locale.ROOT).contains(s.trim().toLowerCase(Locale.ROOT))) {
+                        newArray.add(dictionaryItem);
+                    }
+                }
+
+                ListAdapterDictionary listAdapter2 = new ListAdapterDictionary(getContext(), R.layout.list_item, newArray);
+                listView.setAdapter(listAdapter2);
+                listView.setClickable(true);
+                listView.setFastScrollEnabled(true);
+                listView.setOnItemClickListener((adapterView, view, i, l) -> {
+                    Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
+                    intent.putExtra("title", newArray.get(i).getTitle());
+                    intent.putExtra("content", newArray.get(i).getDefinition());
+                    startActivity(intent);
+                });
+                return false;
+            }
+        });
     }
 
     @Override
