@@ -363,6 +363,7 @@ public class State {
                 "Contents\n" +
                 "--------\n" +
                 "\n" +
+                "![image](https://www.ephotozine.com/articles/xxxx-amazing-examples-of-landscape-photography--26838/images/lrg_14833_1411235204.jpg) \n" +
                 "1.  What is a whistleblower\n" +
                 "2.  [Who to tell and what to expect](https://www.gov.uk/whistleblowing/who-to-tell-what-to-expect)\n" +
                 "3.  [If you're treated unfairly after whistleblowing](https://www.gov.uk/whistleblowing/treated-unfairly-after-whistleblowing)\n" +
@@ -418,12 +419,12 @@ public class State {
     private void initDictionary() {
         dictionary.clear();
         DictionaryItem dictionaryItem1 = new DictionaryItem();
-        dictionaryItem1.setDefinition("Term 1");
-        dictionaryItem1.setTitle("Definition 1");
+        dictionaryItem1.setDefinition("Definition 1");
+        dictionaryItem1.setTitle("Term 1");
 
         DictionaryItem dictionaryItem2 = new DictionaryItem();
-        dictionaryItem2.setDefinition("Term 2");
-        dictionaryItem2.setTitle("Definition 2");
+        dictionaryItem2.setDefinition("Definition 2");
+        dictionaryItem2.setTitle("Term 2");
 
         dictionary.add(dictionaryItem1);
         dictionary.add(dictionaryItem2);

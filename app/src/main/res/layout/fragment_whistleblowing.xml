@@ -19,6 +19,4 @@
         android:textSize="20dp"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
-
-
 </LinearLayout>

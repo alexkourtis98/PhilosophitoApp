@@ -1,7 +1,11 @@
 package com.example.myapplication.ui.main;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +18,36 @@ public class AboutActivitiy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+
+        TextView txt_Message = findViewById(R.id.cyberclub);
+        txt_Message.setMovementMethod(LinkMovementMethod.getInstance());
+
+        ImageView imageView = findViewById(R.id.facebookbtn);
+        imageView.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("https://www.facebook.com/Philosophito-103166662422236"));
+            startActivity(intent);
+        });
+
+        ImageView imageViewIG = findViewById(R.id.instagrambtn);
+        imageViewIG.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("https://www.instagram.com/philosophybusinessethics/"));
+            startActivity(intent);
+        });
+
+        ImageView imageViewT = findViewById(R.id.twitterbtn);
+        imageViewT.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("https://twitter.com/Philosophito"));
+            startActivity(intent);
+        });
 
         findViewById(R.id.logoimg).setOnClickListener(click -> {
             Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);

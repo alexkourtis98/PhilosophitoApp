@@ -64,7 +64,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10sp"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:orientation="vertical">
 
         <TextView
@@ -99,9 +99,11 @@
             android:textSize="17sp" />
 
         <TextView
+            android:id="@+id/emailme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
+            android:autoLink="email"
             android:text="@string/about_developer_email"
             android:textSize="17sp" />
 
@@ -126,12 +128,70 @@
             android:text="@string/about_contributors_sass"
             android:textSize="17sp" />
 
+        <TextView
+            android:id="@+id/cyberclub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="@string/about_contributors_cyber_club"
+            android:textSize="17sp" />
+
         <!--        <Button-->
         <!--            android:id="@+id/updateBtn"-->
         <!--            android:layout_width="wrap_content"-->
         <!--            android:layout_height="wrap_content"-->
         <!--            android:layout_gravity="start"-->
         <!--            android:text="@string/about_update" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:textAlignment="viewStart">
+
+            <ImageView
+                android:id="@+id/facebookbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:contentDescription="@string/logo"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/facebook" />
+
+            <ImageView
+                android:id="@+id/instagrambtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/logo"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/instagram" />
+
+            <ImageView
+                android:id="@+id/twitterbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/logo"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/twitter" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -13,3 +13,10 @@ FUTURE TODOs
 - add audio recordings
 - add visual aid/help
 - add update button
+
+
+- add similar sizes... margins... colors... paddings
+- gestures?
+- more content?
+- load from strings
+- display images? 

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/5771767.xml" value="0.3435" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/facebook.xml" value="0.3435" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.178" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2095" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable-v24/icons8_info_24.xml" value="0.1415" />
@@ -14,7 +16,7 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogo.xml" value="0.2095" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogosm.xml" value="0.3475" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/about_activity.xml" value="0.20208333333333334" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_about.xml" value="0.20260416666666667" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_about.xml" value="0.26132246376811596" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_csr.xml" value="0.3125" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_dictionary_item.xml" value="0.3125" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_main.xml" value="0.378125" />
