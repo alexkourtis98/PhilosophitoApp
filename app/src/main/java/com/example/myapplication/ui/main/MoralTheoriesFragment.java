@@ -34,7 +34,7 @@ public class MoralTheoriesFragment extends Fragment {
     }
 
     private void addMoralTheoriesToList() {
-        ListAdapter listAdapter = new ListAdapter(getContext(), R.layout.list_item, State.theoriesList);
+        ListAdapter listAdapter = new ListAdapter(getContext(), R.layout.list_theory_item, State.theoriesList);
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);

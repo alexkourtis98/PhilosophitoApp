@@ -5,14 +5,17 @@ public class Theory {
     private String title;
     private String shortDescription;
     private String fullContent;
+    private String image;
 
     public Theory() {
     }
 
-    public Theory(String title, String shortDescription, String fullContent) {
-        this.title = title;
-        this.shortDescription = shortDescription;
-        this.fullContent = fullContent;
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getTitle() {
@@ -37,14 +40,5 @@ public class Theory {
 
     public void setFullContent(String fullContent) {
         this.fullContent = fullContent;
-    }
-
-    @Override
-    public String toString() {
-        return "Theory{" +
-                "title='" + title + '\'' +
-                ", shortDescription='" + shortDescription + '\'' +
-                ", fullContent='" + fullContent + '\'' +
-                '}';
     }
 }

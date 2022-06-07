@@ -22,6 +22,7 @@ public class State {
         Theory theoryUtilitarianism = new Theory();
         theoryUtilitarianism.setTitle("Utilitarianism");
         theoryUtilitarianism.setShortDescription("Seeks to...");
+        theoryUtilitarianism.setImage("@mipmap/john_foreground");
         theoryUtilitarianism.setFullContent("What Is Utilitarianism?\n" +
                 "-----------------------\n" +
                 "\n" +
@@ -138,6 +139,7 @@ public class State {
         Theory theoryKantianism = new Theory();
         theoryKantianism.setTitle("Kantianism");
         theoryKantianism.setShortDescription("Seeks to...");
+        theoryKantianism.setImage("@mipmap/kant_foreground");
         theoryKantianism.setFullContent("[![Immanuel Kant](https://cdn.britannica.com/74/102174-050-79127006/Immanuel-Kant-print-London-1812.jpg?w=400&h=300&c=crop)](https://cdn.britannica.com/74/102174-050-79127006/Immanuel-Kant-print-London-1812.jpg)\n" +
                 "\n" +
                 "Immanuel Kant\n" +
@@ -203,6 +205,7 @@ public class State {
         Theory theoryVirtueEthics = new Theory();
         theoryVirtueEthics.setTitle("Virtue Ethics");
         theoryVirtueEthics.setShortDescription("Seeks to...");
+        theoryVirtueEthics.setImage("@mipmap/aristotle_foreground");
         theoryVirtueEthics.setFullContent("Ethics Explainer: Virtue Ethics\n" +
                 "===============================\n" +
                 "\n" +
