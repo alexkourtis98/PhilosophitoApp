@@ -9,12 +9,485 @@ public class State {
     public static final ArrayList<DictionaryItem> dictionary = new ArrayList<>();
     public static CSR CSR = new CSR();
     public static WhistleBlowing whistleBlowing = new WhistleBlowing();
+    public static Discrimination discrimination = new Discrimination();
+    public static AffirmativeAction affirmativeAction = new AffirmativeAction();
+    public static SexualHarassment sexualHarassment = new SexualHarassment();
+    public static Advertising advertising = new Advertising();
+    public static Employment employment = new Employment();
+    public static ProductSafety productSafety = new ProductSafety();
+    public static CorporateGovernance corporateGovernance = new CorporateGovernance();
 
     public State() {
         initTheories();
         initCSR();
-        initWhistleBlowing();
+        initDiscrimination();
         initDictionary();
+        initWhistleBlowing();
+        initAffirmativeAction();
+        initSexualHarassment();
+        initAdvertising();
+        initEmployment();
+        initProductSafety();
+        initCorporateGovernance();
+    }
+
+    private void initDiscrimination() {
+        Discrimination discriminationLocal = new Discrimination();
+        discriminationLocal.setContent("Ethical Discrimination in the Workplace\n" +
+                "=======================================\n" +
+                "\n" +
+                "-   [Small Business](https://smallbusiness.chron.com/)\n" +
+                "|\n" +
+                "-   [Business & Workplace Regulations](https://smallbusiness.chron.com/business-workplace-regulations/)\n" +
+                "|\n" +
+                "-   [Workplace Discrimination](https://smallbusiness.chron.com/workplace-discrimination/)\n" +
+                "\n" +
+                "ByFiona Miller\n" +
+                "\n" +
+                "-   [](mailto:?subject=Ethical%20Discrimination%20in%20the%20Workplace%20%7C%20&body=I%20found%20this%20article%20on%20%20and%20thought%20you%20would%20enjoy%20it%21%0d%0dhttps%3A//smallbusiness.chron.com/ethical-discrimination-workplace-14708.html)\n" +
+                "\n" +
+                "![Making a distinction based on a person's group instead of merit is discrimination.](https://l.hdnux.com/350x235p/photos.demandstudios.com/getty/article/129/189/76806705_XS.jpg)\n" +
+                "\n" +
+                "#### RELATED\n" +
+                "\n" +
+                "-   [Rights of Employees on Bullying in the Workplace](https://smallbusiness.chron.com/rights-employees-bullying-workplace-15201.html)\n" +
+                "-   [The Procedure for an Injury at Your Workplace](https://smallbusiness.chron.com/procedure-injury-workplace-11650.html)\n" +
+                "-   [Major Federal Laws Regarding Equal Employment](https://smallbusiness.chron.com/major-federal-laws-regarding-equal-employment-977.html)\n" +
+                "-   [The State of Arkansas Regulations on a Salaried Employee](https://smallbusiness.chron.com/state-arkansas-regulations-salaried-employee-16148.html)\n" +
+                "-   [EEOC Rules Against Verbal Abuse and Discrimination](https://smallbusiness.chron.com/eeoc-rules-against-verbal-abuse-discrimination-61454.html)\n" +
+                "\n" +
+                "It's never ethical to discriminate in the workplace. In the United States, however, discrimination against people based on their ethnicity, racial or cultural orientation is strictly forbidden under federal and state laws in all sectors, including the employment sector. According to research conducted by the National Conference for Community and Justice, approximately 70 percent of Americans accept that there are racism issues in the workplace. Ethical discrimination may result in the breeding of ill feelings at work, as well as reduced productivity. To eliminate these ramifications, small-business owners need to put forth increased effort in curbing ethical discrimination in the employment sector.\n" +
+                "\n" +
+                "Discrimination Policies\n" +
+                "-----------------------\n" +
+                "\n" +
+                "1.  Discrimination based on a person's ethnicity, race or culture may manifest itself in a number of ways in the workplace. For example, when the policies for a business discriminate against persons of certain ethnicities or races, or when an individual receives unequal treatment due to his ethnicity, this is known as disparate impact and disparate treatment, respectively. This may include grouping employees based on race and having differing standards on promotions, punishment, and hiring and placement of employees based on ethnicity, race or cultural orientation.\n" +
+                "\n" +
+                "Employment Discrimination Laws\n" +
+                "------------------------------\n" +
+                "\n" +
+                "1.  Federal and state laws prohibit discrimination in the workplace under Title VII of the Civil Rights Act. The United States Equal Employment Opportunity Commission is in charge of overseeing the enforcement of the rules and regulations governing this act, which specifies that employers should award equal opportunities to all their employees regardless of their race or ethnicity. Additionally, the Civil Service Reform Act supports the Civil Rights Act through a provision that forbids punishment of an individual who reports ethnic discrimination acts.\n" +
+                "\n" +
+                "Discrimination Reports\n" +
+                "----------------------\n" +
+                "\n" +
+                "1.  An individual who suffers workplace discrimination based on her ethnicity can report these actions through the Equal Employment Opportunity Commission office for proper address. She must file a charge of discrimination stating the nature of the discrimination act, her contacts and her employer's contacts. She may also consult a lawyer to direct her on legal actions.\n" +
+                "\n" +
+                "Compensation for Discrimination\n" +
+                "-------------------------------\n" +
+                "\n" +
+                "1.  The Equal Employment Opportunity Commission investigates the alleged discrimination issue and decides whether to settle the claim with the parties or present the case in court. Once the commission or the court rules in favor of an employee in a discriminatory case, it determines the compensation to be awarded to the employee. This may be in the form of payment fees, job hiring and placement, reinstatement or a promotion. In cases where the plaintiff suffered emotional distress or monetary expenses such as medical fees for stress-related issues --- e.g., high blood pressure --- the court may award damages. The court may also issue an order to the employer to design an exercise in the workplace to address discrimination practices and prevent retaliation against the employee by individuals who took part in discriminatory actions.");
+        discrimination = discriminationLocal;
+    }
+
+    private void initAffirmativeAction() {
+        AffirmativeAction affirmativeActionLocal = new AffirmativeAction();
+        affirmativeActionLocal.setContent("What Affirmative Action Means for Businesses\n" +
+                "============================================\n" +
+                "\n" +
+                "How affirmative action programs operate in the workplace\n" +
+                "--------------------------------------------------------\n" +
+                "\n" +
+                "By \n" +
+                "\n" +
+                "[BASIA HELLWIG](https://www.investopedia.com/contributors/53432/)\n" +
+                "\n" +
+                "Updated June 01, 2021\n" +
+                "\n" +
+                "What Is Affirmative Action?\n" +
+                "---------------------------\n" +
+                "\n" +
+                "Affirmative action refers to policies and programs that are designed to actively promote equal opportunity in the workplace or in education for people regardless of their race, gender, national origin, sexual orientation, and other factors. Affirmative action took hold in the 1960s when it became clear that anti-discrimination laws alone weren't enough to counter past discrimination against groups that have been historically disadvantaged.1\n" +
+                "\n" +
+                "Businesses implement affirmative action programs to ensure that people from groups that have been historically discriminated against or overlooked have equal opportunity---and are not underrepresented---in their workplaces. Businesses that contract with the federal government are required to have affirmative action programs.\n" +
+                "\n" +
+                "### KEY TAKEAWAYS\n" +
+                "\n" +
+                "-   Affirmative action is a policy to promote equal opportunity in the workplace or in education.\n" +
+                "-   The rules are intended to level the playing field for groups that have been historically discriminated against or overlooked in the workplace because of race, gender, sexual orientation, disability, and/or other factors.\n" +
+                "-   Affirmative action is often considered a means of correcting historical discrimination against these groups.\n" +
+                "-   Businesses that contract with the federal government are required to have affirmative action programs, while other employers can implement them voluntarily.\n" +
+                "-   Employers must be aware of these laws and similar rules aimed at equal opportunity and fairness.\n" +
+                "\n" +
+                "History of Affirmative Action\n" +
+                "-----------------------------\n" +
+                "\n" +
+                "The first mention of \"affirmative action\" was in 1961, in President John F. Kennedy's Executive Order 10925 requiring government contractors to \"take affirmative action to ensure that applicants are employed, and that employees are [fairly] treated during employment, without regard to their race, creed, color, or national origin.\"2\n" +
+                "\n" +
+                "Four years later, President Lyndon Johnson signed the [Civil Rights Act of 1964](https://www.investopedia.com/terms/c/civil-rights-act-1964.asp), which aimed to end discrimination in various spheres of American life. Title VII of the Act specifically addresses equal employment opportunity.3 Johnson then followed this with Executive Order 11246, requiring government employers to take \"affirmative action\" to \"hire without regard to race, religion and national origin,\" and put Cabinet-level authority, under the secretary of labor, behind implementing its affirmative action and non-discrimination provisions.4 The landmark order has been amended and strengthened over the years. Gender was added to the definition in 1967, people with disabilities in subsequent years, and in 2014, sexual orientation and gender identity were included.52\n" +
+                "\n" +
+                "Companies that don't do business with the government are not required to implement affirmative action programs, although some do voluntarily.\n" +
+                "\n" +
+                "The Businesses Affirmative Action Affects\n" +
+                "-----------------------------------------\n" +
+                "\n" +
+                "Executive Order 11246, according to the Department of Labor (DOL) website, requires that federal contractors and federally assisted construction contractors who conduct at least $10,000 in government business in a one-year time period take affirmative action to ensure that equal opportunity is provided in all aspects of their employment.6 One-fifth of the U.S. workforce is employed by companies that do business with the federal government, so the order has a broad reach.2 It also applies to subcontractors that supply components to companies with federal contracts, such as manufacturers of engine parts for makers of vehicles purchased by the Department of Defense.6 Financial institutions with deposit accounts for [federal funds](https://www.investopedia.com/terms/f/federalfunds.asp)---or that sell or cash U.S. [savings bonds](https://www.investopedia.com/terms/u/ussavingsbonds.asp)---must also maintain an affirmative action plan.7\n" +
+                "\n" +
+                "Private companies can also voluntarily adopt affirmative action plans to increase the diversity of their workforces. They just have to make sure their plans comply with Title VII.3 The Supreme Court has developed a three-part test for them:8\n" +
+                "\n" +
+                "**1\\. ** **The plan must show there has been past discrimination**. Companies don't have to admit they discriminated in the past, but some factual basis for the plan must exist. Statistical data can make the case, say, that there's a \"conspicuous imbalance\" in a traditionally segregated job sector that needs to be corrected.9\n" +
+                "\n" +
+                "**2\\.  The plan must not \"unnecessarily trammel\" the rights of incumbent workers**. For instance, a company can't lay off a group of White men and replace them all with Black and women workers.\n" +
+                "\n" +
+                "**3.** **The plan must be temporary**. It should last only as long as it takes to correct past discrimination.\n" +
+                "\n" +
+                "How Businesses Implement Affirmative Action Plans\n" +
+                "-------------------------------------------------\n" +
+                "\n" +
+                "The premise of affirmative action programs is that, in the absence of discrimination, the employee profile breakdown at a company would accurately reflect the broader labor pools available to it. A written affirmative action plan (AAP) is a management tool that employs various means to analyze and achieve this. A typical AAP for a business, as outlined by the Code of Federal Regulations, would include:10\n" +
+                "\n" +
+                "-   **Analysis: **a profile of the company that identifies the gender and race/ethnicity of each employee, in the context of an organization chart with job roles and how they relate to one another.\n" +
+                "-   **Availability:** calculations of target minorities working at the company in contrast to the population (labor pool) with the right skills for the available positions.\n" +
+                "-   **Comparison:** incumbent employees to available candidates as a basis for making tangible recruitment and promotion goals.\n" +
+                "-   **Responsibility:** specific managers who will track these goals.\n" +
+                "-   **Problem areas: **list them. For instance, underrepresentation of Black, Latinx, or women workers in specific departments or job categories, lack of promotions for these groups to managerial roles, and so on.\n" +
+                "-   **Corrective actions**: tangible, action-oriented steps. These often include aggressive educational and outreach efforts aimed at recruiting more employees from underrepresented populations---but also [equal treatment during recruitment interviews](https://www.investopedia.com/financial-edge/0910/8-things-employers-arent-allowed-to-ask-you.aspx), and across compensation, training, advancement, and all other components of the workplace experience.\n" +
+                "\n" +
+                "-   **Internal auditing and reporting systems**: track progress and measure the effectiveness of the actions the company has taken toward achieving a more diverse workforce.11\n" +
+                "\n" +
+                "How Affirmative Action Is Enforced\n" +
+                "----------------------------------\n" +
+                "\n" +
+                "Affirmative action plans that are required of federal contractors and subcontractors are enforced by the Office of Federal Contract Compliance Programs (OFCCP) under the DOL umbrella.12\n" +
+                "\n" +
+                "OFCCP conducts compliance reviews to study the employment practices of government-contracted businesses. A compliance officer may scrutinize a contractor's affirmative action program by looking at personnel rosters, payroll figures, and other records in addition to interviewing staffers and management executives. If problems are discovered, OFCCP will recommend corrective action and suggest ways to achieve the desired equal employment opportunity.13\n" +
+                "\n" +
+                "The Advantages and Disadvantages of Affirmative Action\n" +
+                "------------------------------------------------------\n" +
+                "\n" +
+                "Discrimination and disparities in opportunity persist as a problem in the American workforce. Over the years there has been controversy over whether affirmative action is the right approach to fixing this. Claims of \"reverse discrimination\" have been litigated up to the Supreme Court.14 The impact of affirmation action policies has been questioned: Do guidelines that require covered employers to meet certain timetables for hiring and promoting minorities and women pressure them to make hiring decisions based on numbers? Are there negative psychological ramifications of affirmative action policies, stigmatizing women and [minority employees](https://www.investopedia.com/) as \"affirmative action\" hires?\n" +
+                "\n" +
+                "Supporters of affirmative action argue that it is essential to correct past discrimination, and there's work still to be done. The business case for affirmative action has grown over the years, too: From a [profitability](https://www.investopedia.com/terms/p/profit.asp) standpoint, studies show that diversity in the workplace is good for a company's bottom line---especially when it comes to increasing the number of women and racial and ethnic minorities in leadership roles and board positions.151617\n" +
+                "\n" +
+                "The [groupthink](https://www.investopedia.com/terms/g/groupthink.asp) mentality of old-boy networks doesn't necessarily bring about the freshest ideas to solve difficult business challenges.15 Case in point: A 2019 study shows that when you reach a critical mass of 30% or more women on a board of directors, behaviors begin to change, governance improves, and discussions become richer. And though sometimes it takes outside forces for higher-ups to shed their \"hire-like-me\" habits, when they observe the positive consequence, they tend to embrace change willingly.18\n" +
+                "\n" +
+                "Finally, although the availability of [government contracts](https://www.investopedia.com/discrimination-in-small-business-contracts-5113819) varies by administration and federal budgetary outlooks, such accounts are potentially lucrative opportunities for the businesses that win them. As a result, businesses that comply with equal opportunity law may be setting the stage for their own company's success.\n" +
+                "\n" +
+                "The Bottom Line\n" +
+                "---------------\n" +
+                "\n" +
+                "Though affirmative action continues to be a source of controversy for some, such programs are a reality for all government contracted businesses. What's more, many other employers choose to implement affirmative action programs as a helpful way to foster transparency in hiring and promotions and diversity in the workplace.");
+        affirmativeAction = affirmativeActionLocal;
+    }
+
+    private void initSexualHarassment() {
+        SexualHarassment sexualHarassmentLocal = new SexualHarassment();
+        sexualHarassmentLocal.setContent("[Sexual Harassment in the Workplace](https://www.ethicssage.com/2011/04/sexual-harassment-in-the-workplace.html)\n" +
+                "----------------------------------------------------------------------------------------------------------------\n" +
+                "\n" +
+                "##### [04/18/2011](https://www.ethicssage.com/2011/04/sexual-harassment-in-the-workplace.html)\n" +
+                "\n" +
+                "**Dealing with Sexual Harassment in the Workplace**\n" +
+                "\n" +
+                "This is the first of a two-part series on workplace issues. Today I deal with sexual harassment in the workplace. In tomorrow's blog I will address what to do about the increasing stress we all feel on the job due to economic conditions and sometimes excessive employer expectations.\n" +
+                "\n" +
+                "What should you do if you think your boss may be doing something improper? Is it sexual harassment? It's a question I deal with all the time in my ethics class. Sexual harassment is a form of sex discrimination. The legal definition of sexual harassment is \"unwelcome verbal, visual, or physical conduct of a sexual nature that is severe or pervasive and affects working conditions or creates a hostile work environment.\" Two specific legal definitions of sexual harassment have been established in employment law: quid pro quo harassment and hostile environment sexual harassment. \n" +
+                "\n" +
+                "*Quid Pro Quo Harassment*:  \"Something for something.\" Let's assume your boss threatens to stifle your career advancement unless you sleep with him. This is unlawful whether you submit and avoid the threatened harm or resist and suffer the consequences. Your first step should be to make it clear to your boss this is an unwelcomed advance. At the same time, you should determine the company policy on reporting such matters. If the offensive behavior persists, I recommend you talk to a trusted advisor and/or attorney. It may become a legal issue pending resolution of the matter. In all likelihood your advisor will tell you to go to the Human Resources department where Equal Employment Opportunity Commission (EEOC) matters are dealt with. Be sure to document your concerns -- what did he do or say? When did he do it or say it? What did you say to him? How did he react to your concerns? Give a copy of the document to a trusted advisor or lawyer for possible use in a future legal action. The advisor can attest to the fact you provided the document on a specific day so that it wasn't created after the fact. If the HR department does nothing or your boss doesn't change his behavior, it's time to file a formal sexual harassment complaint with the federal EEOC and/or your state's fair employment agency. You must first file with the EEOC before you file a lawsuit in federal or state court. Generally, you have 180 days to file the complaint. After you file a formal complaint with the EEOC or your state's fair employment agency, you can also consider filing a lawsuit. You can sue for money damages, to get your job back, and you can also ask the court to make your employer change its practices to prevent future sexual harassment from occurring.\n" +
+                "\n" +
+                "*Hostile Environment Sexual Harassment*: This occurs when an employee is subjected to\\\n" +
+                "comments of a sexual nature, offensive sexual materials, or unwelcome physical contact as a regular part of the work environment. [![Sexual harassment](https://ethicssage.typepad.com/.a/6a0133f440106f970b01538de0dbe8970b-320wi \"Sexual harassment\")](http://ethicssage.typepad.com/.a/6a0133f440106f970b01538de0dbe8970b-pi)Let's assume your boss has a habit of sizing you up. He looks up and down your body with a sexually suggestive facial expression. Tell him it's unwanted and unwelcome behavior and that it makes you feel uncomfortable. If he persists in being a jerk, then follow the steps above. Generally speaking, a single isolated incident will not be considered a hostile work environment. The courts look to see whether the conduct is both serious and frequent. Supervisors, managers, co-workers and even customers can be responsible for creating a hostile environment.\n" +
+                "\n" +
+                "A recent Louis Harris & Associates poll indicates that 62% of sexual harassment targets took no action. Remember, it's ethically improper and outright wrong for someone to use his or her power and authority over you to exact favors or create a hostile work environment. Speak out if this happens to you. Do not show any kind of interest in going along with advances or tolerating repeated offensive gestures, comments, or actions. Once you start to demonstrate by your words or actions (or inactions) that it is acceptable behavior, it becomes much more difficult to take appropriate action to end it in the future.");
+        sexualHarassment = sexualHarassmentLocal;
+    }
+
+    private void initAdvertising() {
+        Advertising advertisingLocal = new Advertising();
+        advertisingLocal.setContent("Advertising Ethics: What They Are and How They Apply\n" +
+                "====================================================\n" +
+                "\n" +
+                "By Indeed Editorial Team\n" +
+                "\n" +
+                "April 1, 2021\n" +
+                "\n" +
+                "[](https://twitter.com/intent/tweet?hashtags=careertips&hashtags=jobsearchtips&hashtags=careeradvice&text=Advertising%20Ethics%3A%20What%20They%20Are%20and%20How%20They%20Apply%20%7C%20Advertising%20ethics%20are%20the%20moral%20principles%20that%20govern%20how%20businesses%20communicate%20with%20consumers%2C%20so%20advertisers%20must%20understand%20the%20rules%20to%20avoid...&url=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharetwitter%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dtwitter&via=indeed)[](https://www.linkedin.com/sharing/share-offsite?url=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharelinkedin%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dlinkedin)[](https://www.facebook.com/sharer/sharer.php?hashtag=&u=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharefacebook%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dfacebook)[](mailto:?body=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Ashareemail%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Ddirect&subject=Advertising%20Ethics%3A%20What%20They%20Are%20and%20How%20They%20Apply)\n" +
+                "\n" +
+                "Ethics guide people in all professions across all industries, serving as the moral principles for how someone behaves or conducts certain activities. Understanding the role of ethics in advertising can help you better understand what general rules may apply in this area of business. Certain standards for ethical advertisement apply to those working in the marketing and advertising field, and the violation of those standards can lead to legal repercussions. In this article, we will discuss advertising ethics and the role they play in creating ads that appeal to consumers.\n" +
+                "\n" +
+                "[Find the best companies to work for on Indeed](https://www.indeed.com/companies?from=careerguidepromo-US)\n" +
+                "\n" +
+                "Get access to millions of company ratings and reviews\n" +
+                "\n" +
+                "What are advertising ethics?\n" +
+                "----------------------------\n" +
+                "\n" +
+                "Advertising ethics are the moral principles that govern how a business communicates with members of its target audience. Advertising has a set of defined principles that outline the type of communication that can take place between a potential buyer and a seller of goods or services. An example of ethical advertising is an ad that presents true statements in a decent manner, although the definition of decency may vary between individuals.\n" +
+                "\n" +
+                "The purpose of advertising is to increase sales and generate more brand awareness. Good advertising can appeal to a wide audience and generate more demand for a product or service. Companies may claim that what they sell is better than what competitors sell, but ethics come into play when a business cannot back up their claims or use unacceptable methods to generate brand awareness.\n" +
+                "\n" +
+                "Applying ethics in advertising can pose a challenge because the ethical beliefs that people hold vary, based on their background and moral beliefs. For example, one consumer might feel tricked by an advertisement that shows someone snapping their fingers and having a home full of new furniture appear, while another consumer would understand that this advertisement is not attempting to show reality. Certain regulations do apply to advertisers, who must exercise caution when creating ads to avoid facing legal issues or consumer backlash.\n" +
+                "\n" +
+                "Related: [Developing Personal Ethics: Examples and Tips](https://www.indeed.com/career-advice/career-development/developing-personal-ethics)\n" +
+                "\n" +
+                "Ethical standards for advertising\n" +
+                "---------------------------------\n" +
+                "\n" +
+                "Some of the key ethical standards for advertising apply to all brands and industries, requiring those involved in the creation and rollout of ads to carefully review what they produce and avoid violations. The following eight standards were established by the Institute for Advertising Ethics (IAE) and administered by the American Advertising Federation in partnership with two key journalism institutions located in the U.S.\n" +
+                "\n" +
+                "Related: [Complete Guide for Advertising Agents](https://www.indeed.com/career-advice/finding-a-job/advertising-agents)\n" +
+                "\n" +
+                "### Share a common objective of truth\n" +
+                "\n" +
+                "One ethical standard for advertising is that all involved in the creation of an ad, including those in the advertising, public relations, communications, editorial and news departments should share a common objective of truth. Consumers value ethical and honest advertising, so maintaining an objective to share the truth can help advertisers better appeal to a wide audience while maintaining their ethics.\n" +
+                "\n" +
+                "### Obligation to high personal ethics in creating and sharing commercial information\n" +
+                "\n" +
+                "When creating and sharing information, advertisers have an obligation to exercise the highest personal ethics. The mission of the IAE is to provide education to professionals in the advertisement industry to produce true and ethical advertisements while demonstrating a high level of professionalism.\n" +
+                "\n" +
+                "Related: [Social Responsibility: Definition and Examples](https://www.indeed.com/career-advice/career-development/social-responsibility)\n" +
+                "\n" +
+                "### Clearly disclose all material conditions and endorsement identities\n" +
+                "\n" +
+                "An advertisement may offer something for free in exchange for an action taken by the consumer, but this type of advertisement should clearly disclose the conditions of such an exchange to maintain a high ethical standard. Any endorsers should also be clearly identified in advertisements in the interest of transparency and full disclosure. Social media has added a new layer of complexity to advertising in the form of influencers, or people who share their opinions about products and services in exchange for compensation and/or free products and services.\n" +
+                "\n" +
+                "When using influencers or endorsers or offering something for free, advertisers must maintain transparency about the conditions of this deal and whether the people presented in the ad receive any compensation for their participation. Presenting this information clearly allows a consumer to make an informed decision about moving forward with the brand.\n" +
+                "\n" +
+                "### Distinguish between advertising and news or editorial content\n" +
+                "\n" +
+                "One area in which consumers have been treated unethically more frequently is the differentiation between advertising and editorial content or news. A press release should be presented differently than an advertisement, but companies have started to mislead consumers by presenting advertising content as editorial content to create confusion.\n" +
+                "\n" +
+                "### Transparent usage of personal information\n" +
+                "\n" +
+                "Advertisers have an obligation to consumers to provide transparency around the usage of their personal information, as well as provide details on how any information they provide will be used. As marketers use enhanced methods to target online behaviors and actions, consumers continue to worry about their privacy and how companies will use their information. Government regulations have shifted the way marketers obtain and use private information, affording more control to consumers over what they have to share with businesses.\n" +
+                "\n" +
+                "### Fair treatment of consumers\n" +
+                "\n" +
+                "An advertiser must treat all consumers fairly, although stricter rules apply to the audience to whom ads are directed and the nature of the services or products being represented. For example, products geared toward children may have stricter advertising regulations in place because they are more vulnerable and prone to being misled. The same rules may apply to the elderly. Prescription drugs and alcohol also have unique regulations applied to their advertising because of the potentially sensitive nature of these products.\n" +
+                "\n" +
+                "### Permission to discuss ethical concerns\n" +
+                "\n" +
+                "Those working in advertising should have permission to bring up any potential ethical concerns when developing and rolling out ad campaigns. Practicing and applying the highest ethical standards requires those involved in the development of advertising campaigns to take the time to analyze the key standards for ethics in advertising and ensure that what they share with consumers adheres to those standards. When making considerations, ethical advertisers should always think about what is best for the consumer and allow that mindset to drive their actions.\n" +
+                "\n" +
+                "### Follow all legal regulations\n" +
+                "\n" +
+                "All advertisers must follow the legal regulations that apply to the industry, including any local, state and federal laws. Various self-regulatory bodies and programs exist to address and resolve issues in advertising, including the Better Business Bureau and the Federal Trade Commission. Many advertisers rely on these programs to guide their actions and better understand the importance of ethics in advertising. The National Advertising Review Council is a regulatory body established within the advertising industry that reviews ads geared toward all age groups and target audiences.");
+        advertising = advertisingLocal;
+    }
+
+    private void initEmployment() {
+        Employment employmentLocal = new Employment();
+        employmentLocal.setContent("Professional Ethics - Rights of an Employee\n" +
+                "===========================================\n" +
+                "\n" +
+                "* * * * *\n" +
+                "\n" +
+                "[ Previous Page](https://www.tutorialspoint.com/professional_ethics/ethics_in_profession.htm)\n" +
+                "\n" +
+                "[Next Page  ](https://www.tutorialspoint.com/professional_ethics/professional_ethics_whistleblower_policy.htm)\n" +
+                "\n" +
+                "Employees are an asset to the company and any ethical organization would like its employees to be happy and prosperous by providing them a safe and happy working environment, steady work, reasonable modifications to work time, and a healthy work-life balance.\n" +
+                "\n" +
+                "Many companies that top the chart when it comes to providing ideal environments to its employees credit their good employee management and retention programs as the key to their success.\n" +
+                "\n" +
+                "![Rights of an Employee](https://www.tutorialspoint.com/professional_ethics/images/rights_of_an_employee.jpg)\n" +
+                "\n" +
+                "An employee is, at the very least, entitled to the following rights at his workplace -\n" +
+                "\n" +
+                "-   No discrimination at work, especially on the basis of gender, nationality, religion, medical condition, and political affiliation.\n" +
+                "\n" +
+                "-   Healthy work-life balance, which means no long hours at work. Employees can also report if their employer makes unnecessary delays in delegating work.\n" +
+                "\n" +
+                "-   Protection of job for people with disabilities and medical conditions.\n" +
+                "\n" +
+                "-   Complete protection against sexual harassment of any kind and immunity from being forced to exchange favors for benefits.\n" +
+                "\n" +
+                "-   Freedom to discuss the terms and conditions of the employment with other employees and negotiating wages to suit lifestyle as per changing times.\n" +
+                "\n" +
+                "-   Right to ask for safe working conditions and reservation to answering questions on age, religion, nationality, and medical condition.\n" +
+                "\n" +
+                "-   Demanding certain changes and modifications regarding the working conditions to accommodate situations that might crop up due to their prevailing medical conditions.\n" +
+                "\n" +
+                "-   Right to form or participate a union that aims to improve the wages, lifestyle, working environment, and emphasizes on employee rights at the workplaces.");
+        employment = employmentLocal;
+    }
+
+    private void initProductSafety() {
+        ProductSafety productSafetyLocal = new ProductSafety();
+        productSafetyLocal.setContent("Examples of Product Safety in the Real World\n" +
+                "============================================\n" +
+                "\n" +
+                "As a consumer, you might not be aware of all the research, features, and guidelines that go into the products you use every day. Product safety is specifically designed to keep you, the consumer, safe when using a product. Retailers and producers of consumer goods are responsible for ensuring safety for their products and preventing harm or accident from befalling their customers as a result of their products.\n" +
+                "\n" +
+                "Today we will be talking about some of the most common product safety precautions to take when dealing with consumer-driven products.\n" +
+                "\n" +
+                "### Safety Standards and Regulations\n" +
+                "\n" +
+                "As a regular person, you probably won't be able to evaluate safety on your own. Instead, you rely on these companies to do product research and create safety standards and regulations on your behalf. When a company is creating, designing, or manufacturing a product, they seek a wide range of safety certifications in order to create products that are safe to use for consumers. Often, these standards will depend on the individual product. For example, car seats for children require their own standards for safety and testing, whereas food items will have different standards specific to them.\n" +
+                "\n" +
+                "### Preventing Human Error\n" +
+                "\n" +
+                "A lot of products are designed and manufactured to stop or prevent human error. A good example of this would be a safety belt that is created so that it's impossible to put it on wrong.\n" +
+                "\n" +
+                "### Childproof Products\n" +
+                "\n" +
+                "When we talk about human error, it's important to remember that an extra layer of protection must often be added for children, who can easily come to harm through seemingly innocuous products. Childproofing will have two important aspects:\n" +
+                "\n" +
+                "1.  Creating, designing and manufacturing products that are safe for children or do not contain loose or small parts that can create a choking hazard.\n" +
+                "2.  If a product does have loose or small parts, a warning should be placed on said product.\n" +
+                "\n" +
+                "### Safety Features\n" +
+                "\n" +
+                "Most products that deal with hazards, such as electricity, will include safety features so that injury or death can be prevented. The product should also contain warnings on the label. A good example of this would be outdoor versus indoor lights. Outdoor lights have a heavy duty wire coating and a seal on the bulb socket to prevent disasters that might result from exposure to the elements.\n" +
+                "\n" +
+                "### Error Tolerance\n" +
+                "\n" +
+                "This type of product safety deals with a product or item that will continue to work even when an error happens. An example of this is a vehicle that is overheated. The car will display a warning sign and might restrict the speed so that the driver can get to a safer spot and get out of the vehicle.\n" +
+                "\n" +
+                "### Product Information\n" +
+                "\n" +
+                "These days most all products will have clear instructions, warnings, and labeling. The product might also have several different languages on the labeling so that anyone who uses it, no matter their language, will be able to comprehend the instructions and warnings on the product packaging.\n" +
+                "\n" +
+                "While most products contain these guidelines and labels, there are some products that do not. Even worse, there are recalls every single day for products that were manufactured and had defects that are injuring people.");
+        productSafety = productSafetyLocal;
+    }
+
+    private void initCorporateGovernance() {
+        CorporateGovernance corporateGovernanceLocal = new CorporateGovernance();
+        corporateGovernanceLocal.setContent("Corporate Governance\n" +
+                "====================\n" +
+                "\n" +
+                "By \n" +
+                "\n" +
+                "[JAMES CHEN](https://www.investopedia.com/contributors/101529/)\n" +
+                "\n" +
+                "![](https://www.investopedia.com/thmb/PQTu8KQ_0O1DhrDE2tElq-nZo3c=/90x200/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/photo__james_chen-5bfc26144cedfd0026c00af8.jpeg)\n" +
+                "\n" +
+                "[](https://www.investopedia.com/contributors/101529/)\n" +
+                "\n" +
+                "-   [](https://www.linkedin.com/in/jameschenfx/)\n" +
+                "-   [](https://twitter.com/JamesChenFX)\n" +
+                "\n" +
+                "[](https://www.investopedia.com/legal-4768893#editorial-policy)\n" +
+                "\n" +
+                "Updated July 04, 2021\n" +
+                "\n" +
+                "Reviewed by \n" +
+                "\n" +
+                "[MARGARET JAMES](https://www.investopedia.com/margaret-james-4799777)\n" +
+                "\n" +
+                "Fact checked by \n" +
+                "\n" +
+                "[AMANDA BELLUCCO-CHATHAM](https://www.investopedia.com/amanda-bellucco-chatham-5208643)\n" +
+                "\n" +
+                "What Is Corporate Governance?\n" +
+                "-----------------------------\n" +
+                "\n" +
+                "Corporate governance is the [system of rules, practices, and processes](https://www.investopedia.com/terms/m/mckinsey-7s-model.asp) by which a firm is directed and controlled. Corporate governance essentially involves balancing the interests of a company's many [stakeholders](https://www.investopedia.com/terms/s/stakeholder.asp), such as shareholders, senior management executives, customers, suppliers, financiers, the government, and the community.\n" +
+                "\n" +
+                "Since corporate governance also provides the framework for attaining a company's objectives, it encompasses practically every sphere of management, from action plans and [internal controls](https://www.investopedia.com/terms/i/internalcontrols.asp) to performance measurement and corporate [disclosure](https://www.investopedia.com/terms/d/disclosure.asp).\n" +
+                "\n" +
+                "### KEY TAKEAWAYS\n" +
+                "\n" +
+                "-   Corporate governance is the structure of rules, practices, and processes used to direct and manage a company.\n" +
+                "-   A company's board of directors is the primary force influencing corporate governance.\n" +
+                "-   Bad corporate governance can cast doubt on a company's operations and its ultimate profitability.\n" +
+                "-   Corporate governance entails the areas of environmental awareness, ethical behavior, corporate strategy, compensation, and risk management.\n" +
+                "-   The basic principles of corporate governance are accountability, transparency, fairness, and responsibility.\n" +
+                "\n" +
+                "Understanding Corporate Governance\n" +
+                "----------------------------------\n" +
+                "\n" +
+                "Governance refers specifically to the set of rules, controls, policies, and resolutions put in place to dictate corporate behavior. Proxy advisors and [shareholders](https://www.investopedia.com/terms/s/shareholder.asp) are important stakeholders who indirectly affect governance, but these are not examples of governance itself. The board of directors is pivotal in governance, and it can have major ramifications for equity valuation.\n" +
+                "\n" +
+                "A company's corporate governance is important to investors since it shows a company's direction and business integrity. Good corporate governance helps companies build trust with investors and the community. As a result, corporate governance helps promote financial viability by creating a long-term investment opportunity for market participants.\n" +
+                "\n" +
+                "Communicating a firm's corporate governance is a key component of community and [investor relations](https://www.investopedia.com/terms/i/investorrelations.asp). On Apple Inc.'s investor relations site, for example, the firm outlines its corporate leadership---its executive team, its board of directors---and its corporate governance, including its committee charters and governance documents, such as bylaws, stock ownership guidelines, and [articles of incorporation](https://www.investopedia.com/terms/a/articlesofincorporation.asp).1\uFEFF\n" +
+                "\n" +
+                "Most companies strive to have a high level of corporate governance. For many shareholders, it is not enough for a company to merely be profitable; it also needs to demonstrate good [corporate citizenship](https://www.investopedia.com/terms/c/corporatecitizenship.asp) through environmental awareness, ethical behavior, and [sound corporate governance practices](https://www.investopedia.com/terms/b/best_practices.asp). Good corporate governance creates a transparent set of rules and controls in which shareholders, directors, and officers have aligned incentives.\n" +
+                "\n" +
+                "Corporate Governance and the Board of Directors\n" +
+                "-----------------------------------------------\n" +
+                "\n" +
+                "The [board of directors](https://www.investopedia.com/terms/b/boardofdirectors.asp) is the primary direct stakeholder influencing corporate governance. Directors are elected by shareholders or appointed by other board members, and they represent shareholders of the company.\n" +
+                "\n" +
+                "The board is tasked with making important decisions, such as corporate officer appointments, executive compensation, and dividend policy. In some instances, board obligations stretch beyond financial optimization, as when shareholder resolutions call for certain social or environmental concerns to be prioritized.\n" +
+                "\n" +
+                "A board of directors should consist of a diverse group of individuals, those that have skills and knowledge of the business, as well as those who can bring a fresh perspective from outside of the company and industry.\n" +
+                "\n" +
+                "Boards are often made up of inside and independent members. Insiders are major shareholders, founders, and executives. Independent directors do not share the ties of the insiders, but they are chosen because of their experience managing or directing other large companies. Independents are considered helpful for governance because they dilute the concentration of power and help align shareholder interests with those of the insiders.\n" +
+                "\n" +
+                "The board of directors must ensure that the company's corporate governance policies incorporate the corporate strategy, risk management, accountability, transparency, and ethical business practices.\n" +
+                "\n" +
+                "Examples of Corporate Governance\n" +
+                "--------------------------------\n" +
+                "\n" +
+                "### Volkswagen AG\n" +
+                "\n" +
+                "Bad corporate governance can cast doubt on a company's reliability, integrity, or obligation to shareholders; all of which can have implications on the firm's financial health. Tolerance or support of illegal activities can create scandals like the one that rocked Volkswagen AG starting in September 2015.\n" +
+                "\n" +
+                "The development of the details of \"Dieselgate\" (as the affair came to be known) revealed that for years the automaker had deliberately and systematically rigged engine emission equipment in its cars in order to manipulate pollution test results in America and Europe. Volkswagen saw its stock shed nearly half its value in the days following the start of the scandal, and its global sales in the first full month following the news fell 4.5%.2\n" +
+                "\n" +
+                "VW's board structure was a reason for how the emissions rigging took place and was not caught earlier. In contrast to a one-tier board system that is common in most companies, VW has a two-tier board system, which consists of a management board and a supervisory board. The supervisory board was meant to monitor management and approve corporate decisions; however, it lacked the independence and authority to be able to carry out these roles.3\n" +
+                "\n" +
+                "The supervisory board comprised a large portion of shareholders. Ninety percent of shareholder voting rights were controlled by members of the supervisory board. There was no real independent supervisor; shareholders were in control of the supervisory board, which canceled out the purpose of the supervisory board, which was to oversee management and employees and how they operate within the company, which of course, included rigging emissions.3\n" +
+                "\n" +
+                "### Enron and Worldcom\n" +
+                "\n" +
+                "Public and government concern about corporate governance tends to wax and wane. Often, however, highly publicized revelations of corporate malfeasance revive interest in the subject. For example, corporate governance became a pressing issue in the United States at the turn of the 21st century, after fraudulent practices bankrupted high-profile companies such as [Enron](https://www.investopedia.com/terms/e/enron.asp) and [WorldCom](https://www.investopedia.com/terms/w/worldcom.asp).\n" +
+                "\n" +
+                "The problem with Enron was that its board of directors waived many rules related to conflicts of interest by allowing the chief financial officer (CFO), Andrew Fastow, to create independent, private partnerships to do business with Enron. What actually happened was that these private partnerships were used to hide Enron's debts and liabilities, which would have reduced the company's profits significantly.4\n" +
+                "\n" +
+                "What happened at Enron was clearly a lack of corporate governance that should have prevented the creation of these entities that hid the losses. The company also had a corporate atmosphere that had dishonest people at the top (Fastow) down to its traders who made illegal moves in the markets.\n" +
+                "\n" +
+                "Both the Enron and Worldcom scandals resulted in the 2002 passage of the [Sarbanes-Oxley Act](https://www.investopedia.com/terms/s/sarbanesoxleyact.asp), which imposed more stringent recordkeeping requirements on companies, along with stiff criminal penalties for violating them and other securities laws. The aim was to restore public confidence in public companies and how they operate.\n" +
+                "\n" +
+                "### PepsiCo\n" +
+                "\n" +
+                "It's common to hear of bad corporate governance examples, mainly because it is the reason some companies blow up and end up in the news. It's rare to hear of companies with good corporate governance because it is the good corporate governance that keeps them out of the news as no scandal has occurred.\n" +
+                "\n" +
+                "One company that has consistently practiced good corporate governance and seeks to update it often is PepsiCo. In drafting its 2020 proxy statement, PepsiCo took input from investors to focus on six areas:\n" +
+                "\n" +
+                "-   Board composition, diversity, and refreshment, and leadership structure\n" +
+                "-   Long-term strategy, corporate purpose, and [sustainability](https://www.investopedia.com/terms/s/sustainability.asp) issues\n" +
+                "-   Good governance practices and ethical corporate culture\n" +
+                "-   Human capital management\n" +
+                "-   Compensation discussion and analysis\n" +
+                "-   Shareholder and stakeholder engagement5\n" +
+                "\n" +
+                "The company included in its proxy statement a side-by-side graphic that depicted the current leadership structure, which shows a combined chair and CEO along with an independent presiding director, and a link between the compensation of the company's \"Winning With Purpose\" vision and changes to the executive compensation program.5\n" +
+                "\n" +
+                "Special Considerations\n" +
+                "----------------------\n" +
+                "\n" +
+                "As an investor, you want to ensure that the company you are looking to buy shares of practices good corporate governance, in the hope of avoiding losses in cases such as Enron and Worldcom. There are certain areas that an investor can focus on to determine whether a company is practicing good corporate governance or not.\n" +
+                "\n" +
+                "These areas include disclosure practices, executive compensation structure (is it tied only to performance or other metrics?), risk management (what are the checks and balances of making decisions in the company?), policies and procedures on reconciling conflicts of interest (how does a company approach business decisions that might conflict with its mission statement?), the members of the board of the directors (do they have a stake in profits?), contractual and social obligations (how do they approach areas such as climate change?), relationships with [vendors](https://www.investopedia.com/terms/v/vendor.asp), complaints received from shareholders and how they were addressed, and audits (how often are internal and external audits conducted and how have issues been handled?).\n" +
+                "\n" +
+                "Types of bad governance practices include:\n" +
+                "\n" +
+                "-   Companies that do not cooperate sufficiently with auditors or do not select auditors with the appropriate scale, resulting in the publication of spurious or noncompliant financial documents\n" +
+                "-   Bad executive compensation packages that fail to create an optimal incentive for corporate officers\n" +
+                "-   Poorly structured boards that make it too difficult for shareholders to oust ineffective incumbents\n" +
+                "\n" +
+                "These are all areas an investor can research before making an investment decision.\n" +
+                "\n" +
+                "Corporate Governance FAQs\n" +
+                "-------------------------\n" +
+                "\n" +
+                "### What Are the 4 Ps of Corporate Governance?\n" +
+                "\n" +
+                "The four P's of corporate governance are people, process, performance, and purpose.\n" +
+                "\n" +
+                "### Why Is Corporate Governance Important?\n" +
+                "\n" +
+                "Corporate governance is important because it creates a system of rules and practices that determine how a company operates and how it aligns the interest of all its stakeholders. Good corporate governance leads to ethical business practices, which leads to financial viability.\n" +
+                "\n" +
+                "### What Are the Basic Principles of Corporate Governance?\n" +
+                "\n" +
+                "The basic principles of corporate governance are accountability, transparency, fairness, and responsibility.\n" +
+                "\n" +
+                "### What Are Examples of Corporate Governance?\n" +
+                "\n" +
+                "Examples of corporate governance include the Anglo-US model, the German model, and the Japanese model.\n" +
+                "\n" +
+                "The Bottom Line\n" +
+                "---------------\n" +
+                "\n" +
+                "Corporate governance consists of the guiding principles that a company puts in place to direct all of its operations, from compensation to risk management to employee treatment to reporting unfair practices to its impact on the climate, and more.\n" +
+                "\n" +
+                "A strong, transparent corporate governance leads a company to make ethical decisions that benefit all of its stakeholders, allowing the company to place itself as an attractive option to investors if its financials are also healthy. Bad corporate governance leads to a breakdown of a company, often resulting in scandals and bankruptcy.");
+        corporateGovernance = corporateGovernanceLocal;
     }
 
     private void initTheories() {
@@ -272,12 +745,6 @@ public class State {
                 "\n" +
                 "Reviewed by \n" +
                 "\n" +
-                "[THOMAS BROCK](https://www.investopedia.com/thomas-j-brock-4799774)\n" +
-                "\n" +
-                "![Thomas Brock](https://www.investopedia.com/thmb/qTWXY9JLAW584FmJtddg0f5Vs48=/90x200/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HeadshotThomasBrock03.08.20-ThomasBrock-924a228f9b25436183c3d61b0fc6f263.jpeg)\n" +
-                "\n" +
-                "[](https://www.investopedia.com/thomas-j-brock-4799774)\n" +
-                "\n" +
                 "[](https://www.investopedia.com/investopedia-financial-review-board-5076269)\n" +
                 "\n" +
                 "Fact checked by \n" +
@@ -366,7 +833,7 @@ public class State {
                 "Contents\n" +
                 "--------\n" +
                 "\n" +
-                "![image](https://www.ephotozine.com/articles/xxxx-amazing-examples-of-landscape-photography--26838/images/lrg_14833_1411235204.jpg) \n" +
+                "![image]('https://www.ephotozine.com/articles/xxxx-amazing-examples-of-landscape-photography--26838/images/lrg_14833_1411235204.jpg') \n" +
                 "1.  What is a whistleblower\n" +
                 "2.  [Who to tell and what to expect](https://www.gov.uk/whistleblowing/who-to-tell-what-to-expect)\n" +
                 "3.  [If you're treated unfairly after whistleblowing](https://www.gov.uk/whistleblowing/treated-unfairly-after-whistleblowing)\n" +
@@ -421,50 +888,21 @@ public class State {
 
     private void initDictionary() {
         dictionary.clear();
-        DictionaryItem dictionaryItem1 = new DictionaryItem();
-        dictionaryItem1.setDefinition("Definition 1");
-        dictionaryItem1.setTitle("Term 1");
-
-        DictionaryItem dictionaryItem2 = new DictionaryItem();
-        dictionaryItem2.setDefinition("Definition 2");
-        dictionaryItem2.setTitle("Term 2");
-
-        dictionary.add(dictionaryItem1);
-        dictionary.add(dictionaryItem2);
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-        dictionary.add(new DictionaryItem("asdasd", "asdada"));
-
+        dictionary.add(new DictionaryItem("business ethics", "the conduct by which companies and their agents abide by the law and respect the rights of their stakeholders, particularly their customers, clients, employees, and the surrounding community and environment"));
+        dictionary.add(new DictionaryItem("compliance", "the extent to which a company conducts its business operations in accordance with applicable regulation and statutes"));
+        dictionary.add(new DictionaryItem("corporate culture", "the shared beliefs, values, and behaviors that create the organizational context within which employees and managers interact"));
+        dictionary.add(new DictionaryItem("corporate social responsibility (CSR)", "the practice in which a business views itself within a broader context, as a member of society with certain implicit social obligations and responsibility for its own effects on environmental and social well-being"));
+        dictionary.add(new DictionaryItem("deontology", "a normative ethical theory suggesting that an ethical decision requires us to observe only the rights and duties we owe to others, and, in the context of business, act on the basis of a primary motive to do what is right by all stakeholders"));
+        dictionary.add(new DictionaryItem("ethical relativism", "a view that ethics depends entirely upon context"));
+        dictionary.add(new DictionaryItem("ethics", "the standards of behavior to which we hold ourselves in our personal and professional lives"));
+        dictionary.add(new DictionaryItem("goodwill", "the value of a business beyond its tangible assets, usually including its reputation, the value of its brand, the attitude of its workforce, and customer relations"));
+        dictionary.add(new DictionaryItem("integrity", "the adherence to a code of moral values implying trustworthiness and incorruptibility because there is unity between what we say and what we do"));
+        dictionary.add(new DictionaryItem("long-term perspective", "a broad view of profit maximization that recognizes the fact that the impact of a business decision may not manifest for a long time"));
+        dictionary.add(new DictionaryItem("normative ethical theories", "a group of philosophical theories that describe how people ought to behave on the basis of reason"));
+        dictionary.add(new DictionaryItem("shareholder", "an individual or institution that owns stock or shares in a corporation, by definition a type of stakeholder; also called stockholder"));
+        dictionary.add(new DictionaryItem("short-term perspective", "a focus on the goal of maximizing periodic (i.e., quarterly and annual) profits"));
+        dictionary.add(new DictionaryItem("social contract", "an implicit agreement among societal members to cooperate for social benefit; when applied specifically to a business, it suggests a company that responsibly gives back to the society that permits it to incorporate, benefiting the community at the same time that it enriches itself"));
+        dictionary.add(new DictionaryItem("stakeholders", "individuals and entities affected by a business’s decisions, including customers, suppliers, investors, employees, the community, and the environment, among others"));
         Collections.sort(dictionary, (s1, s2) -> s1.getTitle().compareToIgnoreCase(s2.getTitle()));
     }
 }

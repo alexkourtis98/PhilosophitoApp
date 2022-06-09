@@ -16,8 +16,6 @@
 
 FUTURE TODOs
 
-- moral theories list better display
-
 - add audio recordings
 - add visual aid/help
 - add update button
@@ -26,4 +24,4 @@ FUTURE TODOs
 - gestures?
 - more content?
 - load from strings
-- display images? 
+- display images from markdown 

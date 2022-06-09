@@ -5,6 +5,13 @@
     <string name="tab_text_CSR" translatable="false">CSR</string>
     <string name="tab_text_Whistle_Blowing" translatable="false">Whistle Blowing</string>
     <string name="tab_text_Dictionary">Dictionary</string>
+    <string name="tab_text_Discrimination" translatable="false">Discrimination</string>
+    <string name="tab_text_Affirmative_Action" translatable="false">Affirmative Action</string>
+    <string name="tab_text_Sexual_Harassment" translatable="false">Sexual Harassment</string>
+    <string name="tab_text_Advertising" translatable="false">Advertising</string>
+    <string name="tab_text_Employment" translatable="false">Employment</string>
+    <string name="tab_text_Product_Safety" translatable="false">Product Safety</string>
+    <string name="tab_text_Corporate_Governance" translatable="false">Corporate Governance</string>
     <string name="about_title">About</string>
     <string name="tabs_text" translatable="false">Tabs</string>
     <string name="logo" translatable="false">Logo</string>

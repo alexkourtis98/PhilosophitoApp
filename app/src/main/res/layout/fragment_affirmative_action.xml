@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.WhistleBlowingFragment">
+    tools:context=".ui.main.AffirmativeActionFragment">
 
     <org.billthefarmer.markdown.MarkdownView
         android:id="@+id/content"
@@ -19,5 +19,4 @@
         android:textSize="20dp"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
-
 </LinearLayout>
