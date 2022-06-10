@@ -14,7 +14,7 @@ import com.example.myapplication.R;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_Moral_Theories, R.string.tab_text_CSR, R.string.tab_text_Whistle_Blowing, R.string.tab_text_Dictionary, R.string.tab_text_Affirmative_Action, R.string.tab_text_Sexual_Harassment, R.string.tab_text_Advertising, R.string.tab_text_Product_Safety, R.string.tab_text_Employment, R.string.tab_text_Corporate_Governance, R.string.tab_text_Discrimination};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_Moral_Theories, R.string.tab_text_CSR, R.string.tab_text_Whistle_Blowing, R.string.tab_text_Discrimination, R.string.tab_text_Affirmative_Action, R.string.tab_text_Sexual_Harassment, R.string.tab_text_Advertising, R.string.tab_text_Product_Safety, R.string.tab_text_Employment, R.string.tab_text_Corporate_Governance, R.string.tab_text_Dictionary};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
