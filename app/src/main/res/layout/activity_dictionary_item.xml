@@ -10,6 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/black"
         android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
         <RelativeLayout
@@ -28,7 +29,7 @@
                 android:contentDescription="@string/logo"
                 android:gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/philosophylogosm" />
+                android:src="@drawable/newlogotrans" />
 
             <TextView
                 android:id="@+id/title"
@@ -61,15 +62,15 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <org.billthefarmer.markdown.MarkdownView
+    <TextView
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="@string/about_description"
-        android:textColor="@color/black"
         android:textSize="20dp"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />

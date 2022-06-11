@@ -33,29 +33,8 @@ public class State {
 
     private void initDiscrimination() {
         Discrimination discriminationLocal = new Discrimination();
-        discriminationLocal.setContent("Ethical Discrimination in the Workplace\n" +
-                "=======================================\n" +
-                "\n" +
-                "-   [Small Business](https://smallbusiness.chron.com/)\n" +
-                "|\n" +
-                "-   [Business & Workplace Regulations](https://smallbusiness.chron.com/business-workplace-regulations/)\n" +
-                "|\n" +
-                "-   [Workplace Discrimination](https://smallbusiness.chron.com/workplace-discrimination/)\n" +
-                "\n" +
-                "ByFiona Miller\n" +
-                "\n" +
-                "-   [](mailto:?subject=Ethical%20Discrimination%20in%20the%20Workplace%20%7C%20&body=I%20found%20this%20article%20on%20%20and%20thought%20you%20would%20enjoy%20it%21%0d%0dhttps%3A//smallbusiness.chron.com/ethical-discrimination-workplace-14708.html)\n" +
-                "\n" +
-                "![Making a distinction based on a person's group instead of merit is discrimination.](https://l.hdnux.com/350x235p/photos.demandstudios.com/getty/article/129/189/76806705_XS.jpg)\n" +
-                "\n" +
-                "#### RELATED\n" +
-                "\n" +
-                "-   [Rights of Employees on Bullying in the Workplace](https://smallbusiness.chron.com/rights-employees-bullying-workplace-15201.html)\n" +
-                "-   [The Procedure for an Injury at Your Workplace](https://smallbusiness.chron.com/procedure-injury-workplace-11650.html)\n" +
-                "-   [Major Federal Laws Regarding Equal Employment](https://smallbusiness.chron.com/major-federal-laws-regarding-equal-employment-977.html)\n" +
-                "-   [The State of Arkansas Regulations on a Salaried Employee](https://smallbusiness.chron.com/state-arkansas-regulations-salaried-employee-16148.html)\n" +
-                "-   [EEOC Rules Against Verbal Abuse and Discrimination](https://smallbusiness.chron.com/eeoc-rules-against-verbal-abuse-discrimination-61454.html)\n" +
-                "\n" +
+        discriminationLocal.setContent("### Ethical Discrimination in the Workplace\n" +
+                "----------------------------------------------\n" +
                 "It's never ethical to discriminate in the workplace. In the United States, however, discrimination against people based on their ethnicity, racial or cultural orientation is strictly forbidden under federal and state laws in all sectors, including the employment sector. According to research conducted by the National Conference for Community and Justice, approximately 70 percent of Americans accept that there are racism issues in the workplace. Ethical discrimination may result in the breeding of ill feelings at work, as well as reduced productivity. To eliminate these ramifications, small-business owners need to put forth increased effort in curbing ethical discrimination in the employment sector.\n" +
                 "\n" +
                 "Discrimination Policies\n" +
@@ -82,17 +61,11 @@ public class State {
 
     private void initAffirmativeAction() {
         AffirmativeAction affirmativeActionLocal = new AffirmativeAction();
-        affirmativeActionLocal.setContent("What Affirmative Action Means for Businesses\n" +
-                "============================================\n" +
+        affirmativeActionLocal.setContent("### What Affirmative Action Means for Businesses\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "How affirmative action programs operate in the workplace\n" +
                 "--------------------------------------------------------\n" +
-                "\n" +
-                "By \n" +
-                "\n" +
-                "[BASIA HELLWIG](https://www.investopedia.com/contributors/53432/)\n" +
-                "\n" +
-                "Updated June 01, 2021\n" +
                 "\n" +
                 "What Is Affirmative Action?\n" +
                 "---------------------------\n" +
@@ -172,10 +145,10 @@ public class State {
 
     private void initSexualHarassment() {
         SexualHarassment sexualHarassmentLocal = new SexualHarassment();
-        sexualHarassmentLocal.setContent("[Sexual Harassment in the Workplace](https://www.ethicssage.com/2011/04/sexual-harassment-in-the-workplace.html)\n" +
+        sexualHarassmentLocal.setContent("Sexual Harassment in the Workplace\n" +
                 "----------------------------------------------------------------------------------------------------------------\n" +
                 "\n" +
-                "##### [04/18/2011](https://www.ethicssage.com/2011/04/sexual-harassment-in-the-workplace.html)\n" +
+                "* * * * *\n" +
                 "\n" +
                 "**Dealing with Sexual Harassment in the Workplace**\n" +
                 "\n" +
@@ -194,14 +167,8 @@ public class State {
 
     private void initAdvertising() {
         Advertising advertisingLocal = new Advertising();
-        advertisingLocal.setContent("Advertising Ethics: What They Are and How They Apply\n" +
-                "====================================================\n" +
-                "\n" +
-                "By Indeed Editorial Team\n" +
-                "\n" +
-                "April 1, 2021\n" +
-                "\n" +
-                "[](https://twitter.com/intent/tweet?hashtags=careertips&hashtags=jobsearchtips&hashtags=careeradvice&text=Advertising%20Ethics%3A%20What%20They%20Are%20and%20How%20They%20Apply%20%7C%20Advertising%20ethics%20are%20the%20moral%20principles%20that%20govern%20how%20businesses%20communicate%20with%20consumers%2C%20so%20advertisers%20must%20understand%20the%20rules%20to%20avoid...&url=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharetwitter%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dtwitter&via=indeed)[](https://www.linkedin.com/sharing/share-offsite?url=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharelinkedin%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dlinkedin)[](https://www.facebook.com/sharer/sharer.php?hashtag=&u=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Asharefacebook%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Dfacebook)[](mailto:?body=https%3A%2F%2Fwww.indeed.com%2Fcareer-advice%2Fcareer-development%2Fadvertising-ethics%3Futm_campaign%3Dearnedsocial%253Acareerguide%253Ashareemail%253AUS%26utm_content%3DAdvertising%2520Ethics%253A%2520What%2520They%2520Are%2520and%2520How%2520They%2520Apply%26utm_medium%3Dsocial%26utm_source%3Ddirect&subject=Advertising%20Ethics%3A%20What%20They%20Are%20and%20How%20They%20Apply)\n" +
+        advertisingLocal.setContent("### Advertising Ethics: What They Are and How They Apply\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "Ethics guide people in all professions across all industries, serving as the moral principles for how someone behaves or conducts certain activities. Understanding the role of ethics in advertising can help you better understand what general rules may apply in this area of business. Certain standards for ethical advertisement apply to those working in the marketing and advertising field, and the violation of those standards can lead to legal repercussions. In this article, we will discuss advertising ethics and the role they play in creating ads that appeal to consumers.\n" +
                 "\n" +
@@ -267,20 +234,12 @@ public class State {
 
     private void initEmployment() {
         Employment employmentLocal = new Employment();
-        employmentLocal.setContent("Professional Ethics - Rights of an Employee\n" +
-                "===========================================\n" +
-                "\n" +
-                "* * * * *\n" +
-                "\n" +
-                "[ Previous Page](https://www.tutorialspoint.com/professional_ethics/ethics_in_profession.htm)\n" +
-                "\n" +
-                "[Next Page  ](https://www.tutorialspoint.com/professional_ethics/professional_ethics_whistleblower_policy.htm)\n" +
+        employmentLocal.setContent("### Professional Ethics - Rights of an Employee\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "Employees are an asset to the company and any ethical organization would like its employees to be happy and prosperous by providing them a safe and happy working environment, steady work, reasonable modifications to work time, and a healthy work-life balance.\n" +
                 "\n" +
                 "Many companies that top the chart when it comes to providing ideal environments to its employees credit their good employee management and retention programs as the key to their success.\n" +
-                "\n" +
-                "![Rights of an Employee](https://www.tutorialspoint.com/professional_ethics/images/rights_of_an_employee.jpg)\n" +
                 "\n" +
                 "An employee is, at the very least, entitled to the following rights at his workplace -\n" +
                 "\n" +
@@ -304,8 +263,8 @@ public class State {
 
     private void initProductSafety() {
         ProductSafety productSafetyLocal = new ProductSafety();
-        productSafetyLocal.setContent("Examples of Product Safety in the Real World\n" +
-                "============================================\n" +
+        productSafetyLocal.setContent("### Examples of Product Safety in the Real World\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "As a consumer, you might not be aware of all the research, features, and guidelines that go into the products you use every day. Product safety is specifically designed to keep you, the consumer, safe when using a product. Retailers and producers of consumer goods are responsible for ensuring safety for their products and preventing harm or accident from befalling their customers as a result of their products.\n" +
                 "\n" +
@@ -344,34 +303,10 @@ public class State {
 
     private void initCorporateGovernance() {
         CorporateGovernance corporateGovernanceLocal = new CorporateGovernance();
-        corporateGovernanceLocal.setContent("Corporate Governance\n" +
-                "====================\n" +
-                "\n" +
-                "By \n" +
-                "\n" +
-                "[JAMES CHEN](https://www.investopedia.com/contributors/101529/)\n" +
-                "\n" +
-                "![](https://www.investopedia.com/thmb/PQTu8KQ_0O1DhrDE2tElq-nZo3c=/90x200/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/photo__james_chen-5bfc26144cedfd0026c00af8.jpeg)\n" +
-                "\n" +
-                "[](https://www.investopedia.com/contributors/101529/)\n" +
-                "\n" +
-                "-   [](https://www.linkedin.com/in/jameschenfx/)\n" +
-                "-   [](https://twitter.com/JamesChenFX)\n" +
-                "\n" +
-                "[](https://www.investopedia.com/legal-4768893#editorial-policy)\n" +
-                "\n" +
-                "Updated July 04, 2021\n" +
-                "\n" +
-                "Reviewed by \n" +
-                "\n" +
-                "[MARGARET JAMES](https://www.investopedia.com/margaret-james-4799777)\n" +
-                "\n" +
-                "Fact checked by \n" +
-                "\n" +
-                "[AMANDA BELLUCCO-CHATHAM](https://www.investopedia.com/amanda-bellucco-chatham-5208643)\n" +
+        corporateGovernanceLocal.setContent("### Corporate Governance\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "What Is Corporate Governance?\n" +
-                "-----------------------------\n" +
                 "\n" +
                 "Corporate governance is the [system of rules, practices, and processes](https://www.investopedia.com/terms/m/mckinsey-7s-model.asp) by which a firm is directed and controlled. Corporate governance essentially involves balancing the interests of a company's many [stakeholders](https://www.investopedia.com/terms/s/stakeholder.asp), such as shareholders, senior management executives, customers, suppliers, financiers, the government, and the community.\n" +
                 "\n" +
@@ -734,24 +669,7 @@ public class State {
 
     private void initCSR() {
         CSR csrLocal = new CSR();
-        csrLocal.setContent("Corporate Social Responsibility (CSR)\n" +
-                "=====================================\n" +
-                "\n" +
-                "By \n" +
-                "\n" +
-                "[JASON FERNANDO](https://www.investopedia.com/contributors/53746/)\n" +
-                "\n" +
-                "Updated March 07, 2022\n" +
-                "\n" +
-                "Reviewed by \n" +
-                "\n" +
-                "[](https://www.investopedia.com/investopedia-financial-review-board-5076269)\n" +
-                "\n" +
-                "Fact checked by \n" +
-                "\n" +
-                "[KATRINA MUNICHIELLO](https://www.investopedia.com/katrina-munichiello-5078531)\n" +
-                "\n" +
-                "What Is Corporate Social Responsibility (CSR)?\n" +
+        csrLocal.setContent("### What Is Corporate Social Responsibility (CSR)?\n" +
                 "----------------------------------------------\n" +
                 "\n" +
                 "Corporate social responsibility (CSR) is a self-regulating business model that helps a company be socially accountable to itself, its stakeholders, and the public. By practicing corporate social responsibility, also called [corporate citizenship](https://www.investopedia.com/terms/c/corporatecitizenship.asp), companies can be conscious of the kind of impact they are having on all aspects of society, including economic, social, and environmental.\n" +
@@ -764,12 +682,6 @@ public class State {
                 "-   CSR helps both society and the brand image of companies.\n" +
                 "-   Corporate responsibility programs are a great way to raise morale in the workplace.1 \n" +
                 "-   Some examples of companies that strive to be leaders in CSR include Starbucks and Ben & Jerry's.2\n" +
-                "\n" +
-                "0 seconds of 1 minute, 37 secondsVolume 75%\n" +
-                "\n" +
-                "1:37\n" +
-                "\n" +
-                "#### Click Play to Learn What CSR Is\n" +
                 "\n" +
                 "Understanding Corporate Social Responsibility (CSR)\n" +
                 "---------------------------------------------------\n" +
@@ -825,21 +737,10 @@ public class State {
 
     private void initWhistleBlowing() {
         WhistleBlowing whistleBlowingLocal = new WhistleBlowing();
-        whistleBlowingLocal.setContent("Whistleblowing for employees\n" +
-                "============================\n" +
-                "\n" +
-                "[Skip to contents of guide](https://www.gov.uk/whistleblowing#guide-contents)\n" +
-                "\n" +
-                "Contents\n" +
-                "--------\n" +
-                "\n" +
-                "![image]('https://www.ephotozine.com/articles/xxxx-amazing-examples-of-landscape-photography--26838/images/lrg_14833_1411235204.jpg') \n" +
-                "1.  What is a whistleblower\n" +
-                "2.  [Who to tell and what to expect](https://www.gov.uk/whistleblowing/who-to-tell-what-to-expect)\n" +
-                "3.  [If you're treated unfairly after whistleblowing](https://www.gov.uk/whistleblowing/treated-unfairly-after-whistleblowing)\n" +
+        whistleBlowingLocal.setContent("### Whistleblowing for employees\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "What is a whistleblower\n" +
-                "=======================\n" +
                 "\n" +
                 "You're a whistleblower if you're a worker and you report certain types of wrongdoing. This will usually be something you've seen at work - though not always.\n" +
                 "\n" +
@@ -888,21 +789,21 @@ public class State {
 
     private void initDictionary() {
         dictionary.clear();
-        dictionary.add(new DictionaryItem("business ethics", "the conduct by which companies and their agents abide by the law and respect the rights of their stakeholders, particularly their customers, clients, employees, and the surrounding community and environment"));
-        dictionary.add(new DictionaryItem("compliance", "the extent to which a company conducts its business operations in accordance with applicable regulation and statutes"));
-        dictionary.add(new DictionaryItem("corporate culture", "the shared beliefs, values, and behaviors that create the organizational context within which employees and managers interact"));
-        dictionary.add(new DictionaryItem("corporate social responsibility (CSR)", "the practice in which a business views itself within a broader context, as a member of society with certain implicit social obligations and responsibility for its own effects on environmental and social well-being"));
-        dictionary.add(new DictionaryItem("deontology", "a normative ethical theory suggesting that an ethical decision requires us to observe only the rights and duties we owe to others, and, in the context of business, act on the basis of a primary motive to do what is right by all stakeholders"));
-        dictionary.add(new DictionaryItem("ethical relativism", "a view that ethics depends entirely upon context"));
-        dictionary.add(new DictionaryItem("ethics", "the standards of behavior to which we hold ourselves in our personal and professional lives"));
-        dictionary.add(new DictionaryItem("goodwill", "the value of a business beyond its tangible assets, usually including its reputation, the value of its brand, the attitude of its workforce, and customer relations"));
-        dictionary.add(new DictionaryItem("integrity", "the adherence to a code of moral values implying trustworthiness and incorruptibility because there is unity between what we say and what we do"));
-        dictionary.add(new DictionaryItem("long-term perspective", "a broad view of profit maximization that recognizes the fact that the impact of a business decision may not manifest for a long time"));
-        dictionary.add(new DictionaryItem("normative ethical theories", "a group of philosophical theories that describe how people ought to behave on the basis of reason"));
-        dictionary.add(new DictionaryItem("shareholder", "an individual or institution that owns stock or shares in a corporation, by definition a type of stakeholder; also called stockholder"));
-        dictionary.add(new DictionaryItem("short-term perspective", "a focus on the goal of maximizing periodic (i.e., quarterly and annual) profits"));
-        dictionary.add(new DictionaryItem("social contract", "an implicit agreement among societal members to cooperate for social benefit; when applied specifically to a business, it suggests a company that responsibly gives back to the society that permits it to incorporate, benefiting the community at the same time that it enriches itself"));
-        dictionary.add(new DictionaryItem("stakeholders", "individuals and entities affected by a business’s decisions, including customers, suppliers, investors, employees, the community, and the environment, among others"));
+        dictionary.add(new DictionaryItem("Business Ethics", "the conduct by which companies and their agents abide by the law and respect the rights of their stakeholders, particularly their customers, clients, employees, and the surrounding community and environment"));
+        dictionary.add(new DictionaryItem("Compliance", "the extent to which a company conducts its business operations in accordance with applicable regulation and statutes"));
+        dictionary.add(new DictionaryItem("Corporate Culture", "the shared beliefs, values, and behaviors that create the organizational context within which employees and managers interact"));
+        dictionary.add(new DictionaryItem("Corporate Social Responsibility (CSR)", "the practice in which a business views itself within a broader context, as a member of society with certain implicit social obligations and responsibility for its own effects on environmental and social well-being"));
+        dictionary.add(new DictionaryItem("Ceontology", "a normative ethical theory suggesting that an ethical decision requires us to observe only the rights and duties we owe to others, and, in the context of business, act on the basis of a primary motive to do what is right by all stakeholders"));
+        dictionary.add(new DictionaryItem("Ethical Relativism", "a view that ethics depends entirely upon context"));
+        dictionary.add(new DictionaryItem("Ethics", "the standards of behavior to which we hold ourselves in our personal and professional lives"));
+        dictionary.add(new DictionaryItem("Goodwill", "the value of a business beyond its tangible assets, usually including its reputation, the value of its brand, the attitude of its workforce, and customer relations"));
+        dictionary.add(new DictionaryItem("Integrity", "the adherence to a code of moral values implying trustworthiness and incorruptibility because there is unity between what we say and what we do"));
+        dictionary.add(new DictionaryItem("Long-term Perspective", "a broad view of profit maximization that recognizes the fact that the impact of a business decision may not manifest for a long time"));
+        dictionary.add(new DictionaryItem("Normative Ethical Theories", "a group of philosophical theories that describe how people ought to behave on the basis of reason"));
+        dictionary.add(new DictionaryItem("Shareholder", "an individual or institution that owns stock or shares in a corporation, by definition a type of stakeholder; also called stockholder"));
+        dictionary.add(new DictionaryItem("Short-term Perspective", "a focus on the goal of maximizing periodic (i.e., quarterly and annual) profits"));
+        dictionary.add(new DictionaryItem("Social Contract", "an implicit agreement among societal members to cooperate for social benefit; when applied specifically to a business, it suggests a company that responsibly gives back to the society that permits it to incorporate, benefiting the community at the same time that it enriches itself"));
+        dictionary.add(new DictionaryItem("Stakeholders", "individuals and entities affected by a business’s decisions, including customers, suppliers, investors, employees, the community, and the environment, among others"));
         Collections.sort(dictionary, (s1, s2) -> s1.getTitle().compareToIgnoreCase(s2.getTitle()));
     }
 }

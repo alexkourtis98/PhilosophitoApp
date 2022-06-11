@@ -10,6 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/black"
         android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
         <RelativeLayout
@@ -28,7 +29,7 @@
                 android:contentDescription="@string/logo"
                 android:gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/philosophylogosm" />
+                android:src="@drawable/newlogotrans" />
 
             <TextView
                 android:id="@+id/title"

@@ -4,7 +4,7 @@
     android:id="@+id/layout_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/black"
     tools:context=".ui.main.SplashScreenActivity">
 
     <ImageView
@@ -16,6 +16,6 @@
         android:contentDescription="@string/logo"
         android:gravity="center"
         android:scaleType="fitCenter"
-        android:src="@drawable/philosophylogosm" />
+        android:src="@drawable/newlogotrans" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
