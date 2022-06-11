@@ -145,10 +145,8 @@ public class State {
 
     private void initSexualHarassment() {
         SexualHarassment sexualHarassmentLocal = new SexualHarassment();
-        sexualHarassmentLocal.setContent("Sexual Harassment in the Workplace\n" +
+        sexualHarassmentLocal.setContent("### Sexual Harassment in the Workplace\n" +
                 "----------------------------------------------------------------------------------------------------------------\n" +
-                "\n" +
-                "* * * * *\n" +
                 "\n" +
                 "**Dealing with Sexual Harassment in the Workplace**\n" +
                 "\n" +
