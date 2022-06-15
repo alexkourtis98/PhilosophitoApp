@@ -15,6 +15,7 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/icons8_info_24.xml" value="0.2095" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogo.xml" value="0.2095" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/drawable/philosophylogosm.xml" value="0.3475" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout-v21/fragment_moral_theories.xml" value="0.35643115942028986" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/about_activity.xml" value="0.20208333333333334" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_about.xml" value="0.26132246376811596" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/activity_csr.xml" value="0.3125" />
@@ -42,8 +43,9 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_sexual_harassment.xml" value="0.3786231884057971" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_whistleblowing.xml" value="0.20208333333333334" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_item.xml" value="0.3442028985507246" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_theory_item.xml" value="0.3663949275362319" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_theory_item.xml" value="0.33" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/menu/menu.xml" value="0.33" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/aristotle.xml" value="0.1475" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/aristotlefull.xml" value="0.3435" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/aristotlefull_round.xml" value="0.21" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3475" />

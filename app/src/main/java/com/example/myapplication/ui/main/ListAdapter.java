@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,8 +34,8 @@ public class ListAdapter extends ArrayAdapter<Theory> {
 
         convertView = layoutInflater.inflate(mResource, parent, false);
 
-        TextView textView = convertView.findViewById(R.id.theoryTitle);
-        textView.setText(getItem(position).getTitle());
+//        TextView textView = convertView.findViewById(R.id.theoryTitle);
+//        textView.setText(getItem(position).getTitle());
 
         ImageView imageView = convertView.findViewById(R.id.image);
         String name = getItem(position).getImage();

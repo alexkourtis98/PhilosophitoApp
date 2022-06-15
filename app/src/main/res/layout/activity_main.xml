@@ -64,8 +64,10 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/black"
             android:contentDescription="@string/tabs_text"
-            app:tabMode="scrollable" />
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
