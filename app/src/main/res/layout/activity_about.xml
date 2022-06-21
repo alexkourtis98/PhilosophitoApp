@@ -1,207 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.main.AboutActivitiy">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:theme="@style/Theme.MyApplication.AppBarOverlay">
+        android:orientation="vertical"
+        tools:context=".ui.main.AboutActivitiy">
 
-        <RelativeLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/Theme.MyApplication.AppBarOverlay">
 
-            <ImageView
-                android:id="@+id/logoimg"
-                android:layout_width="54dp"
-                android:layout_height="42dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:contentDescription="@string/logo"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/newlogotrans" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_toStartOf="@id/infoBtn"
-                android:layout_toEndOf="@id/logoimg"
-                android:fontFamily="@font/lorabold"
-                android:gravity="center"
-                android:minHeight="?actionBarSize"
-                android:padding="@dimen/appbar_padding"
-                android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/logoimg"
+                    android:layout_width="54dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/logo"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/newlogotrans" />
 
-            <ImageView
-                android:id="@+id/infoBtn"
-                android:layout_width="45dp"
-                android:layout_height="33dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="10dp"
-                android:contentDescription="@string/about"
-                android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icons8_info_24" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toStartOf="@id/infoBtn"
+                    android:layout_toEndOf="@id/logoimg"
+                    android:fontFamily="@font/lorabold"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:padding="@dimen/appbar_padding"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textSize="16sp" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+                <ImageView
+                    android:id="@+id/infoBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="33dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/about"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icons8_info_24" />
+            </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:autoSizeTextType="uniform"
-            android:ellipsize="end"
-            android:inputType="textMultiLine"
-            android:text="@string/about_description"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about_developer_details"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="@string/about_developer_name"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/emailme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:autoLink="email"
-            android:text="@string/about_developer_email"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/about_contributors"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="@string/about_contributors_elias"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="@string/about_contributors_elly_pirocacos"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="@string/about_contributors_sass"
-            android:textSize="17sp" />
-
-        <TextView
-            android:id="@+id/cyberclub"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:text="@string/about_contributors_cyber_club"
-            android:textSize="17sp" />
-
-        <!--        <Button-->
-        <!--            android:id="@+id/updateBtn"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="start"-->
-        <!--            android:text="@string/about_update" />-->
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:gravity="start"
-            android:orientation="horizontal"
-            android:textAlignment="viewStart">
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/facebookbtn"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:clickable="true"
-                android:contentDescription="@string/logo"
-                android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/facebook" />
+                android:text="@string/about"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/instagrambtn"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="5dp"
-                android:clickable="true"
-                android:contentDescription="@string/logo"
-                android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/instagram" />
+                android:layout_margin="10sp"
+                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
+                android:inputType="textMultiLine"
+                android:text="@string/about_description"
+                android:textSize="17sp" />
 
-            <ImageView
-                android:id="@+id/twitterbtn"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="5dp"
-                android:clickable="true"
-                android:contentDescription="@string/logo"
-                android:gravity="center"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/twitter" />
+                android:text="@string/about_developer_details"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/about_developer_name"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/emailme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:autoLink="email"
+                android:text="@string/about_developer_email"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_contributors"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/about_contributors_elias"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/about_contributors_elly_pirocacos"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/about_contributors_sass"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/cyberclub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="@string/about_contributors_cyber_club"
+                android:textSize="17sp" />
+
+            <!--        <Button-->
+            <!--            android:id="@+id/updateBtn"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="start"-->
+            <!--            android:text="@string/about_update" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:textAlignment="viewStart">
+
+                <ImageView
+                    android:id="@+id/facebookbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/logo"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/facebook" />
+
+                <ImageView
+                    android:id="@+id/instagrambtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/logo"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/instagram" />
+
+                <ImageView
+                    android:id="@+id/twitterbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/logo"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/twitter" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
-
+</ScrollView>

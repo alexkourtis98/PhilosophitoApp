@@ -33,6 +33,7 @@ public class CsrFragment extends Fragment {
         String content = State.CSR.getContent();
         MarkdownView markdownView = binding.content;
         markdownView.loadMarkdown(content);
+
         return root;
     }
 

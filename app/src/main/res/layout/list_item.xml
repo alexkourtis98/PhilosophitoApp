@@ -1,13 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/theoryTitle"
+        android:id="@+id/term"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20sp"
         android:text="Utilitarianism"
         android:textAlignment="textStart"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20sp"
+        android:paddingLeft="20sp"
+        android:paddingBottom="20sp"
+        android:text="Utilitarianism"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
 </LinearLayout>

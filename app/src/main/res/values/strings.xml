@@ -33,4 +33,5 @@
     <string name="no">No</string>
     <string name="about_description">This Android application was ideated and created by Alexandros Kourtis. The purpose of this initiative was to provide a study aid to the students taking this course. Feel free to contact the developer at the email below in order to express any comments, improvements, questions, or anything else. </string>
     <string name="title_activity_splash_screen" translatable="false">SplashScreenActivity</string>
+    <string name="moraltheoriestext">A moral theory consists of more or less connected claims arranged to determine what a morally good or right action or stance is, and what it is that makes it either right or good.</string>
 </resources>

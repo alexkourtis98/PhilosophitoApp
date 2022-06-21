@@ -64,9 +64,6 @@ public class State {
         affirmativeActionLocal.setContent("### What Affirmative Action Means for Businesses\n" +
                 "----------------------------------------------\n" +
                 "\n" +
-                "How affirmative action programs operate in the workplace\n" +
-                "--------------------------------------------------------\n" +
-                "\n" +
                 "What Is Affirmative Action?\n" +
                 "---------------------------\n" +
                 "\n" +
@@ -427,10 +424,10 @@ public class State {
         theoriesList.clear();
         Theory theoryUtilitarianism = new Theory();
         theoryUtilitarianism.setTitle("Utilitarianism");
-        theoryUtilitarianism.setShortDescription("Seeks to...");
-        theoryUtilitarianism.setImage("@drawable/newbtn");
-        theoryUtilitarianism.setFullContent("What Is Utilitarianism?\n" +
-                "-----------------------\n" +
+        theoryUtilitarianism.setShortDescription("Utilitarianism is a theory of morality, which advocates actions that foster happiness and oppose actions that cause unhappiness. Utilitarianism promotes \"the greatest amount of good for the greatest number of people.\"");
+        theoryUtilitarianism.setImage("@drawable/utilitarianismbtn");
+        theoryUtilitarianism.setFullContent("### What Is Utilitarianism?\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "Utilitarianism is a theory of morality that advocates actions that foster happiness or pleasure and oppose actions that cause unhappiness or harm. When directed toward making social, economic, or political decisions, a utilitarian philosophy would aim for the betterment of society as a whole.\n" +
                 "\n" +
@@ -544,29 +541,10 @@ public class State {
 
         Theory theoryKantianism = new Theory();
         theoryKantianism.setTitle("Kantianism");
-        theoryKantianism.setShortDescription("Seeks to...");
-        theoryKantianism.setImage("@drawable/kantbtn");
-        theoryKantianism.setFullContent("[![Immanuel Kant](https://cdn.britannica.com/74/102174-050-79127006/Immanuel-Kant-print-London-1812.jpg?w=400&h=300&c=crop)](https://cdn.britannica.com/74/102174-050-79127006/Immanuel-Kant-print-London-1812.jpg)\n" +
-                "\n" +
-                "Immanuel Kant\n" +
-                "\n" +
-                "[See all media](https://www.britannica.com/topic/Kantianism/images-videos)\n" +
-                "\n" +
-                "Key People:\n" +
-                "\n" +
-                "[Hans Vaihinger](https://www.britannica.com/biography/Hans-Vaihinger) [Isaak August Dorner](https://www.britannica.com/biography/Isaak-August-Dorner)\n" +
-                "\n" +
-                "Related Topics:\n" +
-                "\n" +
-                "[categorical imperative](https://www.britannica.com/topic/categorical-imperative) [noumenon](https://www.britannica.com/topic/noumenon) [transcendental idealism](https://www.britannica.com/topic/transcendental-idealism) [Neo-Kantianism](https://www.britannica.com/topic/Neo-Kantianism) [transcendental method](https://www.britannica.com/topic/transcendental-method)\n" +
-                "\n" +
-                "...*(Show more)*\n" +
-                "\n" +
-                "[See all related content →](https://www.britannica.com/facts/Kantianism)\n" +
-                "\n" +
-                "Summary\n" +
-                "\n" +
-                "### Read a brief summary of this topic\n" +
+        theoryKantianism.setShortDescription("Kantianism comprises diverse philosophies that share Kant's concern to explore the nature and limits of human knowledge in the hope of raising philosophy to the level of a science. Each submovement of Kantianism has tended to focus on its own selection and reading of Kant's many concerns.");
+        theoryKantianism.setImage("@drawable/kantbtn2");
+        theoryKantianism.setFullContent("### Kantianism\n" +
+                "----------------------------------------------\n" +
                 "\n" +
                 "Kantianism, either the system of thought contained in the writings of the epoch-making 18th-century philosopher [Immanuel Kant](https://www.britannica.com/biography/Immanuel-Kant) or those later philosophies that arose from the study of Kant's writings and drew their inspiration from his principles. Only the latter is the concern of this article.\n" +
                 "\n" +
@@ -610,17 +588,10 @@ public class State {
 
         Theory theoryVirtueEthics = new Theory();
         theoryVirtueEthics.setTitle("Virtue Ethics");
-        theoryVirtueEthics.setShortDescription("Seeks to...");
-        theoryVirtueEthics.setImage("@drawable/arist");
-        theoryVirtueEthics.setFullContent("Ethics Explainer: Virtue Ethics\n" +
-                "===============================\n" +
-                "\n" +
-                "###### ARTICLEBIG THINKERS + EXPLAINERS\n" +
-                "\n" +
-                "###### BY THE ETHICS CENTRE 16 FEB 2016\n" +
-                "\n" +
-                "Virtue ethics is arguably the oldest ethical theory in the world, with origins in Ancient Greece.\n" +
-                "-------------------------------------------------------------------------------------------------\n" +
+        theoryVirtueEthics.setShortDescription("Virtue ethics mainly deals with the honesty and morality of a person. It states that practicing good habits such as honesty, generosity makes a moral and virtuous person. It guides a person without specific rules for resolving the ethical complexity.");
+        theoryVirtueEthics.setImage("@drawable/virtueethicsbtn");
+        theoryVirtueEthics.setFullContent("### Ethics Explainer: Virtue Ethics\n" +
+                "-----------------------\n" +
                 "\n" +
                 "It defines good actions as ones that display embody virtuous character traits, like courage, loyalty, or wisdom. A virtue itself is a disposition to act, think and feel in certain ways. Bad actions display the opposite and are informed by vices, such as cowardice, treachery, and ignorance.\n" +
                 "\n" +

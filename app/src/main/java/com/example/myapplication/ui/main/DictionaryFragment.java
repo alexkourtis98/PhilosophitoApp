@@ -73,12 +73,12 @@ public class DictionaryFragment extends Fragment {
                 listView.setAdapter(listAdapter2);
                 listView.setClickable(true);
                 listView.setFastScrollEnabled(true);
-                listView.setOnItemClickListener((adapterView, view, i, l) -> {
-                    Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
-                    intent.putExtra("title", newArray.get(i).getTitle());
-                    intent.putExtra("content", newArray.get(i).getDefinition());
-                    startActivity(intent);
-                });
+//                listView.setOnItemClickListener((adapterView, view, i, l) -> {
+//                    Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
+//                    intent.putExtra("title", newArray.get(i).getTitle());
+//                    intent.putExtra("content", newArray.get(i).getDefinition());
+//                    startActivity(intent);
+//                });
                 return false;
             }
         });

@@ -1,6 +1,5 @@
 package com.example.myapplication.ui.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,12 +37,6 @@ public class MoralTheoriesFragment extends Fragment {
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);
-        listView.setOnItemClickListener((adapterView, view, i, l) -> {
-            Intent intent = new Intent(getActivity(), MoralTheoriesItemActivitiy.class);
-            intent.putExtra("title", State.theoriesList.get(i).getTitle());
-            intent.putExtra("content", State.theoriesList.get(i).getFullContent());
-            startActivity(intent);
-        });
     }
 
     @Override

@@ -2,16 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/aristotle_school_athens"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".ui.main.MoralTheoriesFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Moral Theories"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:autoSizeTextType="uniform"
+        android:ellipsize="end"
+        android:inputType="textMultiLine"
+        android:text="@string/moraltheoriestext"
+        android:textSize="17sp" />
 
     <ListView
         android:id="@+id/allTheories"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
         android:divider="@android:color/transparent"
-        android:gravity="center" />
-
+        android:gravity="center"
+        android:textAlignment="center" />
 </LinearLayout>

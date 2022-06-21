@@ -33,8 +33,11 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
 
         convertView = layoutInflater.inflate(mResource, parent, false);
 
-        TextView textView = convertView.findViewById(R.id.theoryTitle);
-        textView.setText(getItem(position).getTitle());
+        TextView textViewTerm = convertView.findViewById(R.id.term);
+        textViewTerm.setText(getItem(position).getTitle());
+
+        TextView textViewDef = convertView.findViewById(R.id.definition);
+        textViewDef.setText(getItem(position).getDefinition());
 
         return convertView;
     }
