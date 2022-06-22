@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.FragmentAffirmativeActionBinding;
-import com.example.myapplication.ui.main.data.State;
 
 import org.billthefarmer.markdown.MarkdownView;
 
@@ -30,9 +29,8 @@ public class AffirmativeActionFragment extends Fragment {
         binding = FragmentAffirmativeActionBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String content = State.affirmativeAction.getContent();
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdown(content);
+        markdownView.loadMarkdownFile("file:///android_asset/affirmativeaction.md", "file:///android_asset/style.css");
         return root;
     }
 

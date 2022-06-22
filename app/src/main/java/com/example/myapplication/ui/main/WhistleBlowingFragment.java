@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.FragmentWhistleblowingBinding;
-import com.example.myapplication.ui.main.data.State;
 
 import org.billthefarmer.markdown.MarkdownView;
 
@@ -30,10 +29,8 @@ public class WhistleBlowingFragment extends Fragment {
 
         binding = FragmentWhistleblowingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        String content = State.whistleBlowing.getContent();
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdown(content);
-
+        markdownView.loadMarkdownFile("file:///android_asset/whistleblowing.md", "file:///android_asset/style.css");
         return root;
     }
 

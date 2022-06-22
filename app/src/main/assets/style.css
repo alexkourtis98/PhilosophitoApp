@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5{
+      color: #757575 !important;
+      font-weight: bold !important;
+}
+
+p{
+    color: #757575 !important;
+}
+
+img{
+    width: 100% !important;
+}

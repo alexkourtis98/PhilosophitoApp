@@ -19,7 +19,8 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
 
         String content = getIntent().getStringExtra("content");
         MarkdownView markdownView = findViewById(R.id.content);
-        markdownView.loadMarkdown(content);
+//        markdownView.loadMarkdown(content);
+        markdownView.loadMarkdownFile("file:///android_asset/" + content, "file:///android_asset/style.css");
 
         findViewById(R.id.infoBtn).setOnClickListener(click -> {
             Intent startIntent = new Intent(getApplicationContext(), AboutActivitiy.class);

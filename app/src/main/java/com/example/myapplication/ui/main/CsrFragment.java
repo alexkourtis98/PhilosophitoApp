@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.FragmentCsrBinding;
-import com.example.myapplication.ui.main.data.State;
 
 import org.billthefarmer.markdown.MarkdownView;
 
@@ -30,10 +29,9 @@ public class CsrFragment extends Fragment {
         binding = FragmentCsrBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String content = State.CSR.getContent();
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdown(content);
 
+        markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/csr.md", "file:///android_asset/style.css");
         return root;
     }
 

@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.FragmentAdvertisingBinding;
-import com.example.myapplication.ui.main.data.State;
 
 import org.billthefarmer.markdown.MarkdownView;
 
@@ -30,9 +29,8 @@ public class AdvertisingFragment extends Fragment {
         binding = FragmentAdvertisingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        String content = State.advertising.getContent();
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdown(content);
+        markdownView.loadMarkdownFile("file:///android_asset/advertising.md", "file:///android_asset/style.css");
         return root;
     }
 

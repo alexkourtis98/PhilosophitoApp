@@ -1,6 +1,5 @@
 package com.example.myapplication.ui.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentDictionaryBinding;
+import com.example.myapplication.ui.main.adapters.ListAdapterDictionary;
 import com.example.myapplication.ui.main.data.DictionaryItem;
 import com.example.myapplication.ui.main.data.State;
 
@@ -46,12 +46,6 @@ public class DictionaryFragment extends Fragment {
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);
-        listView.setOnItemClickListener((adapterView, view, i, l) -> {
-            Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
-            intent.putExtra("title", localCopyOfDictionary.get(i).getTitle());
-            intent.putExtra("content", localCopyOfDictionary.get(i).getDefinition());
-            startActivity(intent);
-        });
         binding.searchterm.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -73,12 +67,6 @@ public class DictionaryFragment extends Fragment {
                 listView.setAdapter(listAdapter2);
                 listView.setClickable(true);
                 listView.setFastScrollEnabled(true);
-//                listView.setOnItemClickListener((adapterView, view, i, l) -> {
-//                    Intent intent = new Intent(getActivity(), DictionaryItemActivitiy.class);
-//                    intent.putExtra("title", newArray.get(i).getTitle());
-//                    intent.putExtra("content", newArray.get(i).getDefinition());
-//                    startActivity(intent);
-//                });
                 return false;
             }
         });

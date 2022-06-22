@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentMoralTheoriesBinding;
+import com.example.myapplication.ui.main.adapters.ListAdapter;
 import com.example.myapplication.ui.main.data.State;
 
 public class MoralTheoriesFragment extends Fragment {
@@ -33,7 +34,7 @@ public class MoralTheoriesFragment extends Fragment {
     }
 
     private void addMoralTheoriesToList() {
-        ListAdapter listAdapter = new ListAdapter(getContext(), R.layout.list_theory_item, State.theoriesList);
+        ListAdapter listAdapter = new ListAdapter(requireContext(), R.layout.list_theory_item, State.theoriesList);
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);
