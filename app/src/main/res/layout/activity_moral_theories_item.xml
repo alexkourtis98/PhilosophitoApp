@@ -41,7 +41,7 @@
                 android:fontFamily="@font/lorabold"
                 android:gravity="center"
                 android:minHeight="?actionBarSize"
-                android:padding="@dimen/appbar_padding"
+                android:padding="@dimen/small"
                 android:text="@string/app_name"
                 android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                 android:textSize="16sp" />
@@ -66,12 +66,12 @@
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginEnd="@dimen/small"
+        android:layout_marginBottom="@dimen/small"
         android:text="@string/about_description"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="@dimen/big"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 

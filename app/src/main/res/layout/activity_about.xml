@@ -44,7 +44,7 @@
                     android:fontFamily="@font/lorabold"
                     android:gravity="center"
                     android:minHeight="?actionBarSize"
-                    android:padding="@dimen/appbar_padding"
+                    android:padding="@dimen/small"
                     android:text="@string/app_name"
                     android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                     android:textSize="16sp" />
@@ -68,14 +68,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_margin="@dimen/mid"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/about"
-                android:textSize="20sp"
+                android:textSize="@dimen/big"
                 android:textStyle="bold" />
 
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/about_developer_details"
-                android:textSize="20sp"
+                android:textSize="@dimen/big"
                 android:textStyle="bold" />
 
             <TextView
@@ -115,7 +115,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/about_contributors"
-                android:textSize="20sp"
+                android:textSize="@dimen/big"
                 android:textStyle="bold" />
 
             <TextView
@@ -158,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/small"
                 android:gravity="start"
                 android:orientation="horizontal"
                 android:textAlignment="viewStart">

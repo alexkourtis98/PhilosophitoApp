@@ -1,44 +1,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingBottom="10dp">
-
-    <!--    <ImageView-->
-    <!--        android:id="@+id/image"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="60dp"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:layout_marginBottom="40dp"-->
-    <!--        android:adjustViewBounds="true"-->
-    <!--        android:background="@drawable/kantbtn2"-->
-    <!--        android:contentDescription="@string/logo"-->
-    <!--        android:foregroundGravity="center"-->
-    <!--        android:scaleType="fitXY"-->
-    <!--        android:textAlignment="center" />-->
 
     <TextView
         android:id="@+id/theoryTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10sp"
-        android:text="adsadadad"
         android:textAlignment="textStart"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/big" />
 
     <TextView
         android:id="@+id/theoryDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10sp"
-        android:text="adsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadadadsadadad"
         android:textAlignment="textStart"
-        android:textSize="16sp" />
+        android:textSize="@dimen/mid" />
 
     <Button
         android:id="@+id/readmorebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Read more" />
+        android:text="@string/readmorebtn"
+        tools:ignore="TextContrastCheck" />
 </LinearLayout>

@@ -2,36 +2,36 @@
     <string name="app_name">Philosophito - Business Ethics</string>
     <string name="tab_text_Moral_Theories">Moral Theories</string>
     <!--    Corporate Social Responsibility -->
-    <string name="tab_text_CSR" translatable="false">CSR</string>
-    <string name="tab_text_Whistle_Blowing" translatable="false">Whistle Blowing</string>
+    <string name="tab_text_CSR">CSR</string>
+    <string name="tab_text_Whistle_Blowing">Whistle Blowing</string>
     <string name="tab_text_Dictionary">Dictionary</string>
-    <string name="tab_text_Discrimination" translatable="false">Discrimination</string>
-    <string name="tab_text_Affirmative_Action" translatable="false">Affirmative Action</string>
-    <string name="tab_text_Sexual_Harassment" translatable="false">Sexual Harassment</string>
-    <string name="tab_text_Advertising" translatable="false">Advertising</string>
-    <string name="tab_text_Employment" translatable="false">Employment</string>
-    <string name="tab_text_Product_Safety" translatable="false">Product Safety</string>
-    <string name="tab_text_Corporate_Governance" translatable="false">Corporate Governance</string>
+    <string name="tab_text_Discrimination">Discrimination</string>
+    <string name="tab_text_Affirmative_Action">Affirmative Action</string>
+    <string name="tab_text_Sexual_Harassment">Sexual Harassment</string>
+    <string name="tab_text_Advertising">Advertising</string>
+    <string name="tab_text_Employment">Employment</string>
+    <string name="tab_text_Product_Safety">Product Safety</string>
+    <string name="tab_text_Corporate_Governance">Corporate Governance</string>
     <string name="about_title">About</string>
-    <string name="tabs_text" translatable="false">Tabs</string>
-    <string name="logo" translatable="false">Logo</string>
+    <string name="tabs_text">Tabs</string>
+    <string name="logo">Logo</string>
     <string name="about">About</string>
-    <string name="view_pager" translatable="false">View pager</string>
+    <string name="view_pager">View pager</string>
     <string name="about_developer_details">Developer details</string>
     <string name="about_developer_name">Name: Alexandros Kourtis</string>
-    <string name="about_developer_email" translatable="false">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
+    <string name="about_developer_email">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
     <string name="about_contributors">Contributors / Special Credits</string>
-    <string name="about_contributors_elly_pirocacos" translatable="false">Dr. Elly Pirocacos</string>
-    <string name="about_contributors_elias" translatable="false">Elias Emir</string>
-    <string name="about_contributors_sass" translatable="false">SASS (Student Academic Support Services)</string>
+    <string name="about_contributors_elly_pirocacos">Dr. Elly Pirocacos</string>
+    <string name="about_contributors_elias">Elias Emir</string>
+    <string name="about_contributors_sass">SASS (Student Academic Support Services)</string>
     <string name="about_contributors_cyber_club"><a href="http://dccyberclub.com/">Cyber Club (Student Club at Deree, ACG)</a></string>
     <string name="dictionary_search_placeholder">Search term…</string>
-    <string name="about_update" translatable="false">Update</string>
+    <string name="about_update">Update</string>
     <string name="about_searching">Looking for updates</string>
     <string name="about_download">Download and install now</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="about_description">This Android application was ideated and created by Alexandros Kourtis. The purpose of this initiative was to provide a study aid to the students taking this course. Feel free to contact the developer at the email below in order to express any comments, improvements, questions, or anything else. </string>
-    <string name="title_activity_splash_screen" translatable="false">SplashScreenActivity</string>
+    <string name="about_description">This Android application was ideated and created by Alexandros Kourtis (IT student at Deree). The purpose of this initiative was to provide a study aid to the students taking this course. Feel free to contact the developer at the email below in order to express any comments, improvements, questions, or just to say hi : ) </string>
     <string name="moraltheoriestext">A moral theory consists of more or less connected claims arranged to determine what a morally good or right action or stance is, and what it is that makes it either right or good.</string>
+    <string name="readmorebtn">Read more</string>
 </resources>

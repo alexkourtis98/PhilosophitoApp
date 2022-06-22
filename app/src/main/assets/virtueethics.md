@@ -1,4 +1,4 @@
-Virtue Ethics
+# Virtue Ethics
 =============
 
 Virtue ethics is a broad term for theories that emphasize the role

@@ -7,21 +7,18 @@
         android:id="@+id/term"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="Utilitarianism"
+        android:padding="@dimen/big"
         android:textAlignment="textStart"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/definition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="20sp"
-        android:paddingLeft="20sp"
-        android:paddingBottom="20sp"
-        android:text="Utilitarianism"
+        android:paddingStart="@dimen/big"
+        android:paddingEnd="@dimen/big"
+        android:paddingBottom="@dimen/big"
         android:textAlignment="textStart"
-        android:textSize="20sp" />
+        android:textSize="@dimen/big" />
 
 </LinearLayout>
