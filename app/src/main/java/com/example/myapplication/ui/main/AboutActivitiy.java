@@ -3,9 +3,7 @@ package com.example.myapplication.ui.main;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,9 +16,6 @@ public class AboutActivitiy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-
-        TextView txt_Message = findViewById(R.id.cyberclub);
-        txt_Message.setMovementMethod(LinkMovementMethod.getInstance());
 
         ImageView imageView = findViewById(R.id.facebookbtn);
         imageView.setOnClickListener(v -> {

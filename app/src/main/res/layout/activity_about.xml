@@ -125,35 +125,6 @@
                 android:text="@string/about_contributors_elias"
                 android:textSize="17sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:text="@string/about_contributors_elly_pirocacos"
-                android:textSize="17sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:text="@string/about_contributors_sass"
-                android:textSize="17sp" />
-
-            <TextView
-                android:id="@+id/cyberclub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:text="@string/about_contributors_cyber_club"
-                android:textSize="17sp" />
-
-            <!--        <Button-->
-            <!--            android:id="@+id/updateBtn"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_gravity="start"-->
-            <!--            android:text="@string/about_update" />-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -21,10 +21,7 @@
     <string name="about_developer_name">Name: Alexandros Kourtis</string>
     <string name="about_developer_email">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
     <string name="about_contributors">Contributors / Special Credits</string>
-    <string name="about_contributors_elly_pirocacos">Dr. Elly Pirocacos</string>
     <string name="about_contributors_elias">Elias Emir</string>
-    <string name="about_contributors_sass">SASS (Student Academic Support Services)</string>
-    <string name="about_contributors_cyber_club"><a href="http://dccyberclub.com/">Cyber Club (Student Club at Deree, ACG)</a></string>
     <string name="dictionary_search_placeholder">Search term…</string>
     <string name="about_update">Update</string>
     <string name="about_searching">Looking for updates</string>
