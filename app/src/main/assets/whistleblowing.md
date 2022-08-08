@@ -1,5 +1,3 @@
-### Whistle-Blowing
-
 #### What is Whistle-Blowing
 
 Whistle-blowing is the voluntary release of nonpublic information, as a moral protest, by a member
@@ -7,25 +5,15 @@ or former member of an organization outside the normal channels of communication
 audience about illegal and/or immoral conduct in the organization or conduct in the organization
 that is opposed in some significant way to the public interest
 
-| **Criteria** | **Whistle-Blowing** | **Not Whistle-Blowing** |
-|--------------| ------------------- | ------------------------| 
-| Who can blow the whistle? | An individual inside an organization exposes | A witness to a crime or a reporter wrongdoing. | 
-| What kind of information is involved? | Nonpublic information that reveals new facts | Facts that are already known to the public. | 
-| What is it reserved for? | Calling attention to matters of substantial importance | Exposing matters of minor importance, such as incompetent management | 
-| Who is informed and how? | External: An employee &quot;goes public&quot; to inform individuals or groups outside the organization.Internal: An employee informs others within the organization by going outside normal channels of communication. | An employee follows established procedures to report wrongdoing through normal channels of communication. | An employee follows established procedures to report wrongdoing through normal channels of 
-communication. |
-| What is the immediate goal? | To correct a wrong by bringing about a desired change | To pass on information about wrongdoing to a supervisor, director, or a third party|
-| Who can blow the whistle? | An individual inside an organization exposes | A witness to a crime or a reporter wrongdoing. |
-| Was the person compelled to act? | The release of information is voluntary. | The testimony is legally compelled (by a court of law).|
-| What is the motive? | To stage a moral protest. | To seek revenge or personal advancement|
-
-report wrongdoing through normal channels of communication. | | What is the immediate goal? | To
-correct a wrong by bringing about a desired change | To pass on information about wrongdoing to a
-supervisor, director, or a third party| | Who can blow the whistle? | An individual inside an
-organization exposes | A witness to a crime or a reporter wrongdoing. | | Was the person compelled
-to act? | The release of information is voluntary. | The testimony is legally compelled (by a court
-of law).| | What is the motive? | To stage a moral protest. | To seek revenge or personal
-advancement|
+- Criteria for it to qualify as Whistle-Blowing
+    - Who can blow the whistle? An individual inside an organization.
+    - What kind of information is involved? | Nonpublic information that reveals new facts.
+    - Who is informed and how? External: An employee &quot;goes public&quot; to inform individuals
+      or groups outside the organization.Internal: An employee informs others within the
+      organization by going outside normal channels of communication. An employee follows
+      established procedures to report wrongdoing through normal channels of communication.
+    - Was the person compelled to act? The release of information is voluntary.
+    - What is the motive? To stage a moral protest.
 
 #### Justification of Whistle-Blowing
 
