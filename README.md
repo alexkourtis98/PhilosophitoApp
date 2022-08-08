@@ -1,8 +1,6 @@
-![Screenshot](./img/1.png)
-
 ### 👋 Welcome
 
-### What is Philosophito?
+![Screenshot](./img/1.png)
 
 ### 🤔 What is Philosophito?
 
