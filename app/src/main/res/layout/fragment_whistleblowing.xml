@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.WhistleBlowingFragment">
+    tools:context="kourtis.quadrum.philosophito.ui.main.WhistleBlowingFragment">
 
     <org.billthefarmer.markdown.MarkdownView
         android:id="@+id/content"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.main.SexualHarassmentFragment">
+    tools:context="kourtis.quadrum.philosophito.ui.main.SexualHarassmentFragment">
 
     <org.billthefarmer.markdown.MarkdownView
         android:id="@+id/content"

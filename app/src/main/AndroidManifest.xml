@@ -13,14 +13,14 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.MoralTheoriesItemActivitiy"
+            android:name="kourtis.quadrum.philosophito.ui.main.MoralTheoriesItemActivitiy"
             android:exported="false"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
-            android:name=".ui.main.AboutActivitiy"
+            android:name="kourtis.quadrum.philosophito.ui.main.AboutActivitiy"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
-            android:name=".ui.main.SplashScreenActivity"
+            android:name="kourtis.quadrum.philosophito.ui.main.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.MyApplication.NoActionBar">
             <intent-filter>
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="kourtis.quadrum.philosophito.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MyApplication.NoActionBar" />
     </application>
