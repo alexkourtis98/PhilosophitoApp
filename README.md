@@ -1,6 +1,6 @@
 ### 👋 Welcome
 
-![Screenshot](https://mybucketkourtis.s3.eu-west-3.amazonaws.com/philosophito/1.png)
+![Screenshot](./img/1.png)
 
 ### 🤔 What is Philosophito?
 
