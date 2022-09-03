@@ -40,8 +40,6 @@ public class CsrFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     private void songNames() {
@@ -85,6 +83,20 @@ public class CsrFragment extends Fragment {
                 }
             }
         }).start();
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                mMediaPlayer.pause();
+                play.setImageResource(R.drawable.play);
+            }
+        }
     }
 
     @Override
@@ -142,12 +154,7 @@ public class CsrFragment extends Fragment {
             }
         });
 
-        mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                play.setImageResource(R.drawable.play);
-            }
-        });
+        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
         play.setOnClickListener(v -> {
             mSeekBarTime.setMax(mMediaPlayer.getDuration());
             if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
