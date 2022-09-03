@@ -7,17 +7,72 @@
     android:orientation="vertical"
     tools:context="kourtis.quadrum.philosophito.ui.main.CsrFragment">
 
-    <org.billthefarmer.markdown.MarkdownView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small"
-        android:layout_marginEnd="@dimen/small"
-        android:layout_marginBottom="@dimen/small"
-        android:text="@string/about_description"
-        android:textColor="@color/black"
-        android:textSize="@dimen/big"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <SeekBar
+            android:id="@+id/seekBarTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/play"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/play" />
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/mute" />
+
+            <SeekBar
+                android:id="@+id/seekBarVol"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <ImageView
+                android:id="@+id/volumeup"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/volumeup" />
+
+        </LinearLayout>
+
+        <org.billthefarmer.markdown.MarkdownView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginEnd="@dimen/small"
+            android:layout_marginBottom="@dimen/small"
+            android:text="@string/about_description"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+    </LinearLayout>
+
 
 </LinearLayout>

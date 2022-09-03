@@ -19,3 +19,8 @@ and the moral issues covered in the course, such as:
 - Corporate Social Responsibility
 - Employment Rights
 - False Advertising
+
+### TODOs
+
+- make it more performant and optimized for old phones
+- add translations
