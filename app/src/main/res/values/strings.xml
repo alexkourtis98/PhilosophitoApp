@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Philosophito - Business Ethics</string>
+    <string name="app_name">Philosophito</string>
     <string name="tab_text_Moral_Theories">Moral Theories</string>
     <!--    Corporate Social Responsibility -->
     <string name="tab_text_CSR">CSR</string>
@@ -12,12 +12,14 @@
     <string name="tab_text_Employment">Employment</string>
     <string name="tab_text_Product_Safety">Product Safety</string>
     <string name="tab_text_Corporate_Governance">Corporate Governance</string>
+    <string name="tab_text_Helpful">Extra Content</string>
     <string name="about_title">About</string>
     <string name="tabs_text">Tabs</string>
     <string name="logo">Logo</string>
     <string name="about">About</string>
     <string name="view_pager">View pager</string>
     <string name="about_developer_details">Developer details</string>
+    <string name="about_developer_social">Social media</string>
     <string name="about_developer_name">Name: Alexandros Kourtis</string>
     <string name="about_developer_email">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
     <string name="about_contributors">Contributors / Special Credits</string>

@@ -1,5 +1,6 @@
 package kourtis.quadrum.philosophito.ui.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,13 +18,14 @@ import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.FragmentDictionaryBinding;
 import kourtis.quadrum.philosophito.ui.main.adapters.ListAdapterDictionary;
 import kourtis.quadrum.philosophito.ui.main.data.DictionaryItem;
+import kourtis.quadrum.philosophito.ui.main.data.ExtraItem;
 import kourtis.quadrum.philosophito.ui.main.data.State;
 
 public class DictionaryFragment extends Fragment {
-
     ListView listView;
     private FragmentDictionaryBinding binding;
-
+    @SuppressLint("Handler Leak")
+    private ArrayList<ExtraItem> localCopyOfExtras = State.extras;
     private ArrayList<DictionaryItem> localCopyOfDictionary = State.dictionary;
 
     @Override
@@ -71,6 +73,7 @@ public class DictionaryFragment extends Fragment {
             }
         });
     }
+
 
     @Override
     public void onDestroyView() {

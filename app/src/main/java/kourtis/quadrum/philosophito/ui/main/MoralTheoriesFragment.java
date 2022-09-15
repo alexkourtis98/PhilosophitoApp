@@ -15,7 +15,6 @@ import kourtis.quadrum.philosophito.ui.main.adapters.ListAdapter;
 import kourtis.quadrum.philosophito.ui.main.data.State;
 
 public class MoralTheoriesFragment extends Fragment {
-
     ListView listView;
     private FragmentMoralTheoriesBinding binding;
 

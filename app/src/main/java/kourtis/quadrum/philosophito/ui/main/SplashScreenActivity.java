@@ -7,8 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import kourtis.quadrum.philosophito.databinding.ActivitySplashScreenBinding;
 import kourtis.quadrum.philosophito.MainActivity;
+import kourtis.quadrum.philosophito.databinding.ActivitySplashScreenBinding;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -25,6 +25,6 @@ public class SplashScreenActivity extends AppCompatActivity {
             Intent i = new Intent(SplashScreenActivity.this, MainActivity.class);
             startActivity(i);
             finish();
-        }, 2500); //2500
+        }, 2500);
     }
 }

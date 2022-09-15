@@ -23,7 +23,7 @@ The Equality Act 2010 and protected characteristics
 ---------------------------------------------------
 
 [The Equality Act 2010](https://www.legislation.gov.uk/ukpga/2010/15/contents) brought together a
-number of pieces of separate legislation under one banner and strengthened the laws around
+number of pieces of separate legislation under one FULL_BANNER and strengthened the laws around
 discrimination. In the Act, nine protected characteristics are listed:
 
 - Age

@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.billthefarmer.markdown.MarkdownView;
 
-import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.MainActivity;
+import kourtis.quadrum.philosophito.R;
 
 public class MoralTheoriesItemActivitiy extends AppCompatActivity {
 
@@ -33,5 +33,6 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
             startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplicationContext().startActivity(startIntent);
         });
+
     }
 }

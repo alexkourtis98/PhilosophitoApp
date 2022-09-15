@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context="kourtis.quadrum.philosophito.ui.main.DictionaryFragment">
 
+
     <SearchView
         android:id="@+id/searchterm"
         android:layout_width="match_parent"

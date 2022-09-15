@@ -22,7 +22,6 @@ import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.FragmentCsrBinding;
 
 public class CsrFragment extends Fragment {
-
     static MediaPlayer mMediaPlayer;
     ImageView play;
     SeekBar mSeekBarTime, mSeekBarVol;
@@ -36,10 +35,45 @@ public class CsrFragment extends Fragment {
     private FragmentCsrBinding binding;
     private AudioManager mAudioManager;
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        // Make sure that we are currently visible
+        if (this.isVisible()) {
+            // If we are becoming invisible, then...
+            if (!isVisibleToUser) {
+                mMediaPlayer.pause();
+                play.setImageResource(R.drawable.play);
+            }
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    private void setupaudio() {
+
+        play = binding.play;
+        mSeekBarTime = binding.seekBarTime;
+
+        mMediaPlayer = MediaPlayer.create(getContext().getApplicationContext(), R.raw.sample);
+
+        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
+        play.setOnClickListener(v -> {
+            mSeekBarTime.setMax(mMediaPlayer.getDuration());
+            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
+                mMediaPlayer.pause();
+                play.setImageResource(R.drawable.play);
+            } else {
+                mMediaPlayer.start();
+                play.setImageResource(R.drawable.pause);
+            }
+
+            songNames();
+        });
     }
 
     private void songNames() {
@@ -86,20 +120,6 @@ public class CsrFragment extends Fragment {
     }
 
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-
-        // Make sure that we are currently visible
-        if (this.isVisible()) {
-            // If we are becoming invisible, then...
-            if (!isVisibleToUser) {
-                mMediaPlayer.pause();
-                play.setImageResource(R.drawable.play);
-            }
-        }
-    }
-
-    @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -111,67 +131,13 @@ public class CsrFragment extends Fragment {
 
         mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
 
-        play = binding.play;
-        mSeekBarTime = binding.seekBarTime;
-        mSeekBarVol = binding.seekBarVol;
-
-        mMediaPlayer = MediaPlayer.create(getContext().getApplicationContext(), R.raw.sample);
-
-        ImageView mute = binding.mute;
-        mute.setOnClickListener(click -> {
-            mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
-            mSeekBarVol.setProgress(0);
-        });
-
-        ImageView volumeup = binding.volumeup;
-        volumeup.setOnClickListener(click -> {
-            mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
-            int curV = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-            mSeekBarVol.setProgress(curV);
-        });
-
-
-        // seekbar volume
-        int maxV = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-        int curV = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-        mSeekBarVol.setMax(maxV);
-        mSeekBarVol.setProgress(curV);
-
-        mSeekBarVol.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
-        play.setOnClickListener(v -> {
-            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-                mMediaPlayer.pause();
-                play.setImageResource(R.drawable.play);
-            } else {
-                mMediaPlayer.start();
-                play.setImageResource(R.drawable.pause);
-            }
-
-
-            songNames();
-        });
 
         markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/csr.md", "file:///android_asset/style.css");
+
+        setupaudio();
         return root;
     }
+
 
     @Override
     public void onDestroyView() {

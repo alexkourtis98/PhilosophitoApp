@@ -1,10 +1,4 @@
-Corporate social responsibility (CSR)
-=====================================
-
-What is corporate social responsibility?
-----------------------------------------
-
-![Benjamin Bannekat](test.png)
+### What is Corporate social responsibility (CSR)?
 
 **Corporate social responsibility (CSR)** is a broad business concept. It usually describes a
 company's commitment to carry out their business in an ethical way.
