@@ -1,8 +1,8 @@
 <resources>
-    <dimen name="fab_margin">12sp</dimen>
-    <dimen name="verysmall">8sp</dimen>
-    <dimen name="small">12sp</dimen>
-    <dimen name="mid">16sp</dimen>
-    <dimen name="big">20sp</dimen>
-    <dimen name="verybig">24sp</dimen>
+    <dimen name="fab_margin">12dp</dimen>
+    <dimen name="verysmall">8dp</dimen>
+    <dimen name="small">12dp</dimen>
+    <dimen name="mid">16dp</dimen>
+    <dimen name="big">20dp</dimen>
+    <dimen name="verybig">24dp</dimen>
 </resources>

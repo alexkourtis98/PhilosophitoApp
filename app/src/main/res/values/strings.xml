@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Philosophito</string>
+    <string name="app_name_full">Philosophito - Business Ethics</string>
+    <string name="main_menu">Main Menu</string>
     <string name="tab_text_Moral_Theories">Moral Theories</string>
+    <string name="tab_text_Moral_Issues">Moral Issues</string>
     <!--    Corporate Social Responsibility -->
     <string name="tab_text_CSR">CSR</string>
     <string name="tab_text_Whistle_Blowing">Whistle Blowing</string>

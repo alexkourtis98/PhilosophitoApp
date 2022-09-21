@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/tab_text_Moral_Theories">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/one"
+                    android:title="Utilitarianism" />
+                <item
+                    android:id="@+id/two"
+                    android:title="Kantianism" />
+                <item
+                    android:id="@+id/three"
+                    android:title="Virtue Ethics" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/tab_text_Moral_Issues">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/csr"
+                    android:title="@string/tab_text_CSR" />
+                <item
+                    android:id="@+id/whistle"
+                    android:title="@string/tab_text_Whistle_Blowing" />
+                <item
+                    android:id="@+id/disc"
+                    android:title="@string/tab_text_Discrimination" />
+                <item
+                    android:id="@+id/affirm"
+                    android:title="@string/tab_text_Affirmative_Action" />
+                <item
+                    android:id="@+id/harass"
+                    android:title="@string/tab_text_Sexual_Harassment" />
+                <item
+                    android:id="@+id/advertising"
+                    android:title="@string/tab_text_Advertising" />
+                <item
+                    android:id="@+id/product"
+                    android:title="@string/tab_text_Product_Safety" />
+                <item
+                    android:id="@+id/employment"
+                    android:title="@string/tab_text_Employment" />
+                <item
+                    android:id="@+id/corp"
+                    android:title="@string/tab_text_Corporate_Governance" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/tab_text_Dictionary">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/dict"
+                    android:title="@string/tab_text_Dictionary" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/tab_text_Helpful">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/extra"
+                    android:title="@string/tab_text_Helpful" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/about">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about"
+                    android:title="About the app" />
+            </group>
+        </menu>
+    </item>
+</menu>
