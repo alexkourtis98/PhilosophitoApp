@@ -90,6 +90,7 @@
             android:foregroundTint="@color/white"
             android:outlineAmbientShadowColor="@color/red"
             android:outlineSpotShadowColor="@color/red"
+            app:itemIconSize="15pt"
             app:itemRippleColor="@color/red"
             app:itemTextColor="@color/red"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -12,6 +12,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Objects;
+
 import kourtis.quadrum.philosophito.R;
 
 public class HomeFragment extends Fragment {
@@ -21,7 +23,7 @@ public class HomeFragment extends Fragment {
     private DrawerLayout navDrawer = null;
     private ViewGroup view;
     private View inflateview;
-    private int selectedtab;
+    private int selectedtab = 0;
     private ViewPager viewPager;
     private SectionsPagerAdapter sectionsPagerAdapter;
 
@@ -38,7 +40,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         inflateview = inflater.inflate(R.layout.fragment_home, container, false);
-        sectionsPagerAdapter = new SectionsPagerAdapter(getContext(), getChildFragmentManager());
+        sectionsPagerAdapter = new SectionsPagerAdapter(container.getContext(), getChildFragmentManager());
         viewPager = inflateview.findViewById(R.id.viewPager);
         viewPager.setAdapter(sectionsPagerAdapter);
         tabs = inflateview.findViewById(R.id.tabs);
@@ -49,11 +51,17 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        Objects.requireNonNull(this.tabs.getTabAt(selectedtab)).select();
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        this.selectedtab = tabs.getSelectedTabPosition();
+    }
+
+    public void setSelectedtab(int selectedtab) {
+        this.selectedtab = selectedtab;
     }
 
     public TabLayout getTabs() {

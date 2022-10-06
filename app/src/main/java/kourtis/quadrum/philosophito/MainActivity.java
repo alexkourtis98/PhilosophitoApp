@@ -15,10 +15,13 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.Objects;
 
 import kourtis.quadrum.philosophito.databinding.ActivityMainBinding;
 import kourtis.quadrum.philosophito.ui.main.AboutActivitiy;
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        navDrawer = findViewById(R.id.drawer_layout);
 
         FirstFragment firstFragment = new FirstFragment();
         PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
@@ -122,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupnavdrawer() {
         binding.navView.setNavigationItemSelectedListener(item -> {
+            System.out.println(item.getItemId());
+            System.out.println(item.getTitle());
             switch (item.getItemId()) {
                 case R.id.one:
                     Intent intent = new Intent(getApplicationContext(), MoralTheoriesItemActivitiy.class);
@@ -145,59 +151,70 @@ public class MainActivity extends AppCompatActivity {
                     getApplicationContext().startActivity(intent2);
                     break;
                 case R.id.csr:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab1 = homeFragment.getTabs().getTabAt(1);
-                    tab1.select();
+                    homeFragment.setSelectedtab(1);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(1)).select();
                     break;
                 case R.id.whistle:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab2 = homeFragment.getTabs().getTabAt(2);
-                    tab2.select();
+                    homeFragment.setSelectedtab(2);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(2)).select();
                     break;
                 case R.id.disc:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab3 = homeFragment.getTabs().getTabAt(3);
-                    tab3.select();
+                    homeFragment.setSelectedtab(3);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(3)).select();
                     break;
                 case R.id.affirm:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab4 = homeFragment.getTabs().getTabAt(4);
-                    tab4.select();
+                    homeFragment.setSelectedtab(4);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(4)).select();
                     break;
                 case R.id.harass:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab5 = homeFragment.getTabs().getTabAt(5);
-                    tab5.select();
+                    homeFragment.setSelectedtab(5);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(5)).select();
                     break;
                 case R.id.advertising:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab6 = homeFragment.getTabs().getTabAt(6);
-                    tab6.select();
+                    homeFragment.setSelectedtab(6);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(6)).select();
                     break;
                 case R.id.product:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab7 = homeFragment.getTabs().getTabAt(7);
-                    tab7.select();
+                    homeFragment.setSelectedtab(7);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(7)).select();
                     break;
                 case R.id.employment:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab8 = homeFragment.getTabs().getTabAt(8);
-                    tab8.select();
+                    homeFragment.setSelectedtab(8);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(8)).select();
                     break;
                 case R.id.corp:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab9 = homeFragment.getTabs().getTabAt(9);
-                    tab9.select();
+                    homeFragment.setSelectedtab(9);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(9)).select();
                     break;
                 case R.id.dict:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab10 = homeFragment.getTabs().getTabAt(10);
-                    tab10.select();
+                    homeFragment.setSelectedtab(10);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(10)).select();
                     break;
                 case R.id.extra:
+                    binding.bottomNavigationView.setSelectedItemId(R.id.home);
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).commit();
-                    TabLayout.Tab tab11 = homeFragment.getTabs().getTabAt(11);
-                    tab11.select();
+                    homeFragment.setSelectedtab(11);
+                    Objects.requireNonNull(homeFragment.getTabs().getTabAt(11)).select();
                     break;
                 case R.id.about:
                     Intent startIntent = new Intent(getApplicationContext(), AboutActivitiy.class);
@@ -205,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
                     getApplicationContext().startActivity(startIntent);
                     break;
             }
+
+            navDrawer.closeDrawer(GravityCompat.START);
 
             return false;
         });
