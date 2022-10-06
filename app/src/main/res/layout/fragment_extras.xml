@@ -5,12 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="@dimen/mid"
     tools:context="kourtis.quadrum.philosophito.ui.main.ExtraContentFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lorabold"
+        android:text="Recommended extra material"
+        android:textSize="@dimen/big"
+        android:textStyle="bold" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mid"
+        android:layout_marginBottom="@dimen/mid" />
 
     <ListView
         android:id="@+id/allExtras"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/small" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

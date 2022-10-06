@@ -21,7 +21,6 @@
         android:paddingBottom="@dimen/big"
         android:weightSum="1">
 
-
         <TextView
             android:id="@+id/definition"
             android:layout_width="wrap_content"

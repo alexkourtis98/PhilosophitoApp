@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mid"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lorabold"
+        android:text="Quiz-Exercise sets"
+        android:textSize="@dimen/big"
+        android:textStyle="bold" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mid" />
+
+    <LinearLayout
+        android:id="@+id/privacypolicy"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/left4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/mid">
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/privacytip48px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/mid"
+                android:layout_toLeftOf="@+id/right4"
+                android:layout_toRightOf="@+id/left4">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Check Privacy Policy"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/mid" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/mid"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--privacy policy ended-->
+
+
+    <LinearLayout
+        android:id="@+id/donate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/left5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/mid">
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/savings48px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/mid"
+                android:layout_toLeftOf="@+id/right5"
+                android:layout_toRightOf="@+id/left5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Donate money to developer"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/mid" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/mid"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--donate ended-->
+</LinearLayout>

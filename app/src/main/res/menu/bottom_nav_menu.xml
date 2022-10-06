@@ -11,7 +11,7 @@
         android:title="Quiz" />
     <item
         android:id="@+id/bank"
-        android:icon="@drawable/temppreferences_custom48px"
+        android:icon="@drawable/account_balance48px"
         android:iconTint="@color/white"
         android:title="Questions Bank" />
     <item
@@ -21,7 +21,7 @@
         android:title="Favorites" />
     <item
         android:id="@+id/settings"
-        android:iconTint="@color/white"
         android:icon="@drawable/settings48px"
+        android:iconTint="@color/white"
         android:title="Settings" />
 </menu>

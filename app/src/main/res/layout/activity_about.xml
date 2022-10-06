@@ -86,9 +86,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
                 android:text="@string/about"
                 android:textSize="@dimen/big"
                 android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mid" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -103,9 +109,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
                 android:text="@string/sources_used"
                 android:textSize="@dimen/big"
                 android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mid" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -122,9 +135,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
                 android:text="@string/about_developer_details"
                 android:textSize="@dimen/big"
                 android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mid" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -156,9 +175,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
                 android:text="@string/about_contributors"
                 android:textSize="@dimen/big"
                 android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mid" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -170,9 +195,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
                 android:text="@string/about_developer_social"
                 android:textSize="@dimen/big"
                 android:textStyle="bold" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mid" />
 
             <LinearLayout
                 android:layout_width="match_parent"

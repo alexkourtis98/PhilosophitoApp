@@ -1,6 +1,5 @@
 package kourtis.quadrum.philosophito.ui.main;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,15 +17,12 @@ import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.FragmentDictionaryBinding;
 import kourtis.quadrum.philosophito.ui.main.adapters.ListAdapterDictionary;
 import kourtis.quadrum.philosophito.ui.main.data.DictionaryItem;
-import kourtis.quadrum.philosophito.ui.main.data.ExtraItem;
 import kourtis.quadrum.philosophito.ui.main.data.State;
 
 public class DictionaryFragment extends Fragment {
+    private final ArrayList<DictionaryItem> localCopyOfDictionary = State.dictionary;
     ListView listView;
     private FragmentDictionaryBinding binding;
-    @SuppressLint("Handler Leak")
-    private ArrayList<ExtraItem> localCopyOfExtras = State.extras;
-    private ArrayList<DictionaryItem> localCopyOfDictionary = State.dictionary;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,7 +40,7 @@ public class DictionaryFragment extends Fragment {
     }
 
     private void addTermsToList() {
-        ListAdapterDictionary listAdapter = new ListAdapterDictionary(getContext(), R.layout.list_item, localCopyOfDictionary);
+        ListAdapterDictionary listAdapter = new ListAdapterDictionary(requireContext(), R.layout.list_item, localCopyOfDictionary);
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);
@@ -65,7 +61,7 @@ public class DictionaryFragment extends Fragment {
                     }
                 }
 
-                ListAdapterDictionary listAdapter2 = new ListAdapterDictionary(getContext(), R.layout.list_item, newArray);
+                ListAdapterDictionary listAdapter2 = new ListAdapterDictionary(requireContext(), R.layout.list_item, newArray);
                 listView.setAdapter(listAdapter2);
                 listView.setClickable(true);
                 listView.setFastScrollEnabled(true);
@@ -73,7 +69,6 @@ public class DictionaryFragment extends Fragment {
             }
         });
     }
-
 
     @Override
     public void onDestroyView() {

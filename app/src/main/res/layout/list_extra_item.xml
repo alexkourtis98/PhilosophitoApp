@@ -12,8 +12,7 @@
         android:clickable="true"
         android:focusable="true"
         android:linksClickable="true"
-        android:paddingStart="@dimen/big"
-        android:paddingEnd="@dimen/big"
+        android:paddingBottom="@dimen/big"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="@dimen/big" />
@@ -22,7 +21,8 @@
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/big"
+        android:paddingTop="@dimen/big"
+        android:paddingBottom="@dimen/big"
         android:textAlignment="textStart"
         android:textSize="@dimen/mid" />
 

@@ -8,8 +8,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/lorabold"
         android:text="Favorites"
         android:textSize="@dimen/big"
         android:textStyle="bold" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mid" />
 </LinearLayout>

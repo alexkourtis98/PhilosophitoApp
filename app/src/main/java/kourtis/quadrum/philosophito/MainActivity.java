@@ -28,9 +28,8 @@ import kourtis.quadrum.philosophito.ui.main.AboutActivitiy;
 import kourtis.quadrum.philosophito.ui.main.FavoritesFragment;
 import kourtis.quadrum.philosophito.ui.main.HomeFragment;
 import kourtis.quadrum.philosophito.ui.main.MoralTheoriesItemActivitiy;
-import kourtis.quadrum.philosophito.ui.main.MotivationFragment;
-import kourtis.quadrum.philosophito.ui.main.PrivacyPolicyFragment;
-import kourtis.quadrum.philosophito.ui.main.ResourcesFragment;
+import kourtis.quadrum.philosophito.ui.main.QuestionsBankFragment;
+import kourtis.quadrum.philosophito.ui.main.QuizMenuFragment;
 import kourtis.quadrum.philosophito.ui.main.SettingsFragment;
 import kourtis.quadrum.philosophito.ui.main.data.State;
 
@@ -56,10 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         navDrawer = findViewById(R.id.drawer_layout);
 
-        PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
         FavoritesFragment favoritesFragment = new FavoritesFragment();
-        MotivationFragment motivationFragment = new MotivationFragment();
-        ResourcesFragment resourcesFragment = new ResourcesFragment();
+        QuizMenuFragment quizMenuFragment = new QuizMenuFragment();
+        QuestionsBankFragment questionsBankFragment = new QuestionsBankFragment();
         SettingsFragment settingsFragment = new SettingsFragment();
         homeFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).addToBackStack(null).commit();
@@ -69,14 +67,14 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.home:
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, homeFragment).addToBackStack(null).commit();
                     return true;
-                case R.id.bank:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, resourcesFragment).addToBackStack(null).commit();
-                    return true;
                 case R.id.quiz:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, favoritesFragment).addToBackStack(null).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, quizMenuFragment).addToBackStack(null).commit();
+                    return true;
+                case R.id.bank:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, questionsBankFragment).addToBackStack(null).commit();
                     return true;
                 case R.id.favorites:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, motivationFragment).addToBackStack(null).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, favoritesFragment).addToBackStack(null).commit();
                     return true;
                 case R.id.settings:
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, settingsFragment).addToBackStack(null).commit();
