@@ -26,7 +26,6 @@ import java.util.Objects;
 import kourtis.quadrum.philosophito.databinding.ActivityMainBinding;
 import kourtis.quadrum.philosophito.ui.main.AboutActivitiy;
 import kourtis.quadrum.philosophito.ui.main.FavoritesFragment;
-import kourtis.quadrum.philosophito.ui.main.FirstFragment;
 import kourtis.quadrum.philosophito.ui.main.HomeFragment;
 import kourtis.quadrum.philosophito.ui.main.MoralTheoriesItemActivitiy;
 import kourtis.quadrum.philosophito.ui.main.MotivationFragment;
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
         navDrawer = findViewById(R.id.drawer_layout);
 
-        FirstFragment firstFragment = new FirstFragment();
         PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
         FavoritesFragment favoritesFragment = new FavoritesFragment();
         MotivationFragment motivationFragment = new MotivationFragment();

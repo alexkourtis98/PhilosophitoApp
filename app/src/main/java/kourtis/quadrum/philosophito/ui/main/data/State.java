@@ -20,19 +20,19 @@ public class State {
         Theory theoryUtilitarianism = new Theory();
         theoryUtilitarianism.setTitle("Utilitarianism");
         theoryUtilitarianism.setShortDescription("Utilitarianism is a theory of morality, which advocates actions that foster happiness and oppose actions that cause unhappiness. Utilitarianism promotes \"the greatest amount of good for the greatest number of people.\"");
-        theoryUtilitarianism.setImage("@drawable/utilitarianismbtn");
+        theoryUtilitarianism.setImage("@drawable/john");
         theoryUtilitarianism.setFullContent("util.md");
 
         Theory theoryKantianism = new Theory();
         theoryKantianism.setTitle("Kantianism");
         theoryKantianism.setShortDescription("Kantianism comprises diverse philosophies that share Kant's concern to explore the nature and limits of human knowledge in the hope of raising philosophy to the level of a science. Each submovement of Kantianism has tended to focus on its own selection and reading of Kant's many concerns.");
-        theoryKantianism.setImage("@drawable/kantbtn2");
+        theoryKantianism.setImage("@drawable/kant");
         theoryKantianism.setFullContent("kantianism.md");
 
         Theory theoryVirtueEthics = new Theory();
         theoryVirtueEthics.setTitle("Virtue Ethics");
         theoryVirtueEthics.setShortDescription("Virtue ethics mainly deals with the honesty and morality of a person. It states that practicing good habits such as honesty, generosity makes a moral and virtuous person. It guides a person without specific rules for resolving the ethical complexity.");
-        theoryVirtueEthics.setImage("@drawable/virtueethicsbtn");
+        theoryVirtueEthics.setImage("@drawable/aristotle");
         theoryVirtueEthics.setFullContent("virtueethics.md");
 
         theoriesList.add(theoryUtilitarianism);

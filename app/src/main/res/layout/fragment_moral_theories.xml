@@ -6,29 +6,11 @@
     android:orientation="vertical"
     tools:context="kourtis.quadrum.philosophito.ui.main.MoralTheoriesFragment">
 
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="@dimen/mid"-->
-    <!--        android:layout_marginTop="@dimen/mid"-->
-    <!--        android:text="@string/tab_text_Moral_Theories"-->
-    <!--        android:textSize="@dimen/big" />-->
-
-    <!--    <TextView-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="@dimen/mid"-->
-    <!--        android:layout_marginTop="@dimen/mid"-->
-    <!--        android:ellipsize="end"-->
-    <!--        android:text="@string/moraltheoriestext"-->
-    <!--        android:textSize="@dimen/mid" />-->
-
     <ListView
         android:id="@+id/allTheories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/mid"
         android:divider="@android:color/transparent"
         android:gravity="center"
         android:textAlignment="center" />
