@@ -7,30 +7,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import kourtis.quadrum.philosophito.R;
 
-public class SettingsFragment extends Fragment {
+public class DonateFragment extends Fragment {
     private View view;
 
-    public SettingsFragment() {
+    public DonateFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.view = inflater.inflate(R.layout.fragment_settings, container, false);
+        this.view = inflater.inflate(R.layout.fragment_donate, container, false);
 
-        this.view.findViewById(R.id.privacypolicy).setOnClickListener(item -> {
-            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new PrivacyPolicyFragment()).commit();
+        requireActivity().getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new SettingsFragment()).commit();
+            }
         });
 
-        this.view.findViewById(R.id.donate).setOnClickListener(item -> {
-            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new DonateFragment()).commit();
-        });
-
-        this.view.findViewById(R.id.rateapp).setOnClickListener(v -> {
+        this.view.findViewById(R.id.patreon).setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -38,7 +38,7 @@ public class SettingsFragment extends Fragment {
             startActivity(intent);
         });
 
-        this.view.findViewById(R.id.allapps).setOnClickListener(v -> {
+        this.view.findViewById(R.id.buymeacoffee).setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
@@ -46,7 +46,7 @@ public class SettingsFragment extends Fragment {
             startActivity(intent);
         });
 
-        this.view.findViewById(R.id.sendtofriend).setOnClickListener(v -> {
+        this.view.findViewById(R.id.paypal).setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.addCategory(Intent.CATEGORY_BROWSABLE);
