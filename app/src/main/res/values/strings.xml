@@ -19,10 +19,11 @@
     <string name="about_title">About</string>
     <string name="tabs_text">Tabs</string>
     <string name="logo">Logo</string>
-    <string name="about">About</string>
+    <string name="about">About Philosophito</string>
     <string name="view_pager">View pager</string>
     <string name="about_developer_details">Developer details</string>
-    <string name="about_developer_social">Social media</string>
+    <string name="about_developer_social">Social media of Philosophito</string>
+    <string name="about_developer_social_myown">Social media of the Developer</string>
     <string name="about_developer_name">Name: Alexandros Kourtis</string>
     <string name="about_developer_email">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
     <string name="about_developer_phone">Phone number: <a href="tel:+306989442438">+30 69 8944 2438</a></string>

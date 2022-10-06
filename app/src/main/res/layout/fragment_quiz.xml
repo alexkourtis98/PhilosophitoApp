@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mid"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/quizsettitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lorabold"
+        android:text="Quiz"
+        android:textSize="@dimen/big"
+        android:textStyle="bold" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mid" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/questionlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/questiontext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lorabold"
+                android:text=" adsadasasdadaddassdaasadsdasdasdaaadsadasasdadaddassdaasadsdasdasdaa adsadas  sdadaddassdaasadsdasd   sdaaadsadasa sdadadd assdaasadsdasdasdaaad sadasasdadaddassdaasadsdas dasdaaadsadasasda daddassdaasadsdasdasdaaadsada sasdadad  dassdaasadsdasdasdaav  adsadasasdadaddassdaasadsdasdasdaa?"
+                android:textSize="@dimen/mid" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionlayout"
+            android:layout_marginTop="@dimen/mid"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/choiceA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="choice A"
+                android:textSize="@dimen/mid" />
+
+            <Button
+                android:id="@+id/choiceB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="choice B"
+                android:textSize="@dimen/mid" />
+
+            <Button
+                android:id="@+id/choiceC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="choice C"
+                android:textSize="@dimen/mid" />
+
+            <Button
+                android:id="@+id/choiceD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small"
+                android:text="choice D"
+                android:textSize="@dimen/mid" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/answerslayout"
+            android:layout_marginTop="@dimen/mid"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/mid"
+                android:textSize="@dimen/big"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/infoquestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="question 1 out of 20"
+                android:textSize="@dimen/small" />
+
+            <TextView
+                android:id="@+id/infocorrects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="correct answers: 1"
+                android:textSize="@dimen/small" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

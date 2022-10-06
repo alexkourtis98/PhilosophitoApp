@@ -27,7 +27,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+  
             <RelativeLayout
                 android:id="@+id/left4"
                 android:layout_width="wrap_content"

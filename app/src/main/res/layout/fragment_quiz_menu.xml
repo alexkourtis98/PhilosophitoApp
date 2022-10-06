@@ -19,7 +19,198 @@
         android:layout_marginTop="@dimen/mid" />
 
     <LinearLayout
-        android:id="@+id/privacypolicy"
+        android:id="@+id/set1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/left1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/mid">
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fitnesscenter48px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/mid"
+                android:layout_toLeftOf="@+id/right1"
+                android:layout_toRightOf="@+id/left1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Quiz Set 1"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/mid" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/mid"
+                android:gravity="end">
+
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--set 1 ended-->
+
+
+    <LinearLayout
+        android:id="@+id/set2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/left2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/mid">
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fitnesscenter48px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/mid"
+                android:layout_toLeftOf="@+id/right2"
+                android:layout_toRightOf="@+id/left2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Quiz Set 2"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/mid" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/mid"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--set 2 ended-->
+
+
+    <LinearLayout
+        android:id="@+id/set3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/left3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/mid">
+
+                <ImageView
+                    android:layout_width="15pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fitnesscenter48px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/mid"
+                android:layout_toLeftOf="@+id/right3"
+                android:layout_toRightOf="@+id/left3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Quiz Set 3"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/mid" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/right3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/mid"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="10pt"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--    set 3 ended -->
+
+
+    <LinearLayout
+        android:id="@+id/set4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="vertical">
@@ -38,7 +229,7 @@
                 <ImageView
                     android:layout_width="15pt"
                     android:layout_height="match_parent"
-                    android:src="@drawable/privacytip48px" />
+                    android:src="@drawable/fitnesscenter48px" />
 
             </RelativeLayout>
 
@@ -54,7 +245,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Check Privacy Policy"
+                    android:text="Quiz Set 4"
                     android:textAlignment="textStart"
                     android:textSize="@dimen/mid" />
 
@@ -69,7 +260,6 @@
                 android:layout_margin="@dimen/mid"
                 android:gravity="end">
 
-
                 <ImageView
                     android:layout_width="10pt"
                     android:layout_height="match_parent"
@@ -79,11 +269,12 @@
 
         </RelativeLayout>
     </LinearLayout>
-    <!--privacy policy ended-->
+
+    <!--    set 4 ended -->
 
 
     <LinearLayout
-        android:id="@+id/donate"
+        android:id="@+id/set5"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="vertical">
@@ -102,7 +293,7 @@
                 <ImageView
                     android:layout_width="15pt"
                     android:layout_height="match_parent"
-                    android:src="@drawable/savings48px" />
+                    android:src="@drawable/fitnesscenter48px" />
 
             </RelativeLayout>
 
@@ -118,7 +309,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Donate money to developer"
+                    android:text="Quiz Set 5"
                     android:textAlignment="textStart"
                     android:textSize="@dimen/mid" />
 
@@ -142,5 +333,7 @@
 
         </RelativeLayout>
     </LinearLayout>
-    <!--donate ended-->
+
+    <!--    set 5 ended -->
+
 </LinearLayout>

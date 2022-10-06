@@ -8,11 +8,64 @@ public class State {
     public static final ArrayList<Theory> theoriesList = new ArrayList<>();
     public static final ArrayList<DictionaryItem> dictionary = new ArrayList<>();
     public static final ArrayList<ExtraItem> extras = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet1 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet2 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet3 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet4 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet5 = new ArrayList<>();
 
     public State() {
         initTheories();
         initDictionary();
         initExtra();
+        initializeQuestionsSets();
+    }
+
+    public static ArrayList<QuizQuestion> getQuestionsSetByNum(int num) {
+        switch (num) {
+            case 2:
+                return questionsSet2;
+            case 3:
+                return questionsSet3;
+            case 4:
+                return questionsSet4;
+            case 5:
+                return questionsSet5;
+            default:
+                return questionsSet1;
+        }
+    }
+
+    private void initializeQuestionsSets() {
+        questionsSet1.add(new QuizQuestion("Question 1", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet1.add(new QuizQuestion("Question 2", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet1.add(new QuizQuestion("Question 3", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet1.add(new QuizQuestion("Question 4", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet1.add(new QuizQuestion("aadasdasdasdasdadasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet2.add(new QuizQuestion("aasdadaddasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet2.add(new QuizQuestion("adasdasadaasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet2.add(new QuizQuestion("adasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet2.add(new QuizQuestion("adasdasdasddasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet2.add(new QuizQuestion("aadasdasdaadasdsdasdasdasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet3.add(new QuizQuestion("advfvdbgdsfgasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet3.add(new QuizQuestion("aqwewedadasdasdsd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet3.add(new QuizQuestion("adasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet3.add(new QuizQuestion("aadasdasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet3.add(new QuizQuestion("ad131asd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet4.add(new QuizQuestion("adasdgdfgdsfgd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet4.add(new QuizQuestion("adqwrqwerwrasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet4.add(new QuizQuestion("axcvasvasdfgdasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet4.add(new QuizQuestion("adadsfadsfsd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet4.add(new QuizQuestion("addfadsfasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet5.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet5.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet5.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet5.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet5.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
     }
 
     private void initTheories() {
