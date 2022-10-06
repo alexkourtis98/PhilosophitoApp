@@ -62,7 +62,7 @@ public class WhistleBlowingFragment extends Fragment {
         binding = FragmentWhistleblowingBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdownFile("file:///android_asset/whistleblowing.md", "file:///android_asset/style.css");
+        markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/whistleblowing.md", "file:///android_asset/style.css");
 
         setupaudio();
         return root;

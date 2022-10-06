@@ -1,3 +1,5 @@
+![CSR](john.jpg)
+
 ### Quick Summary
 
 Utilitarianism is

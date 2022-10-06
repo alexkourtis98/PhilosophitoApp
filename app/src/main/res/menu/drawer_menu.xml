@@ -5,13 +5,13 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/one"
-                    android:title="Utilitarianism" />
+                    android:title="@string/utilitarianism" />
                 <item
                     android:id="@+id/two"
-                    android:title="Kantianism" />
+                    android:title="@string/kantianism" />
                 <item
                     android:id="@+id/three"
-                    android:title="Virtue Ethics" />
+                    android:title="@string/virtue_ethics" />
             </group>
         </menu>
     </item>
@@ -48,31 +48,13 @@
             </group>
         </menu>
     </item>
-    <item android:title="@string/tab_text_Dictionary">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/dict"
-                    android:title="@string/tab_text_Dictionary" />
-            </group>
-        </menu>
-    </item>
-    <item android:title="@string/tab_text_Helpful">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/extra"
-                    android:title="@string/tab_text_Helpful" />
-            </group>
-        </menu>
-    </item>
-    <item android:title="@string/about">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/about"
-                    android:title="About the app" />
-            </group>
-        </menu>
-    </item>
+    <item
+        android:id="@+id/dict"
+        android:title="@string/tab_text_Dictionary" />
+    <item
+        android:id="@+id/extra"
+        android:title="@string/tab_text_Helpful" />
+    <item
+        android:id="@+id/about"
+        android:title="@string/about" />
 </menu>

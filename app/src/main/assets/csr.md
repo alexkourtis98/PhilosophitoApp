@@ -1,3 +1,5 @@
+![CSR](csr.png)
+
 ### What is Corporate social responsibility (CSR)?
 
 **Corporate social responsibility (CSR)** is a broad business concept. It usually describes a

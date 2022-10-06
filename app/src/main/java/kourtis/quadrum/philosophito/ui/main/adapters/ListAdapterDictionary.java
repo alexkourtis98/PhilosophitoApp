@@ -1,6 +1,8 @@
 package kourtis.quadrum.philosophito.ui.main.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +40,17 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
 
         TextView textViewDef = convertView.findViewById(R.id.definition);
         textViewDef.setText(getItem(position).getDefinition());
+
+        TextView textViewSource = convertView.findViewById(R.id.source);
+
+        textViewSource.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse(getItem(position).getSource()));
+            view.getContext().startActivity(intent);
+        });
+
 
         return convertView;
     }

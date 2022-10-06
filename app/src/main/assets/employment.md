@@ -1,3 +1,5 @@
+![CSR](employment.png)
+
 An employee is, at the very least, entitled to the following rights at his workplace -
 
 - No discrimination at work, especially on the basis of gender, nationality, religion, medical

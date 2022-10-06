@@ -1,5 +1,8 @@
-# Virtue Ethics
-=============
+![CSR](aristotle.jpg)
+
+### Virtue Ethics
+
+-------------------------
 
 Virtue ethics is a broad term for theories that emphasize the role
 of [character](https://iep.utm.edu/moral-ch/) and virtue

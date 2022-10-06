@@ -1,3 +1,5 @@
+![CSR](kant.jpg)
+
 #### What is Kantian Ethics?
 
 Kantianism is

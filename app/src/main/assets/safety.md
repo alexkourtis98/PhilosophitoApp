@@ -1,4 +1,6 @@
-What is a safe product?
+![CSR](productsafety.png)
+
+### What is a safe product?
 -----------------------
 
 A safe product is one that provides either no risk or a minimum acceptable level of risk, taking

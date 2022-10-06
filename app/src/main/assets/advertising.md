@@ -1,3 +1,5 @@
+![CSR](falseadvertising.png)
+
 Deceptive advertising is false advertising, and it is illegal according to the Federal Trade
 Commission. It is also unethical. Other kinds of unethical advertising are neither deceptive nor
 illegal; however, they offend moral principles of human conduct in terms of bad intent and effects.

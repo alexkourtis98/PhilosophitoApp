@@ -62,7 +62,7 @@ public class DiscriminationFragment extends Fragment {
         View root = binding.getRoot();
 
         MarkdownView markdownView = binding.content;
-        markdownView.loadMarkdownFile("file:///android_asset/discrimination.md", "file:///android_asset/style.css");
+        markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/discrimination.md", "file:///android_asset/style.css");
 
         setupaudio();
         return root;

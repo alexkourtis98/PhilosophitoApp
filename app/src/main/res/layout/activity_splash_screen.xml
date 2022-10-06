@@ -9,13 +9,15 @@
 
     <ImageView
         android:id="@+id/logoimg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:layout_gravity="center"
         android:contentDescription="@string/logo"
+        android:foregroundGravity="center"
         android:gravity="center"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
         android:src="@drawable/newlogotrans" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

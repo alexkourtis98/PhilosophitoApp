@@ -1,3 +1,5 @@
+![CSR](sexualharassment.JPG)
+
 Harassment For the purposes of this Policy, harassment is conduct, considered by the employer to be
 unacceptable in the workplace, in which an employee exhibits offensive behaviour to another
 employee, or group of employees, and where that individual knew, or ought reasonably to have known,

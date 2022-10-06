@@ -1,3 +1,5 @@
+![CSR](discrimination.png)
+
 Discrimination in the workplace is based on certain prejudices and occurs when an employee is
 treated unfavourably because of gender, sexuality, race, religion, pregnancy and maternity or
 disability.

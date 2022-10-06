@@ -1,3 +1,5 @@
+![CSR](affirmativeaction.png)
+
 What Is Affirmative Action?
 ---------------------------
 

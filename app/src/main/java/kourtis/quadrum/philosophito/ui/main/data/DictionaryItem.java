@@ -4,13 +4,23 @@ public class DictionaryItem {
 
     private String title;
     private String definition;
+    private String source;
 
-    public DictionaryItem(String title, String definition) {
+    public DictionaryItem(String title, String definition, String source) {
         this.title = title;
         this.definition = definition;
+        this.source = source;
     }
 
     public DictionaryItem() {
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     public String getTitle() {
@@ -34,6 +44,7 @@ public class DictionaryItem {
         return "DictionaryItem{" +
                 "title='" + title + '\'' +
                 ", definition='" + definition + '\'' +
+                ", source='" + source + '\'' +
                 '}';
     }
 }

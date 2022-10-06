@@ -131,17 +131,26 @@ public class CsrFragment extends Fragment {
 
         mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
 
-
         markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/csr.md", "file:///android_asset/style.css");
 
         setupaudio();
         return root;
     }
 
+    @Override
+    public void onResume() {
+        MarkdownView markdownView = binding.content;
+
+        mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
+
+        markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/csr.md", "file:///android_asset/style.css");
+
+        setupaudio();
+        super.onResume();
+    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
 }
