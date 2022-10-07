@@ -50,7 +50,9 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_corporate_governance.xml" value="0.3786231884057971" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_csr.xml" value="0.3125" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionary.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionaryItem.xml" value="0.24365942028985507" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionary_item.xml" value="0.37318840579710144" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_dictionaryitem.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_discrimination.xml" value="0.3786231884057971" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_donate.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_employment.xml" value="0.3786231884057971" />
@@ -67,7 +69,7 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_product_safety.xml" value="0.3786231884057971" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_questions_bank.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_quiz.xml" value="0.33" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_quiz_menu.xml" value="0.3875" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_quiz_menu.xml" value="0.33" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_resources.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_results.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_second.xml" value="0.20208333333333334" />
@@ -75,7 +77,8 @@
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_sexual_harassment.xml" value="0.3786231884057971" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/fragment_whistleblowing.xml" value="0.20208333333333334" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_extra_item.xml" value="0.1884498480243161" />
-        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_item.xml" value="0.25" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_item.xml" value="0.22" />
+        <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_item_extra.xml" value="0.3875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/list_theory_item.xml" value="0.33" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/nav_header.xml" value="0.171875" />
         <entry key="..\:/Soft Development/BUSINESSETHICSAPP/AndroidApp/app/src/main/res/layout/outline_turned_in_24.xml" value="0.3875" />

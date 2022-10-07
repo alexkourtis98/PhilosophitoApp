@@ -1,7 +1,13 @@
 package kourtis.quadrum.philosophito.ui.main.data;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 
 public class State {
 
@@ -13,6 +19,17 @@ public class State {
     public static final ArrayList<QuizQuestion> questionsSet3 = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet4 = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet5 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet6 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet7 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet8 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet9 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet10 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet11 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet12 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet13 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet14 = new ArrayList<>();
+    public static final ArrayList<QuizQuestion> questionsSet15 = new ArrayList<>();
+    public static final ArrayList<FavoriteItem> favorites = new ArrayList<>();
 
     public State() {
         initTheories();
@@ -31,8 +48,58 @@ public class State {
                 return questionsSet4;
             case 5:
                 return questionsSet5;
+            case 6:
+                return questionsSet6;
+            case 7:
+                return questionsSet7;
+            case 8:
+                return questionsSet8;
+            case 9:
+                return questionsSet9;
+            case 10:
+                return questionsSet10;
+            case 11:
+                return questionsSet11;
+            case 12:
+                return questionsSet12;
+            case 13:
+                return questionsSet13;
+            case 14:
+                return questionsSet14;
+            case 15:
+                return questionsSet15;
             default:
                 return questionsSet1;
+        }
+    }
+
+    public static void initFavorites(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+//        FavoriteItem favoriteItem = new FavoriteItem();
+//        favoriteItem.setId("adsa");
+//        favoriteItem.setTextcontent("asdsasdasdadsdsadasd");
+//        favoriteItem.setTitle("title");
+//        favoriteItem.setMdFile("mdfilelocation");
+
+//set variables of 'myObject', etc.
+
+//        SharedPreferences.Editor prefsEditor = prefs.edit();
+//        Gson gson = new Gson();
+//        String json = gson.toJson(favoriteItem);
+//        prefsEditor.putString(favoriteItem.getId(), json);
+//        prefsEditor.commit();
+
+        // to retrieve
+//        Gson gson = new Gson();
+//        String json = mPrefs.getString("MyObject", "");
+//        MyObject obj = gson.fromJson(json, MyObject.class);
+
+        Map<String, ?> keys = prefs.getAll();
+
+        for (Map.Entry<String, ?> entry : keys.entrySet()) {
+            Log.d("map values", entry.getKey() + ": " +
+                    entry.getValue().toString());
         }
     }
 
@@ -66,6 +133,66 @@ public class State {
         questionsSet5.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
         questionsSet5.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
         questionsSet5.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet6.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet6.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet6.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet6.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet6.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet7.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet7.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet7.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet7.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet7.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet8.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet8.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet8.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet8.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet8.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet9.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet9.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet9.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet9.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet9.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet10.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet10.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet10.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet10.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet10.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet11.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet11.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet11.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet11.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet11.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet12.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet12.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet12.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet12.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet12.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet13.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet13.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet13.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet13.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet13.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet14.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet14.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet14.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet14.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet14.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
+
+        questionsSet15.add(new QuizQuestion("adsfdsfdasasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet15.add(new QuizQuestion("adfdasfdasasd", 3, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet15.add(new QuizQuestion("adfdasfasdfasd", 2, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet15.add(new QuizQuestion("adadasdaasd", 1, "asdas", "dasdadasdasda", "adsa", "adasda"));
+        questionsSet15.add(new QuizQuestion("adasdasdaasd", 4, "asdas", "dasdadasdasda", "adsa", "adasda"));
     }
 
     private void initTheories() {
@@ -95,21 +222,21 @@ public class State {
 
     private void initDictionary() {
         dictionary.clear();
-        dictionary.add(new DictionaryItem("Agency", "Agency is a contractual relationship between two parties, in which one party – the agent – is empowered to act, to make certain decisions, and to make legally-binding agreements on behalf of another party – the principal – subject to the principal’s control. Agents are duty-bound at law to act as fiduciaries for their principals. Agency relationships are ubiquitous features of business because they permit both individuals and companies to conduct business and enter into contractual relationships in many different places at the same time. One powerful way to think of a company or a firm is as a web of agency relationships.", "https://conciseencyclopedia.org/entries/agency/"));
-        dictionary.add(new DictionaryItem("Capitalism", "Capitalism is an economic system that can be summed up roughly by the intersection of three practices. The first is the holding of private property, and the right to keep whatever profit that property generates. The second is the practice of distributing goods through a process of voluntary exchange, in more or less free markets. The third is the idea that production within the economic system is reflective of demand: what goods or services are produced, and in what quantity, is in some way a function of what the purchasing public wants, rather than (for example) of what a ruler or government agency decides should be produced.", "https://conciseencyclopedia.org/entries/capitalism/"));
-        dictionary.add(new DictionaryItem("Compliance", "In business ethics contexts, compliance generally refers to a company’s or a business person’s conformity with relevant laws and regulations—that is, following the rules set out by government. In its slightly broader sense, a focus on compliance may also imply a focus on adherence by employees on the organization’s own internal rules.", "https://conciseencyclopedia.org/entries/compliance/"));
-        dictionary.add(new DictionaryItem("Human Rights", "Human rights are moral entitlements that are thought of as being owed to all humans, simply in light of the fact of their humanity, independent of any legal structure and regardless of where in the world they live. Examples include the right of all persons to be treated equally under the law, the right not to be tortured, and the right not to be enslaved. While human rights are primarily a moral concept, human rights have also received legal protection of various kinds. Some nations have enshrined various rights in their own constitutions (as in the US Bill of Rights and the Canadian Charter of Rights and Freedoms), and international law (as in the provisions of the Geneva Conventions, which govern the conduct of war.)", "https://conciseencyclopedia.org/entries/human-rights/"));
-        dictionary.add(new DictionaryItem("Ethical Consumerism", "Ethical Consumerism is the idea that consumers can, and should, act out a range of ethical values and principles and seek any of a range of ethical objectives through how they spend their money in the market. It generally implies that purchasing decisions are a way of putting values into action.", "https://conciseencyclopedia.org/entries/ethical-consumerism/"));
-        dictionary.add(new DictionaryItem("Environmental Ethics", "Environmental ethics is the field dedicated to understanding human responsibilities with regard to the natural environment. Some approaches to environmental ethics apply standard philosophical theories (e.g., utilitarianism and rights-based approaches) to environmental issues.", "https://conciseencyclopedia.org/entries/environmental-ethics/"));
-        dictionary.add(new DictionaryItem("Sustainability", "The term “sustainability” is most often used in business ethics to refer to environmental sustainability. In its most general sense, environmental sustainability refers to the ability to make sustained (prolonged) use of some resource (e.g., by carefully managing a renewable resource like a woodlot).", "https://conciseencyclopedia.org/entries/sustainability/"));
-        dictionary.add(new DictionaryItem("Business Ethics", "Business ethics (also known as Corporate Ethics) is a form of applied ethics or professional ethics, that examines ethical principles and moral or ethical problems that can arise in a business environment. It applies to all aspects of business conduct and is relevant to the conduct of individuals and entire organizations.", "https://en.wikipedia.org/wiki/Business_ethics"));
-        dictionary.add(new DictionaryItem("Maxim", "A maxim is a concise expression of a fundamental moral rule or principle, whether considered as objective or subjective contingent on one's philosophy. A maxim is often pedagogical and motivates specific actions.", "https://en.wikipedia.org/wiki/Maxim_(philosophy)"));
-        dictionary.add(new DictionaryItem("Corporate Governance", "Corporate governance describes the processes, structures, and mechanisms that influence the control and direction of corporations.", "https://en.wikipedia.org/wiki/Corporate_governance"));
-        dictionary.add(new DictionaryItem("Good Faith", "In contract law, the implied covenant of good faith and fair dealing is a general presumption that the parties to a contract will deal with each other honestly, fairly, and in good faith, so as to not destroy the right of the other party or parties to receive the benefits of the contract.", "https://en.wikipedia.org/wiki/Good_faith_(law)"));
-        dictionary.add(new DictionaryItem("Corruption", "Corruption is a form of dishonesty or a criminal offense which is undertaken by a person or an organization which is entrusted in a position of authority, in order to acquire illicit benefits or abuse power for one's personal gain. Corruption may involve many activities which include bribery, influence peddling and the embezzlement and it may also involve practices which are legal in many countries.", "https://en.wikipedia.org/wiki/Corruption"));
-        dictionary.add(new DictionaryItem("Conflict of Interest", "A conflict of interest (COI) is a situation in which a person or organization is involved in multiple interests, financial or otherwise, and serving one interest could involve working against another. Typically, this relates to situations in which the personal interest of an individual or organization might adversely affect a duty owed to make decisions for the benefit of a third party.", "https://en.wikipedia.org/wiki/Conflict_of_interest"));
-        dictionary.add(new DictionaryItem("Code of Ethics", "Codes of ethics, or in other words ethical codes, are adopted by organizations to assist members in understanding the difference between right and wrong and in applying that understanding to their decisions. An ethical code generally implies documents at three levels: codes of business ethics, codes of conduct for employees, and codes of professional practice.", "https://en.wikipedia.org/wiki/Ethical_code"));
-        dictionary.add(new DictionaryItem("Code of Conduct", "A code of conduct is a set of rules outlining the norms, rules, and responsibilities or proper practices of an individual party or an organization.", "https://en.wikipedia.org/wiki/Code_of_conduct"));
+        dictionary.add(new DictionaryItem("Agency", "Agency is a contractual relationship between two parties, in which one party – the agent – is empowered to act, to make certain decisions, and to make legally-binding agreements on behalf of another party – the principal – subject to the principal’s control. Agents are duty-bound at law to act as fiduciaries for their principals. Agency relationships are ubiquitous features of business because they permit both individuals and companies to conduct business and enter into contractual relationships in many different places at the same time. One powerful way to think of a company or a firm is as a web of agency relationships.", "https://conciseencyclopedia.org/entries/agency/", 0));
+        dictionary.add(new DictionaryItem("Capitalism", "Capitalism is an economic system that can be summed up roughly by the intersection of three practices. The first is the holding of private property, and the right to keep whatever profit that property generates. The second is the practice of distributing goods through a process of voluntary exchange, in more or less free markets. The third is the idea that production within the economic system is reflective of demand: what goods or services are produced, and in what quantity, is in some way a function of what the purchasing public wants, rather than (for example) of what a ruler or government agency decides should be produced.", "https://conciseencyclopedia.org/entries/capitalism/", 1));
+        dictionary.add(new DictionaryItem("Compliance", "In business ethics contexts, compliance generally refers to a company’s or a business person’s conformity with relevant laws and regulations—that is, following the rules set out by government. In its slightly broader sense, a focus on compliance may also imply a focus on adherence by employees on the organization’s own internal rules.", "https://conciseencyclopedia.org/entries/compliance/", 2));
+        dictionary.add(new DictionaryItem("Human Rights", "Human rights are moral entitlements that are thought of as being owed to all humans, simply in light of the fact of their humanity, independent of any legal structure and regardless of where in the world they live. Examples include the right of all persons to be treated equally under the law, the right not to be tortured, and the right not to be enslaved. While human rights are primarily a moral concept, human rights have also received legal protection of various kinds. Some nations have enshrined various rights in their own constitutions (as in the US Bill of Rights and the Canadian Charter of Rights and Freedoms), and international law (as in the provisions of the Geneva Conventions, which govern the conduct of war.)", "https://conciseencyclopedia.org/entries/human-rights/", 3));
+        dictionary.add(new DictionaryItem("Ethical Consumerism", "Ethical Consumerism is the idea that consumers can, and should, act out a range of ethical values and principles and seek any of a range of ethical objectives through how they spend their money in the market. It generally implies that purchasing decisions are a way of putting values into action.", "https://conciseencyclopedia.org/entries/ethical-consumerism/", 4));
+        dictionary.add(new DictionaryItem("Environmental Ethics", "Environmental ethics is the field dedicated to understanding human responsibilities with regard to the natural environment. Some approaches to environmental ethics apply standard philosophical theories (e.g., utilitarianism and rights-based approaches) to environmental issues.", "https://conciseencyclopedia.org/entries/environmental-ethics/", 5));
+        dictionary.add(new DictionaryItem("Sustainability", "The term “sustainability” is most often used in business ethics to refer to environmental sustainability. In its most general sense, environmental sustainability refers to the ability to make sustained (prolonged) use of some resource (e.g., by carefully managing a renewable resource like a woodlot).", "https://conciseencyclopedia.org/entries/sustainability/", 6));
+        dictionary.add(new DictionaryItem("Business Ethics", "Business ethics (also known as Corporate Ethics) is a form of applied ethics or professional ethics, that examines ethical principles and moral or ethical problems that can arise in a business environment. It applies to all aspects of business conduct and is relevant to the conduct of individuals and entire organizations.", "https://en.wikipedia.org/wiki/Business_ethics", 7));
+        dictionary.add(new DictionaryItem("Maxim", "A maxim is a concise expression of a fundamental moral rule or principle, whether considered as objective or subjective contingent on one's philosophy. A maxim is often pedagogical and motivates specific actions.", "https://en.wikipedia.org/wiki/Maxim_(philosophy)", 9));
+        dictionary.add(new DictionaryItem("Corporate Governance", "Corporate governance describes the processes, structures, and mechanisms that influence the control and direction of corporations.", "https://en.wikipedia.org/wiki/Corporate_governance", 10));
+        dictionary.add(new DictionaryItem("Good Faith", "In contract law, the implied covenant of good faith and fair dealing is a general presumption that the parties to a contract will deal with each other honestly, fairly, and in good faith, so as to not destroy the right of the other party or parties to receive the benefits of the contract.", "https://en.wikipedia.org/wiki/Good_faith_(law)", 11));
+        dictionary.add(new DictionaryItem("Corruption", "Corruption is a form of dishonesty or a criminal offense which is undertaken by a person or an organization which is entrusted in a position of authority, in order to acquire illicit benefits or abuse power for one's personal gain. Corruption may involve many activities which include bribery, influence peddling and the embezzlement and it may also involve practices which are legal in many countries.", "https://en.wikipedia.org/wiki/Corruption", 12));
+        dictionary.add(new DictionaryItem("Conflict of Interest", "A conflict of interest (COI) is a situation in which a person or organization is involved in multiple interests, financial or otherwise, and serving one interest could involve working against another. Typically, this relates to situations in which the personal interest of an individual or organization might adversely affect a duty owed to make decisions for the benefit of a third party.", "https://en.wikipedia.org/wiki/Conflict_of_interest", 13));
+        dictionary.add(new DictionaryItem("Code of Ethics", "Codes of ethics, or in other words ethical codes, are adopted by organizations to assist members in understanding the difference between right and wrong and in applying that understanding to their decisions. An ethical code generally implies documents at three levels: codes of business ethics, codes of conduct for employees, and codes of professional practice.", "https://en.wikipedia.org/wiki/Ethical_code", 14));
+        dictionary.add(new DictionaryItem("Code of Conduct", "A code of conduct is a set of rules outlining the norms, rules, and responsibilities or proper practices of an individual party or an organization.", "https://en.wikipedia.org/wiki/Code_of_conduct", 15));
         Collections.sort(dictionary, (s1, s2) -> s1.getTitle().compareToIgnoreCase(s2.getTitle()));
     }
 

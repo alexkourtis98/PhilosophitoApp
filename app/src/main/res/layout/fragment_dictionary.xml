@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+    android:id="@+id/wrapperframe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="kourtis.quadrum.philosophito.ui.main.DictionaryFragment">
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/mywrapperlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lorabold"
-        android:padding="@dimen/mid"
-        android:text="Dictionary-Glossary"
-        android:textSize="@dimen/big"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/mid" />
+        <SearchView
+            android:id="@+id/searchterm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mid"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search term"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="@id/allTerms" />
 
-    <SearchView
-        android:id="@+id/searchterm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search term"
-        android:textAlignment="textStart"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="@id/allTerms" />
-
-    <ListView
-        android:id="@+id/allTerms"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-</LinearLayout>
+        <ListView
+            android:id="@+id/allTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

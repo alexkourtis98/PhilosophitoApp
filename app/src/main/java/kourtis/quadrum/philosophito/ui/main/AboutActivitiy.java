@@ -79,11 +79,4 @@ public class AboutActivitiy extends AppCompatActivity {
             getApplicationContext().startActivity(startIntent);
         });
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
-        startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        getApplicationContext().startActivity(startIntent);
-    }
 }

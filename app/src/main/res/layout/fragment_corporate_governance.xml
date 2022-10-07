@@ -42,16 +42,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_toLeftOf="@id/play1"
+                android:layout_toLeftOf="@id/bookmark"
                 android:layout_toRightOf="@id/play"
                 android:foregroundGravity="center" />
 
             <ImageView
-                android:id="@+id/play1"
+                android:id="@+id/bookmark"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/outline_bookmark_add_20" />
+
+            <ImageView
+                android:id="@+id/bookmarkUnmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/outline_turned_in_24"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <org.billthefarmer.markdown.MarkdownView

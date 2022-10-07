@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
@@ -98,8 +97,8 @@ public class QuizFragment extends Fragment {
         }
         if (this.currentquestionindex < maxquestions - 1) {
             waitabit();
+            goToNextQuestion();
         } else {
-            Toast.makeText(requireContext(), "Ended", Toast.LENGTH_SHORT).show();
             showResults();
         }
     }
@@ -144,7 +143,6 @@ public class QuizFragment extends Fragment {
             public void onFinish() {
                 validateAllButtons();
                 clearStatus();
-                goToNextQuestion();
             }
         }.start();
     }
@@ -166,7 +164,6 @@ public class QuizFragment extends Fragment {
 
     private void wrongAnswerMechanism(int choiceselected) {
         this.tried = true;
-        disableSelectedBtn(choiceselected);
         wrongAnswerToast();
     }
 
@@ -211,16 +208,20 @@ public class QuizFragment extends Fragment {
         Button choiceC = this.view.findViewById(R.id.choiceC);
         Button choiceD = this.view.findViewById(R.id.choiceD);
         choiceA.setOnClickListener(choice -> {
+            disableSelectedBtn(1);
             checkAnswer(1);
         });
         choiceB.setOnClickListener(choice -> {
+            disableSelectedBtn(2);
             checkAnswer(2);
         });
         choiceC.setOnClickListener(choice -> {
+            disableSelectedBtn(3);
             checkAnswer(3);
         });
         choiceD.setOnClickListener(choice -> {
             checkAnswer(4);
+            disableSelectedBtn(4);
         });
     }
 

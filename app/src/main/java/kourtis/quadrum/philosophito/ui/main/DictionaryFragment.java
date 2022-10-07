@@ -40,7 +40,7 @@ public class DictionaryFragment extends Fragment {
     }
 
     private void addTermsToList() {
-        ListAdapterDictionary listAdapter = new ListAdapterDictionary(requireContext(), R.layout.list_item, localCopyOfDictionary);
+        ListAdapterDictionary listAdapter = new ListAdapterDictionary(this.getContext(), R.layout.list_item, localCopyOfDictionary);
         listView.setAdapter(listAdapter);
         listView.setClickable(true);
         listView.setFastScrollEnabled(true);
@@ -61,7 +61,7 @@ public class DictionaryFragment extends Fragment {
                     }
                 }
 
-                ListAdapterDictionary listAdapter2 = new ListAdapterDictionary(requireContext(), R.layout.list_item, newArray);
+                ListAdapterDictionary listAdapter2 = new ListAdapterDictionary(getContext(), R.layout.list_item, newArray);
                 listView.setAdapter(listAdapter2);
                 listView.setClickable(true);
                 listView.setFastScrollEnabled(true);

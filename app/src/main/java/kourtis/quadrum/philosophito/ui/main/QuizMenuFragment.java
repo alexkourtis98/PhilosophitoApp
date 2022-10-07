@@ -40,6 +40,46 @@ public class QuizMenuFragment extends Fragment {
             ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
         });
 
+        this.view.findViewById(R.id.set6).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set7).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set8).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set9).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set10).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set11).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set12).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set13).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set14).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
+        this.view.findViewById(R.id.set15).setOnClickListener(item -> {
+            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new QuizFragment(5)).commit();
+        });
+
         return this.view;
     }
 }

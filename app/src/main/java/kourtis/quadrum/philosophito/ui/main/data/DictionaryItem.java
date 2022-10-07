@@ -5,14 +5,24 @@ public class DictionaryItem {
     private String title;
     private String definition;
     private String source;
+    private int id;
 
-    public DictionaryItem(String title, String definition, String source) {
+    public DictionaryItem(String title, String definition, String source, int id) {
         this.title = title;
         this.definition = definition;
         this.source = source;
+        this.id = id;
     }
 
     public DictionaryItem() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSource() {

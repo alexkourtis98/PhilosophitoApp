@@ -33,10 +33,8 @@ public class ExtraContentFragment extends Fragment {
         binding = FragmentExtrasBinding.inflate(inflater, container, false);
         this.listView = binding.allExtras;
         addTermsToList();
-
         return binding.getRoot();
     }
-
 
     private void addTermsToList() {
         ListAdapterExtra listAdapter = new ListAdapterExtra(requireContext(), R.layout.list_extra_item, localCopyOfExtras);
