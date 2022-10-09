@@ -1,5 +1,6 @@
 package kourtis.quadrum.philosophito.ui.main.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -16,13 +17,14 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 import kourtis.quadrum.philosophito.R;
-import kourtis.quadrum.philosophito.ui.main.home.theories.MoralTheoriesItemActivitiy;
 import kourtis.quadrum.philosophito.ui.main.data.Theory;
+import kourtis.quadrum.philosophito.ui.main.home.theories.MoralTheoriesItemActivitiy;
 
 public class ListAdapterTheory extends ArrayAdapter<Theory> {
 
-    private Context mContext;
-    private int mResource;
+    private final Context mContext;
+    private final int mResource;
+    private View view;
 
     public ListAdapterTheory(@NonNull Context context, int resource, @NonNull ArrayList<Theory> objects) {
         super(context, resource, objects);
@@ -30,34 +32,43 @@ public class ListAdapterTheory extends ArrayAdapter<Theory> {
         this.mResource = resource;
     }
 
-    @NonNull
-    @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
+    private void setTexts(int position) {
+        ((TextView) this.view.findViewById(R.id.theoryTitle)).setText(getItem(position).getTitle());
+        ((TextView) this.view.findViewById(R.id.theoryDesc)).setText(getItem(position).getShortDescription());
+    }
 
-        convertView = layoutInflater.inflate(mResource, parent, false);
-
-        TextView textView = convertView.findViewById(R.id.theoryTitle);
-        textView.setText(getItem(position).getTitle());
-
-        TextView textViewdesc = convertView.findViewById(R.id.theoryDesc);
-        textViewdesc.setText(getItem(position).getShortDescription());
-
-        View finalConvertView = convertView;
-
-        LinearLayout item = convertView.findViewById(R.id.item);
-        item.setOnClickListener(click -> {
-            Intent intent = new Intent(finalConvertView.getContext(), MoralTheoriesItemActivitiy.class);
-            intent.putExtra("title", getItem(position).getTitle());
-            intent.putExtra("content", getItem(position).getFullContent());
-            finalConvertView.getContext().startActivity(intent);
-        });
-
-        ImageView layoutimg = convertView.findViewById(R.id.layoutimg);
-        int id = convertView.getResources().getIdentifier(getItem(position).getImage(), "id", getContext().getPackageName());
+    private void setImage(int position) {
+        ImageView layoutimg = this.view.findViewById(R.id.layoutimg);
+        int id = this.view.getResources().getIdentifier(getItem(position).getImage(), "id", getContext().getPackageName());
         layoutimg.setImageResource(id);
         layoutimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
+    }
 
-        return convertView;
+    private void goToTheoryActivity(int position) {
+        Intent intent = new Intent(this.view.getContext(), MoralTheoriesItemActivitiy.class);
+        intent.putExtra("title", getItem(position).getTitle());
+        intent.putExtra("content", getItem(position).getFullContent());
+        this.view.getContext().startActivity(intent);
+    }
+
+    private void setClickListenersToLayout(int position) {
+        LinearLayout item = this.view.findViewById(R.id.item);
+        item.setOnClickListener(click -> {
+            goToTheoryActivity(position);
+        });
+    }
+
+    @SuppressLint("ViewHolder")
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View view, @NonNull ViewGroup parent) {
+        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
+        this.view = layoutInflater.inflate(mResource, parent, false);
+
+        this.setTexts(position);
+        this.setClickListenersToLayout(position);
+        this.setImage(position);
+
+        return this.view;
     }
 }

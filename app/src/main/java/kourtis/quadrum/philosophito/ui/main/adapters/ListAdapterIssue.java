@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,8 +16,8 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 import kourtis.quadrum.philosophito.R;
-import kourtis.quadrum.philosophito.ui.main.home.issues.MoralIssueItemActivitiy;
 import kourtis.quadrum.philosophito.ui.main.data.Issue;
+import kourtis.quadrum.philosophito.ui.main.home.issues.MoralIssueItemActivitiy;
 
 public class ListAdapterIssue extends ArrayAdapter<Issue> {
 
@@ -56,17 +55,13 @@ public class ListAdapterIssue extends ArrayAdapter<Issue> {
     }
 
     private void setTexts(int position) {
-        TextView textView = view.findViewById(R.id.issueTitle);
-        textView.setText(getItem(position).getTitle());
-
-        TextView textViewdesc = view.findViewById(R.id.issueDesc);
-        textViewdesc.setText(getItem(position).getShortDescription());
+        ((TextView) this.view.findViewById(R.id.issueTitle)).setText(getItem(position).getTitle());
+        ((TextView) this.view.findViewById(R.id.issueDesc)).setText(getItem(position).getShortDescription());
     }
 
     private void onClickOpenMoralIssue(int position) {
-        LinearLayout item = this.view.findViewById(R.id.item);
         View myview = this.view;
-        item.setOnClickListener(click -> {
+        this.view.findViewById(R.id.item).setOnClickListener(click -> {
             Intent intent = new Intent(myview.getContext(), MoralIssueItemActivitiy.class);
             intent.putExtra("title", getItem(position).getTitle());
             intent.putExtra("audiolocation", getItem(position).getAudioLocation());

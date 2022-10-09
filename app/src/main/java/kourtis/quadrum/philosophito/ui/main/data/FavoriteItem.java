@@ -14,6 +14,30 @@ public class FavoriteItem {
     public FavoriteItem() {
     }
 
+    public FavoriteItem(String id, String title, String mdFile, String textcontent, String source, String enumtype, String audiofile) {
+        this.id = id;
+        this.title = title;
+        this.mdFile = mdFile;
+        this.textcontent = textcontent;
+        this.source = source;
+        this.enumtype = enumtype;
+        this.audiofile = audiofile;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "FavoriteItem{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", mdFile='" + mdFile + '\'' +
+                ", textcontent='" + textcontent + '\'' +
+                ", source='" + source + '\'' +
+                ", enumtype='" + enumtype + '\'' +
+                ", audiofile='" + audiofile + '\'' +
+                '}';
+    }
+
     public String getEnumtype() {
         return enumtype;
     }
@@ -36,17 +60,6 @@ public class FavoriteItem {
 
     public void setSource(String source) {
         this.source = source;
-    }
-
-    @NonNull
-    @Override
-    public String toString() {
-        return "FavoriteItem{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", mdFile='" + mdFile + '\'' +
-                ", textcontent='" + textcontent + '\'' +
-                '}';
     }
 
     public String getId() {

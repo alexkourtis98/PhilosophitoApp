@@ -23,13 +23,45 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
 
     private final Context context;
     private final int resource;
-    ArrayList<DictionaryItem> localdictionary;
+    private View view;
+    private ViewGroup parent;
 
     public ListAdapterDictionary(@NonNull Context context, int resource, @NonNull ArrayList<DictionaryItem> objects) {
         super(context, resource, objects);
-        this.localdictionary = objects;
         this.context = context;
         this.resource = resource;
+    }
+
+    private void setTexts(int position) {
+        ((TextView) this.view.findViewById(R.id.termtitle)).setText(getItem(position).getTitle());
+    }
+
+    private Bundle makeBundle(int position) {
+        Bundle bundle = new Bundle();
+        bundle.putString("title", getItem(position).getTitle());
+        bundle.putString("definition", getItem(position).getDefinition());
+        bundle.putString("source", getItem(position).getSource());
+
+        return bundle;
+    }
+
+    private void showDictionaryItemFragment(Bundle bundle) {
+        // make fragment
+        DictionaryItemFragment dictionaryItemFragment = new DictionaryItemFragment();
+        dictionaryItemFragment.setArguments(bundle);
+
+        // make parent view invisible
+        this.parent.getRootView().findViewById(R.id.mywrapperlayout).setVisibility(View.GONE);
+
+        // complete parente fragment view with the new one
+        ((FragmentActivity) this.context).getSupportFragmentManager().beginTransaction().replace(R.id.wrapperframe, dictionaryItemFragment).addToBackStack(null).commit();
+    }
+
+    private void setClickListener(int position) {
+        this.view.setOnClickListener(click -> {
+            Bundle bundle = makeBundle(position);
+            showDictionaryItemFragment(bundle);
+        });
     }
 
     @SuppressLint("ViewHolder")
@@ -37,24 +69,12 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        convertView = layoutInflater.inflate(resource, parent, false);
-        TextView textViewTerm = convertView.findViewById(R.id.termtitle);
-        textViewTerm.setText(getItem(position).getTitle());
-//
-        convertView.setOnClickListener(click -> {
-            Bundle bundle = new Bundle();
-            bundle.putString("title", getItem(position).getTitle());
-            bundle.putString("definition", getItem(position).getDefinition());
-            bundle.putString("source", getItem(position).getSource());
+        this.view = layoutInflater.inflate(resource, parent, false);
+        this.parent = parent;
 
-            DictionaryItemFragment dictionaryItemFragment = new DictionaryItemFragment();
-            dictionaryItemFragment.setArguments(bundle);
+        this.setTexts(position);
+        this.setClickListener(position);
 
-            parent.getRootView().findViewById(R.id.mywrapperlayout).setVisibility(View.GONE);
-
-            ((FragmentActivity) this.context).getSupportFragmentManager().beginTransaction().replace(R.id.wrapperframe, dictionaryItemFragment).addToBackStack(null).commit();
-        });
-
-        return convertView;
+        return this.view;
     }
 }

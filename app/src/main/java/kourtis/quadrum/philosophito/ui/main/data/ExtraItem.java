@@ -1,5 +1,7 @@
 package kourtis.quadrum.philosophito.ui.main.data;
 
+import androidx.annotation.NonNull;
+
 public class ExtraItem {
 
     private String link;
@@ -31,10 +33,12 @@ public class ExtraItem {
         this.description = description;
     }
 
+    @NonNull
     @Override
     public String toString() {
-        return "DictionaryItem{" +
+        return "ExtraItem{" +
                 "link='" + link + '\'' +
+                ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

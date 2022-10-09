@@ -1,5 +1,7 @@
 package kourtis.quadrum.philosophito.ui.main.data;
 
+import androidx.annotation.NonNull;
+
 public class DictionaryItem {
 
     private String title;
@@ -15,6 +17,17 @@ public class DictionaryItem {
     }
 
     public DictionaryItem() {
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "DictionaryItem{" +
+                "title='" + title + '\'' +
+                ", definition='" + definition + '\'' +
+                ", source='" + source + '\'' +
+                ", id=" + id +
+                '}';
     }
 
     public int getId() {
@@ -49,12 +62,4 @@ public class DictionaryItem {
         this.definition = definition;
     }
 
-    @Override
-    public String toString() {
-        return "DictionaryItem{" +
-                "title='" + title + '\'' +
-                ", definition='" + definition + '\'' +
-                ", source='" + source + '\'' +
-                '}';
-    }
 }

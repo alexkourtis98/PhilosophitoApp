@@ -188,12 +188,12 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
                 play.setImageResource(R.drawable.pause);
             }
 
-            songNames();
+            songProgressBar();
         });
     }
 
 
-    private void songNames() {
+    private void songProgressBar() {
         // seekbar duration
         mMediaPlayer.setOnPreparedListener(mp -> {
             mSeekBarTime.setMax(mMediaPlayer.getDuration());

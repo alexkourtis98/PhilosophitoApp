@@ -1,5 +1,7 @@
 package kourtis.quadrum.philosophito.ui.main.data;
 
+import androidx.annotation.NonNull;
+
 public class QuizQuestion {
 
     private String questiontext;
@@ -20,9 +22,6 @@ public class QuizQuestion {
         this.choiceC = choiceC;
         this.choiceD = choiceD;
     }
-
-    // check if correct answer
-
 
     public String getQuestiontext() {
         return questiontext;
@@ -72,6 +71,7 @@ public class QuizQuestion {
         this.choiceD = choiceD;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "QuizQuestion{" +

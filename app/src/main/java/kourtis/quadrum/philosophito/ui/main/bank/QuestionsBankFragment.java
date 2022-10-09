@@ -13,23 +13,22 @@ import kourtis.quadrum.philosophito.ui.main.settings.DonateFragment;
 import kourtis.quadrum.philosophito.ui.main.settings.PrivacyPolicyFragment;
 
 public class QuestionsBankFragment extends Fragment {
-    private View view;
 
     public QuestionsBankFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.view = inflater.inflate(R.layout.fragment_questions_bank, container, false);
+        View view = inflater.inflate(R.layout.fragment_questions_bank, container, false);
 
-        this.view.findViewById(R.id.privacypolicy).setOnClickListener(item -> {
+        view.findViewById(R.id.privacypolicy).setOnClickListener(item -> {
             ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new PrivacyPolicyFragment()).commit();
         });
 
-        this.view.findViewById(R.id.donate).setOnClickListener(item -> {
+        view.findViewById(R.id.donate).setOnClickListener(item -> {
             ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new DonateFragment()).commit();
         });
 
-        return this.view;
+        return view;
     }
 }

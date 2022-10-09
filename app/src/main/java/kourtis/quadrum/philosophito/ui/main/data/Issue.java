@@ -14,6 +14,15 @@ public class Issue {
     public Issue() {
     }
 
+    public Issue(String title, String shortDescription, String mdLocation, String image, String audioLocation, String enumname) {
+        this.title = title;
+        this.shortDescription = shortDescription;
+        this.mdLocation = mdLocation;
+        this.image = image;
+        this.audioLocation = audioLocation;
+        this.enumname = enumname;
+    }
+
     @Override
     @NonNull
     public String toString() {

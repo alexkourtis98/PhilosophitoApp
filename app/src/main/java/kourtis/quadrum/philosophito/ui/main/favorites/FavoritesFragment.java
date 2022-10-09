@@ -4,22 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import java.util.ArrayList;
-
 import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.FragmentFavoritesBinding;
 import kourtis.quadrum.philosophito.ui.main.adapters.ListAdapterFavorites;
-import kourtis.quadrum.philosophito.ui.main.data.FavoriteItem;
 import kourtis.quadrum.philosophito.ui.main.data.State;
 
 public class FavoritesFragment extends Fragment {
-    private final ArrayList<FavoriteItem> favorites = State.favorites;
     ListView listView;
     private FragmentFavoritesBinding binding;
 
@@ -34,8 +29,6 @@ public class FavoritesFragment extends Fragment {
         binding = FragmentFavoritesBinding.inflate(inflater, container, false);
         this.listView = binding.allTerms;
         addTermsToList();
-
-        LinearLayout linearLayout = binding.mywrapperlayout;
 
         return binding.getRoot();
     }

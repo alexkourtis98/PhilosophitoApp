@@ -1,5 +1,6 @@
 package kourtis.quadrum.philosophito.ui.main.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -22,36 +23,45 @@ import kourtis.quadrum.philosophito.ui.main.data.ExtraItem;
 public class ListAdapterExtra extends ArrayAdapter<ExtraItem> {
 
     private final Context mContext;
-    private final int mResource;
+    private final int resource;
+    private View view;
 
     public ListAdapterExtra(@NonNull Context context, int resource, @NonNull ArrayList<ExtraItem> objects) {
         super(context, resource, objects);
         this.mContext = context;
-        this.mResource = resource;
+        this.resource = resource;
     }
 
-    @NonNull
-    @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
+    private void openLink(int position) {
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(getItem(position).getLink()));
+        this.view.getContext().startActivity(i);
+    }
 
-        convertView = layoutInflater.inflate(mResource, parent, false);
-        TextView textViewTitle = convertView.findViewById(R.id.title);
+    private void markTitleAsHrefTag(int position) {
+        TextView textViewTitle = this.view.findViewById(R.id.title);
         String text = "<u> " + getItem(position).getTitle() + " </u>";
         textViewTitle.setText(Html.fromHtml(text));
         textViewTitle.setClickable(true);
         textViewTitle.setMovementMethod(LinkMovementMethod.getInstance());
+    }
 
-        View finalConvertView = convertView;
-        textViewTitle.setOnClickListener(click -> {
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(getItem(position).getLink()));
-            finalConvertView.getContext().startActivity(i);
-        });
+    private void setTextsAndListenersAndMarkTag(int position) {
+        ((TextView) this.view.findViewById(R.id.description)).setText(getItem(position).getDescription());
+        this.view.findViewById(R.id.title).setOnClickListener(click -> openLink(position));
+        this.markTitleAsHrefTag(position);
+    }
 
-        TextView textViewDesc = convertView.findViewById(R.id.description);
-        textViewDesc.setText(getItem(position).getDescription());
 
-        return convertView;
+    @SuppressLint("ViewHolder")
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        LayoutInflater layoutInflater = LayoutInflater.from(mContext);
+        this.view = layoutInflater.inflate(resource, parent, false);
+
+        this.setTextsAndListenersAndMarkTag(position);
+
+        return this.view;
     }
 }

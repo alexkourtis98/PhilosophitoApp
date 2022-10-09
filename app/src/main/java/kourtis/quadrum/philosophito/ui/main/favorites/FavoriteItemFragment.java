@@ -22,13 +22,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.google.gson.Gson;
-
 import org.billthefarmer.markdown.MarkdownView;
 
 import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.FragmentFavoriteitemBinding;
-import kourtis.quadrum.philosophito.ui.main.data.FavoriteItem;
 
 public class FavoriteItemFragment extends Fragment {
     static MediaPlayer mMediaPlayer;
@@ -42,31 +39,12 @@ public class FavoriteItemFragment extends Fragment {
         }
     };
     private FragmentFavoriteitemBinding binding;
-    private ViewGroup container;
     private String title;
-    private String definition;
-    private String md;
     private String source;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    private void saveItem() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
-
-        FavoriteItem favoriteItem = new FavoriteItem();
-        favoriteItem.setId(this.title);
-        favoriteItem.setTextcontent(this.definition);
-        favoriteItem.setTitle(this.title);
-        favoriteItem.setMdFile("");
-
-        SharedPreferences.Editor refsEditor = prefs.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(favoriteItem);
-        refsEditor.putString(favoriteItem.getTitle(), json);
-        refsEditor.apply();
     }
 
     private void bookMark() {
@@ -111,18 +89,14 @@ public class FavoriteItemFragment extends Fragment {
             Toast.makeText(requireContext(), "Saved to Favorites", Toast.LENGTH_SHORT).show();
         });
 
-        binding.bookmarkUnmark.setOnClickListener(click -> {
-            bookUnmark();
-        });
+        binding.bookmarkUnmark.setOnClickListener(click -> bookUnmark());
 
         binding.moralbookmark.setOnClickListener(click -> {
             bookMark();
             Toast.makeText(requireContext(), "Saved to Favorites", Toast.LENGTH_SHORT).show();
         });
 
-        binding.moralbookmarkUnmark.setOnClickListener(click -> {
-            bookUnmark();
-        });
+        binding.moralbookmarkUnmark.setOnClickListener(click -> bookUnmark());
     }
 
     private void checkIfBooked() {
@@ -144,8 +118,7 @@ public class FavoriteItemFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         binding = FragmentFavoriteitemBinding.inflate(inflater, container, false);
-        this.container = container;
-        boolean isTerm = false;
+        boolean isTerm;
         isTerm = this.getArguments().getString("mdlocation").trim().equals("");
 
         if (isTerm) {
@@ -153,10 +126,10 @@ public class FavoriteItemFragment extends Fragment {
             binding.morallayout.setVisibility(View.GONE);
 
             this.title = this.getArguments().getString("title");
-            this.definition = this.getArguments().getString("text");
+            String definition = this.getArguments().getString("text");
             this.source = this.getArguments().getString("source");
             binding.title.setText(this.title);
-            binding.definition.setText(this.definition);
+            binding.definition.setText(definition);
 
             binding.source.setOnClickListener(view -> {
                 Intent intent = new Intent();
@@ -170,8 +143,8 @@ public class FavoriteItemFragment extends Fragment {
             binding.morallayout.setVisibility(View.VISIBLE);
             binding.termlayout.setVisibility(View.GONE);
             MarkdownView markdownView = binding.content;
-            this.md = this.getArguments().getString("mdlocation");
-            markdownView.loadMarkdownFile("file:///android_asset/", this.md, "file:///android_asset/style.css");
+            String md = this.getArguments().getString("mdlocation");
+            markdownView.loadMarkdownFile("file:///android_asset/", md, "file:///android_asset/style.css");
             this.title = this.getArguments().getString("title");
             binding.moraltitle.setText(this.title);
         }
@@ -207,12 +180,12 @@ public class FavoriteItemFragment extends Fragment {
                 play.setImageResource(R.drawable.pause);
             }
 
-            songNames();
+            songProgressBar();
         });
     }
 
 
-    private void songNames() {
+    private void songProgressBar() {
         // seekbar duration
         mMediaPlayer.setOnPreparedListener(mp -> {
             mSeekBarTime.setMax(mMediaPlayer.getDuration());

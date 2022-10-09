@@ -23,6 +23,8 @@ public class ListAdapterFavorites extends ArrayAdapter<FavoriteItem> {
 
     private final Context context;
     private final int resource;
+    private View view;
+    private ViewGroup parent;
 
     public ListAdapterFavorites(@NonNull Context context, int resource, @NonNull ArrayList<FavoriteItem> objects) {
         super(context, resource, objects);
@@ -30,34 +32,53 @@ public class ListAdapterFavorites extends ArrayAdapter<FavoriteItem> {
         this.resource = resource;
     }
 
+    private void setIdToThisView() {
+        this.view.setId(View.generateViewId());
+    }
+
+    private void setClickListeners(int position) {
+        this.view.setOnClickListener(click -> {
+            switchToNewFragment(makeBundle(position));
+        });
+    }
+
+    private Bundle makeBundle(int position) {
+        Bundle bundle = new Bundle();
+        bundle.putString("title", getItem(position).getTitle());
+        bundle.putString("text", getItem(position).getTextcontent());
+        bundle.putString("mdlocation", getItem(position).getMdFile());
+        bundle.putString("source", getItem(position).getSource());
+        bundle.putString("id", String.valueOf(this.view.getId()));
+
+        return bundle;
+    }
+
+    private void switchToNewFragment(Bundle bundle) {
+        FavoriteItemFragment dictionaryItemFragment = new FavoriteItemFragment();
+        dictionaryItemFragment.setArguments(bundle);
+
+        this.parent.getRootView().findViewById(R.id.mywrapperlayout).setVisibility(View.GONE);
+
+        ((FragmentActivity) this.context).getSupportFragmentManager().beginTransaction().replace(R.id.wrapperfavframe, dictionaryItemFragment).addToBackStack(null).commit();
+    }
+
+    private void setTexts(int position) {
+        ((TextView) this.view.findViewById(R.id.favtitle)).setText(getItem(position).getTitle());
+    }
+
+
     @SuppressLint("ViewHolder")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        convertView = layoutInflater.inflate(resource, parent, false);
+        this.view = layoutInflater.inflate(resource, parent, false);
+        this.parent = parent;
+        
+        setIdToThisView();
+        setTexts(position);
+        setClickListeners(position);
 
-        convertView.setId(View.generateViewId());
-        TextView textViewTerm = convertView.findViewById(R.id.favtitle);
-        textViewTerm.setText(getItem(position).getTitle());
-
-        View finalConvertView = convertView;
-        convertView.setOnClickListener(click -> {
-            Bundle bundle = new Bundle();
-            bundle.putString("title", getItem(position).getTitle());
-            bundle.putString("text", getItem(position).getTextcontent());
-            bundle.putString("mdlocation", getItem(position).getMdFile());
-            bundle.putString("source", getItem(position).getSource());
-            bundle.putString("id", String.valueOf(finalConvertView.getId()));
-
-            FavoriteItemFragment dictionaryItemFragment = new FavoriteItemFragment();
-            dictionaryItemFragment.setArguments(bundle);
-
-            parent.getRootView().findViewById(R.id.mywrapperlayout).setVisibility(View.GONE);
-
-            ((FragmentActivity) this.context).getSupportFragmentManager().beginTransaction().replace(R.id.wrapperfavframe, dictionaryItemFragment).addToBackStack(null).commit();
-        });
-
-        return convertView;
+        return this.view;
     }
 }
