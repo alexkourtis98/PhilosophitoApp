@@ -7,15 +7,35 @@ public class FavoriteItem {
     private String title;
     private String mdFile;
     private String textcontent;
+    private String source;
+    private String enumtype;
+    private String audiofile;
 
     public FavoriteItem() {
     }
 
-    public FavoriteItem(String id, String title, String mdFile, String textcontent) {
-        this.id = id;
-        this.title = title;
-        this.mdFile = mdFile;
-        this.textcontent = textcontent;
+    public String getEnumtype() {
+        return enumtype;
+    }
+
+    public void setEnumtype(String enumtype) {
+        this.enumtype = enumtype;
+    }
+
+    public String getAudiofile() {
+        return audiofile;
+    }
+
+    public void setAudiofile(String audiofile) {
+        this.audiofile = audiofile;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
     }
 
     @NonNull

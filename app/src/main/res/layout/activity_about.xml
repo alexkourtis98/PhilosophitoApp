@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="kourtis.quadrum.philosophito.ui.main.AboutActivitiy">
+        tools:context="kourtis.quadrum.philosophito.ui.main.general.AboutActivitiy">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -369,6 +369,21 @@
                     android:gravity="center"
                     android:scaleType="fitCenter"
                     android:src="@drawable/instagramlogo" />
+
+
+                <ImageView
+                    android:id="@+id/myyoutubebtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/logo"
+                    android:gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/youtubelogo"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
         </LinearLayout>

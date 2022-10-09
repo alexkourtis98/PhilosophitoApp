@@ -18,24 +18,21 @@ import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.tabs.TabLayout;
-
 import java.util.Objects;
 
 import kourtis.quadrum.philosophito.databinding.ActivityMainBinding;
-import kourtis.quadrum.philosophito.ui.main.AboutActivitiy;
-import kourtis.quadrum.philosophito.ui.main.FavoritesFragment;
-import kourtis.quadrum.philosophito.ui.main.HomeFragment;
-import kourtis.quadrum.philosophito.ui.main.MoralTheoriesItemActivitiy;
-import kourtis.quadrum.philosophito.ui.main.QuestionsBankFragment;
-import kourtis.quadrum.philosophito.ui.main.QuizMenuFragment;
-import kourtis.quadrum.philosophito.ui.main.SettingsFragment;
+import kourtis.quadrum.philosophito.ui.main.bank.QuestionsBankFragment;
 import kourtis.quadrum.philosophito.ui.main.data.State;
+import kourtis.quadrum.philosophito.ui.main.favorites.FavoritesFragment;
+import kourtis.quadrum.philosophito.ui.main.general.AboutActivitiy;
+import kourtis.quadrum.philosophito.ui.main.home.HomeFragment;
+import kourtis.quadrum.philosophito.ui.main.home.theories.MoralTheoriesItemActivitiy;
+import kourtis.quadrum.philosophito.ui.main.quiz.QuizMenuFragment;
+import kourtis.quadrum.philosophito.ui.main.settings.SettingsFragment;
+import kourtis.quadrum.philosophito.utils.CustomTypefaceSpan;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
-    private TabLayout tabs;
     private DrawerLayout navDrawer = null;
     private HomeFragment homeFragment;
 
@@ -49,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         initState();
-        State.initFavorites(getApplicationContext());
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -101,8 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setfont() {
-        NavigationView navigationView = binding.navView;
-        Menu m = navigationView.getMenu();
+        Menu m = binding.navView.getMenu();
         Typeface myfont = ResourcesCompat.getFont(getApplicationContext(), R.font.lorabold);
 
         for (int i = 0; i < m.size(); i++) {

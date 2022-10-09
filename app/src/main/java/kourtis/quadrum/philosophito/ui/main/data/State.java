@@ -3,7 +3,8 @@ package kourtis.quadrum.philosophito.ui.main.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.util.Log;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,6 +13,7 @@ import java.util.Map;
 public class State {
 
     public static final ArrayList<Theory> theoriesList = new ArrayList<>();
+    public static final ArrayList<Issue> issuesList = new ArrayList<>();
     public static final ArrayList<DictionaryItem> dictionary = new ArrayList<>();
     public static final ArrayList<ExtraItem> extras = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet1 = new ArrayList<>();
@@ -29,13 +31,15 @@ public class State {
     public static final ArrayList<QuizQuestion> questionsSet13 = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet14 = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet15 = new ArrayList<>();
-    public static final ArrayList<FavoriteItem> favorites = new ArrayList<>();
+    public static ArrayList<FavoriteItem> favorites = new ArrayList<>();
+
 
     public State() {
         initTheories();
         initDictionary();
         initExtra();
         initializeQuestionsSets();
+        initIssues();
     }
 
     public static ArrayList<QuizQuestion> getQuestionsSetByNum(int num) {
@@ -73,34 +77,116 @@ public class State {
         }
     }
 
-    public static void initFavorites(Context context) {
+    public static void loadFavorites(Context context) {
+        favorites.clear();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-
-//        FavoriteItem favoriteItem = new FavoriteItem();
-//        favoriteItem.setId("adsa");
-//        favoriteItem.setTextcontent("asdsasdasdadsdsadasd");
-//        favoriteItem.setTitle("title");
-//        favoriteItem.setMdFile("mdfilelocation");
-
-//set variables of 'myObject', etc.
-
-//        SharedPreferences.Editor prefsEditor = prefs.edit();
-//        Gson gson = new Gson();
-//        String json = gson.toJson(favoriteItem);
-//        prefsEditor.putString(favoriteItem.getId(), json);
-//        prefsEditor.commit();
-
-        // to retrieve
-//        Gson gson = new Gson();
-//        String json = mPrefs.getString("MyObject", "");
-//        MyObject obj = gson.fromJson(json, MyObject.class);
 
         Map<String, ?> keys = prefs.getAll();
 
         for (Map.Entry<String, ?> entry : keys.entrySet()) {
-            Log.d("map values", entry.getKey() + ": " +
-                    entry.getValue().toString());
+            Gson gson = new Gson();
+            String json = entry.getValue().toString();
+            FavoriteItem favoriteItem = gson.fromJson(json, FavoriteItem.class);
+            favorites.add(favoriteItem);
         }
+    }
+
+    private void initIssues() {
+        issuesList.clear();
+        Issue issueCSR = new Issue();
+        issueCSR.setShortDescription("Corporate social responsibility (CSR) is a business model that helps a company be socially accountable to itself, its stakeholders, and the public.");
+        issueCSR.setImage("@drawable/csr");
+        issueCSR.setEnumname(datanames.CSR.name());
+        issueCSR.setTitle("Corporate Social Responsibility");
+        issueCSR.setMdLocation("file:///android_asset/issues/md/csr.md");
+        issueCSR.setAudioLocation("sample");
+
+        Issue issueADV = new Issue();
+        issueADV.setShortDescription("Deceptive advertising is false advertising, and it is illegal according to the Federal Trade" +
+                "Commission. It is also unethical.");
+        issueADV.setImage("@drawable/falseadvertising");
+        issueADV.setEnumname(datanames.ADV.name());
+        issueADV.setTitle("Deceptive Advertising");
+        issueADV.setMdLocation("file:///android_asset/issues/md/advertising.md");
+        issueADV.setAudioLocation("sample");
+
+        Issue issueAFF = new Issue();
+        issueAFF.setShortDescription("Affirmative action refers to policies and programs that are designed to actively promote equal" +
+                "opportunity in the workplace or in education for people regardless of their race, gender, national" +
+                "origin, sexual orientation, and other factors.");
+        issueAFF.setImage("@drawable/affirmativeaction");
+        issueAFF.setEnumname(datanames.AFF.name());
+        issueAFF.setTitle("Affirmative Action");
+        issueAFF.setMdLocation("file:///android_asset/issues/md/affirmativeaction.md");
+        issueAFF.setAudioLocation("sample");
+
+        Issue issueCORP = new Issue();
+        issueCORP.setShortDescription("Corporate governance is the system by which companies are directed and controlled. Boards of directors are responsible for the governance of their companies. The shareholders' role in governance is to appoint the directors and the auditors and to satisfy themselves that an appropriate governance structure is in place.");
+        issueCORP.setImage("@drawable/corporategovernance");
+        issueCORP.setEnumname(datanames.CORP.name());
+        issueCORP.setTitle("Corporate Governance");
+        issueCORP.setMdLocation("file:///android_asset/issues/md/governance.md");
+        issueCORP.setAudioLocation("sample");
+
+        Issue issueDISC = new Issue();
+        issueDISC.setShortDescription("Discrimination in the workplace is based on certain prejudices and occurs when an employee is" +
+                "treated unfavourably because of gender, sexuality, race, religion, pregnancy and maternity or" +
+                "disability.");
+        issueDISC.setImage("@drawable/discrimination");
+        issueDISC.setEnumname(datanames.DISC.name());
+        issueDISC.setTitle("Discrimination");
+        issueDISC.setMdLocation("file:///android_asset/issues/md/discrimination.md");
+        issueDISC.setAudioLocation("sample");
+
+        Issue issueEMP = new Issue();
+        issueEMP.setShortDescription("Freedom to discuss the terms and conditions of the employment with other employees and negotiating wages to suit lifestyle as per changing times. Right to ask for safe working conditions and reservation to answering questions on age, religion, nationality, and medical condition.");
+        issueEMP.setImage("@drawable/employment");
+        issueEMP.setEnumname(datanames.EMP.name());
+        issueEMP.setTitle("Employment");
+        issueEMP.setMdLocation("file:///android_asset/issues/md/employment.md");
+        issueEMP.setAudioLocation("sample");
+
+        Issue issuePROD = new Issue();
+        issuePROD.setShortDescription("A safe product is one that provides either no risk or a minimum acceptable level of risk, taking" +
+                "into account the normal or reasonably foreseeable use of the product and the need to maintain a high" +
+                "level of protection for consumers.");
+        issuePROD.setImage("@drawable/productsafety");
+        issuePROD.setEnumname(datanames.PROD.name());
+        issuePROD.setTitle("Product Safety");
+        issuePROD.setMdLocation("file:///android_asset/issues/md/safety.md");
+        issuePROD.setAudioLocation("sample");
+
+        Issue issueSEX = new Issue();
+        issueSEX.setShortDescription("Harassment For the purposes of this Policy, harassment is conduct, considered by the employer to be" +
+                "unacceptable in the workplace, in which an employee exhibits offensive behaviour to another" +
+                "employee, or group of employees, and where that individual knew, or ought reasonably to have known," +
+                "the behaviour would cause offence or harm.");
+        issueSEX.setImage("@drawable/sexualharassment");
+        issueSEX.setEnumname(datanames.SEX.name());
+        issueSEX.setTitle("Sexual Harassment");
+        issueSEX.setMdLocation("file:///android_asset/issues/md/harassment.md");
+        issueSEX.setAudioLocation("sample");
+
+        Issue issueWHISTLE = new Issue();
+        issueWHISTLE.setShortDescription("Whistleblowing is the voluntary release of nonpublic information, as a moral protest, by a member or" +
+                "former member of an organization outside the normal channels of communication to an appropriate" +
+                "audience about illegal and/or immoral conduct in the organization or conduct in the organization" +
+                "that is opposed in some significant way to the public interest.");
+        issueWHISTLE.setImage("@drawable/whistleblowing");
+        issueWHISTLE.setEnumname(datanames.WHISTLE.name());
+        issueWHISTLE.setTitle("Whistleblowing");
+        issueWHISTLE.setMdLocation("file:///android_asset/issues/md/whistleblowing.md");
+        issueWHISTLE.setAudioLocation("sample");
+
+        issuesList.add(issueCSR);
+        issuesList.add(issueADV);
+        issuesList.add(issueAFF);
+        issuesList.add(issueCORP);
+        issuesList.add(issueDISC);
+        issuesList.add(issueEMP);
+        issuesList.add(issuePROD);
+        issuesList.add(issueSEX);
+        issuesList.add(issueWHISTLE);
     }
 
     private void initializeQuestionsSets() {
@@ -201,19 +287,19 @@ public class State {
         theoryUtilitarianism.setTitle("Utilitarianism");
         theoryUtilitarianism.setShortDescription("Utilitarianism is a theory of morality, which advocates actions that foster happiness and oppose actions that cause unhappiness. Utilitarianism promotes \"the greatest amount of good for the greatest number of people.\"");
         theoryUtilitarianism.setImage("@drawable/john");
-        theoryUtilitarianism.setFullContent("util.md");
+        theoryUtilitarianism.setFullContent("theories/md/util.md");
 
         Theory theoryKantianism = new Theory();
         theoryKantianism.setTitle("Kantianism");
         theoryKantianism.setShortDescription("Kantianism comprises diverse philosophies that share Kant's concern to explore the nature and limits of human knowledge in the hope of raising philosophy to the level of a science. Each submovement of Kantianism has tended to focus on its own selection and reading of Kant's many concerns.");
         theoryKantianism.setImage("@drawable/kant");
-        theoryKantianism.setFullContent("kantianism.md");
+        theoryKantianism.setFullContent("theories/md/kantianism.md");
 
         Theory theoryVirtueEthics = new Theory();
         theoryVirtueEthics.setTitle("Virtue Ethics");
         theoryVirtueEthics.setShortDescription("Virtue ethics mainly deals with the honesty and morality of a person. It states that practicing good habits such as honesty, generosity makes a moral and virtuous person. It guides a person without specific rules for resolving the ethical complexity.");
         theoryVirtueEthics.setImage("@drawable/aristotle");
-        theoryVirtueEthics.setFullContent("virtueethics.md");
+        theoryVirtueEthics.setFullContent("theories/md/virtueethics.md");
 
         theoriesList.add(theoryUtilitarianism);
         theoriesList.add(theoryKantianism);
@@ -248,7 +334,6 @@ public class State {
         extras.add(new ExtraItem("https://www.ted.com/talks/john_biewen_the_lie_that_invented_racism", "The lie that invented racism", "To understand and eradicate racist thinking, start at the beginning. That's what journalist and documentarian John Biewen did, leading to a trove of surprising and thought-provoking information on the \"origins\" of race. He shares his findings, supplying answers to fundamental questions about racism -- and lays out an exemplary path for practicing effective allyship."));
         extras.add(new ExtraItem("https://www.ted.com/talks/michelle_tlaseca_verde_why_we_need_affirmative_action", "Why We Need Affirmative Action", "Affirmative action in higher education continues to be a hotly contested policy. In her talk, Michelle details the myriad ways in which American society has systematically worked to help white Americans and oppress African Americans. Michelle goes on to argue that knowing this history will help all Americans see the necessity of affirmative action policies."));
         extras.add(new ExtraItem("https://www.ted.com/talks/baratunde_thurston_how_to_deconstruct_racism_one_headline_at_a_time", "How to deconstruct racism, one headline at a time", "Baratunde Thurston explores the phenomenon of white Americans calling the police on Black Americans who have committed the crimes of ... eating, walking or generally \"living while Black.\" In this profound, thought-provoking and often hilarious talk, he reveals the power of language to change stories of trauma into stories of healing -- while challenging us all to level up."));
-
         extras.add(new ExtraItem("https://www.youtube.com/watch?v=VO6XEQIsCoM&ab_channel=TED", "The paradox of choice | Barry Schwartz", "Psychologist Barry Schwartz takes aim at a central tenet of western societies: freedom of choice. In Schwartz's estimation, choice has made us not freer but more paralyzed, not happier but more dissatisfied."));
         extras.add(new ExtraItem("http://www.youtube.com/watch?v=lA-zdh_bQBo", "Barry Schwartz: Our loss of wisdom", "Barry Schwartz makes a passionate call for practical wisdom as an antidote to a society gone mad with bureaucracy. He argues powerfully that rules often fail us, incentives often backfire, and practical, everyday wisdom will help rebuild our world."));
         extras.add(new ExtraItem("http://www.youtube.com/watch?v=IDS-ieLCmS4", "Barry Schwartz: Using our practical wisdom", "In an intimate talk, Barry Schwartz dives into the question \"How do we do the right thing?\" With help from collaborator Kenneth Sharpe, he shares stories that illustrate the difference between following the rules and truly choosing wisely."));
@@ -256,6 +341,14 @@ public class State {
         extras.add(new ExtraItem("http://www.youtube.com/watch?v=Gv1fpvAqMh8", "Banned Commercials You Won't Be Seeing Anytime Soon", "Some of these ads got banned for being too risque for network TV, while others were too violent, sacrilegious, or—in the case of a truly bizarre Axe commercial—simultaneously risque and sacrilegious"));
         extras.add(new ExtraItem("http://www.youtube.com/watch?v=Y888wVY5hzw", "The Corporation", "THE CORPORATION is a Canadian documentary film written by Joel Bakan, and directed by Mark Achbar and Jennifer Abbott. The documentary examines the modern-day corporation, considering its legal status as a class of person and evaluating its behavior towards society and the world at large as a psychiatrist might evaluate an ordinary person. This is explored through specific examples. Bakan wrote the book, The Corporation: The Pathological Pursuit of Profit and Power, during the filming of the documentary."));
         extras.add(new ExtraItem("https://vimeo.com/218553565", "Ethical Consumption", "Interviewees Christian Barry and Kate McDonald unwind supply chains and consider ethical consumption in a complex world."));
+        extras.add(new ExtraItem("https://www.businessethicsresourcecenter.org/", "businessethicsresourcecenter.org", "BERC, also known as the Business Ethics Resource Center, is an open-access website that makes business ethics resources available freely to the public with the intent to educate business leaders and assist them in building and maintaining strong organizational cultures and practices of ethics and compliance in the businesses and industries they serve."));
+        extras.add(new ExtraItem("https://www.youtube.com/channel/UCdIkWI_BqoiPn_OeWTVBtuw/videos", "Business Ethics (YouTube Channel)", "A Great online resource for Business Ethics."));
+        extras.add(new ExtraItem("https://www.goodreads.com/book/show/27606298-thinking-about-ethics?from_search=true&from_srp=true&qid=gJqkzphenc&rank=2", "Thinking about Ethics", "This book is a primer for college and university students of ethics, a reader for professionals negotiating moral issues and lifelong learners. It covers the most prominent ethical theories in a practical and accessible manner. Introductory chapters to Utilitarianism, Kantianism, Ethical Egoism and Virtue Ethics are followed by chapters developing arguments in favour and against."));
+        extras.add(new ExtraItem("https://www.goodreads.com/book/show/81912.Human_Action", "Human Action: A Treatise on Economics", "Human Action: A Treatise on Economics is a work by the Austrian economist and philosopher Ludwig von Mises. Widely considered Mises' magnum opus, it presents the case for laissez-faire capitalism based on praxeology, or rational investigation of human decision-making"));
+        extras.add(new ExtraItem("https://www.youtube.com/watch?v=biEWv9O_Sk4&ab_channel=BusinessLawProf", "Business Ethics (\"The Friedman Doctrine\")", "Do business firms have any ethical or moral duties? If so, what is the scope of these moral duties? In this video the Professor will introduce and defend the so-called \"Friedman Doctrine\": the idea that the social responsibility of business is to maximize its profits."));
+        extras.add(new ExtraItem("https://www.youtube.com/watch?v=pHrDUu4Rjtg&ab_channel=TheBusinessMindset", "The Importance of Business Ethics", "Every year we seem to hear about a company involved in some sort of ethical scandal affecting workers, customers, society as a whole, or the environment." +
+                "" +
+                "This video covers examples of ethical dilemmas, companies involved in controversial business ethics, as well as the benefits of operating a company with high ethical standards."));
         Collections.sort(extras, (s1, s2) -> s1.getTitle().compareToIgnoreCase(s2.getTitle()));
     }
 }

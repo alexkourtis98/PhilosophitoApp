@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="kourtis.quadrum.philosophito.ui.main.home.issues.MoralIssuesFragment">
+
+    <ListView
+        android:id="@+id/allIssues"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:divider="@android:color/transparent"
+        android:gravity="center"
+        android:textAlignment="center" />
+</LinearLayout>

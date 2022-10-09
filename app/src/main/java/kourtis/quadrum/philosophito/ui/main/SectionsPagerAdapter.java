@@ -10,11 +10,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import kourtis.quadrum.philosophito.R;
+import kourtis.quadrum.philosophito.ui.main.home.dictionary.DictionaryFragment;
+import kourtis.quadrum.philosophito.ui.main.home.extras.ExtraContentFragment;
+import kourtis.quadrum.philosophito.ui.main.home.issues.MoralIssuesFragment;
+import kourtis.quadrum.philosophito.ui.main.home.theories.MoralTheoriesFragment;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_Moral_Theories, R.string.tab_text_CSR, R.string.tab_text_Whistle_Blowing, R.string.tab_text_Discrimination, R.string.tab_text_Affirmative_Action, R.string.tab_text_Sexual_Harassment, R.string.tab_text_Advertising, R.string.tab_text_Product_Safety, R.string.tab_text_Employment, R.string.tab_text_Corporate_Governance, R.string.tab_text_Dictionary, R.string.tab_text_Helpful};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_Moral_Theories, R.string.tab_text_Moral_Issues, R.string.tab_text_Dictionary, R.string.tab_text_Helpful};
+    // R.string.tab_text_CSR, R.string.tab_text_Whistle_Blowing, R.string.tab_text_Discrimination, R.string.tab_text_Affirmative_Action, R.string.tab_text_Sexual_Harassment, R.string.tab_text_Advertising, R.string.tab_text_Product_Safety, R.string.tab_text_Employment, R.string.tab_text_Corporate_Governance,
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -29,26 +34,28 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new MoralTheoriesFragment();
             case 1:
-                return new CsrFragment();
+                return new MoralIssuesFragment();
+//            case 1:
+//                return new CsrFragment();
+//            case 2:
+//                return new WhistleBlowingFragment();
+//            case 3:
+//                return new DiscriminationFragment();
+//            case 4:
+//                return new AffirmativeActionFragment();
+//            case 5:
+//                return new SexualHarassmentFragment();
+//            case 6:
+//                return new AdvertisingFragment();
+//            case 7:
+//                return new ProductSafetyFragment();
+//            case 8:
+//                return new EmploymentFragment();
+//            case 9:
+//                return new CorporateGovernanceFragment();
             case 2:
-                return new WhistleBlowingFragment();
-            case 3:
-                return new DiscriminationFragment();
-            case 4:
-                return new AffirmativeActionFragment();
-            case 5:
-                return new SexualHarassmentFragment();
-            case 6:
-                return new AdvertisingFragment();
-            case 7:
-                return new ProductSafetyFragment();
-            case 8:
-                return new EmploymentFragment();
-            case 9:
-                return new CorporateGovernanceFragment();
-            case 10:
                 return new DictionaryFragment();
-            case 11:
+            case 3:
                 return new ExtraContentFragment();
             default:
                 return new Fragment();
@@ -63,6 +70,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 12;
+        return 4;
     }
 }

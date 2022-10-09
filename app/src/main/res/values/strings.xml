@@ -44,4 +44,15 @@
     <string name="about_the_app">About the app</string>
     <string name="wikipedia_link">Many of the texts used in this app is straight off of <a href="https://www.wikipedia.org/">wikipedia.org</a> and <a href="https://www.encyclopedia.com/">encyclopedia.com</a>. The Moral Issues texts are MY OWN paraphrased summaries from the book called "'Ethics and the Conduct of Business' (2017)" by John R. Boatright. By the way, summarizing something IS NOT copyright infringement (at least based on US Copyright Law), so yea. I did not create the universe and all existence before me, I merely was put here and I do observe, absorb, and then, summarize in my own words MY OWN experience and knowledge. For any copyright-related matters do not hesitate to contact me.</string>
     <string name="sources_used">Sources used</string>
+    <string name="about_link_facebook">https://www.facebook.com/Philosophito-103166662422236</string>
+    <string name="about_link_linkedin">https://www.linkedin.com/groups/9233252/</string>
+    <string name="about_link_twitter">https://twitter.com/Philosophito</string>
+    <string name="about_link_instagram">https://www.instagram.com/philosophitoapp/</string>
+    <string name="about_link_youtube">https://www.youtube.com/channel/UCEXXpqKRW15LlMGDCQOvfGA</string>
+    <string name="about_link_soundcloud">https://soundcloud.com/akourtis-dev/adasadadsd</string>
+    <string name="about_me_link_facebook">https://www.facebook.com/alexandros.kourtis.581</string>
+    <string name="about_me_link_linkedin">https://www.linkedin.com/in/alexandros-kourtis-3946831aa/</string>
+    <string name="about_me_link_youtube">https://www.youtube.com/channel/UC6ZnvrNVDdy8uRWlBursp-A</string>
+    <string name="about_me_link_twitter">https://twitter.com/dreadpirate98</string>
+    <string name="about_me_link_instagram">https://www.instagram.com/alexandros.malt98/?hl=en</string>
 </resources>

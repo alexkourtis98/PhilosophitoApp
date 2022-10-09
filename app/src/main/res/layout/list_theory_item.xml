@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/item"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:background="@color/black"
         android:gravity="bottom"
         android:orientation="vertical"
@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/layoutimg"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside" />
 
@@ -39,7 +39,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="7sp"
-                android:text="adasdasdasddasdasdasdas"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big" />
@@ -49,7 +48,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5sp"
-                android:text="asdadasdasdasdasdasdasdadadasd dasd asdasdasasdas dasdasdadasd asdas dasdasdasdasdas d "
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textSize="@dimen/mid" />

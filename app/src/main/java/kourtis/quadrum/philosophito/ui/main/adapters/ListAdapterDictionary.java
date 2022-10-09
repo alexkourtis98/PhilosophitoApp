@@ -16,8 +16,8 @@ import androidx.fragment.app.FragmentActivity;
 import java.util.ArrayList;
 
 import kourtis.quadrum.philosophito.R;
-import kourtis.quadrum.philosophito.ui.main.DictionaryItemFragment;
 import kourtis.quadrum.philosophito.ui.main.data.DictionaryItem;
+import kourtis.quadrum.philosophito.ui.main.home.dictionary.DictionaryItemFragment;
 
 public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
 
@@ -41,7 +41,6 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
         TextView textViewTerm = convertView.findViewById(R.id.termtitle);
         textViewTerm.setText(getItem(position).getTitle());
 //
-        View finalConvertView = convertView;
         convertView.setOnClickListener(click -> {
             Bundle bundle = new Bundle();
             bundle.putString("title", getItem(position).getTitle());
@@ -52,7 +51,7 @@ public class ListAdapterDictionary extends ArrayAdapter<DictionaryItem> {
             dictionaryItemFragment.setArguments(bundle);
 
             parent.getRootView().findViewById(R.id.mywrapperlayout).setVisibility(View.GONE);
-            
+
             ((FragmentActivity) this.context).getSupportFragmentManager().beginTransaction().replace(R.id.wrapperframe, dictionaryItemFragment).addToBackStack(null).commit();
         });
 
