@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -44,14 +44,6 @@ public class ListAdapterIssue extends ArrayAdapter<Issue> {
     private void setUpUI(int position) {
         setTexts(position);
         onClickOpenMoralIssue(position);
-        setImage(position);
-    }
-
-    private void setImage(int position) {
-        ImageView layoutimg = view.findViewById(R.id.layoutimg);
-        int id = view.getResources().getIdentifier(getItem(position).getImage(), "id", getContext().getPackageName());
-        layoutimg.setImageResource(id);
-        layoutimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
     }
 
     private void setTexts(int position) {
@@ -60,14 +52,15 @@ public class ListAdapterIssue extends ArrayAdapter<Issue> {
     }
 
     private void onClickOpenMoralIssue(int position) {
-        View myview = this.view;
-        this.view.findViewById(R.id.item).setOnClickListener(click -> {
-            Intent intent = new Intent(myview.getContext(), MoralIssueItemActivitiy.class);
+        Button button = this.view.findViewById(R.id.readmorebtn);
+        button.setOnClickListener(click -> {
+            Intent intent = new Intent(getContext(), MoralIssueItemActivitiy.class);
             intent.putExtra("title", getItem(position).getTitle());
             intent.putExtra("audiolocation", getItem(position).getAudioLocation());
             intent.putExtra("mdlocation", getItem(position).getMdLocation());
-            intent.putExtra("enumname", getItem(position).getEnumname());
-            myview.getContext().startActivity(intent);
+            intent.putExtra("enumtype", getItem(position).getEnumtype());
+            getContext().startActivity(intent);
         });
+
     }
 }

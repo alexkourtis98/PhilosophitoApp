@@ -14,6 +14,7 @@ public class State {
 
     public static final ArrayList<Theory> theoriesList = new ArrayList<>();
     public static final ArrayList<Issue> issuesList = new ArrayList<>();
+    public static final ArrayList<BankQuestion> questionBankList = new ArrayList<>();
     public static final ArrayList<DictionaryItem> dictionary = new ArrayList<>();
     public static final ArrayList<ExtraItem> extras = new ArrayList<>();
     public static final ArrayList<QuizQuestion> questionsSet1 = new ArrayList<>();
@@ -40,6 +41,7 @@ public class State {
         initExtra();
         initializeQuestionsSets();
         initIssues();
+        initQuestionBankList();
     }
 
     public static ArrayList<QuizQuestion> getQuestionsSetByNum(int num) {
@@ -96,7 +98,7 @@ public class State {
         Issue issueCSR = new Issue();
         issueCSR.setShortDescription("Corporate social responsibility (CSR) is a business model that helps a company be socially accountable to itself, its stakeholders, and the public.");
         issueCSR.setImage("@drawable/csr");
-        issueCSR.setEnumname(datanames.CSR.name());
+        issueCSR.setEnumtype("moralissue" + datanames.CSR.name());
         issueCSR.setTitle("Corporate Social Responsibility");
         issueCSR.setMdLocation("file:///android_asset/issues/md/csr.md");
         issueCSR.setAudioLocation("sample");
@@ -105,7 +107,7 @@ public class State {
         issueADV.setShortDescription("Deceptive advertising is false advertising, and it is illegal according to the Federal Trade" +
                 "Commission. It is also unethical.");
         issueADV.setImage("@drawable/falseadvertising");
-        issueADV.setEnumname(datanames.ADV.name());
+        issueADV.setEnumtype("moralissue" + datanames.ADV.name());
         issueADV.setTitle("Deceptive Advertising");
         issueADV.setMdLocation("file:///android_asset/issues/md/advertising.md");
         issueADV.setAudioLocation("sample");
@@ -115,7 +117,7 @@ public class State {
                 "opportunity in the workplace or in education for people regardless of their race, gender, national" +
                 "origin, sexual orientation, and other factors.");
         issueAFF.setImage("@drawable/affirmativeaction");
-        issueAFF.setEnumname(datanames.AFF.name());
+        issueAFF.setEnumtype("moralissue" + datanames.AFF.name());
         issueAFF.setTitle("Affirmative Action");
         issueAFF.setMdLocation("file:///android_asset/issues/md/affirmativeaction.md");
         issueAFF.setAudioLocation("sample");
@@ -123,7 +125,7 @@ public class State {
         Issue issueCORP = new Issue();
         issueCORP.setShortDescription("Corporate governance is the system by which companies are directed and controlled. Boards of directors are responsible for the governance of their companies. The shareholders' role in governance is to appoint the directors and the auditors and to satisfy themselves that an appropriate governance structure is in place.");
         issueCORP.setImage("@drawable/corporategovernance");
-        issueCORP.setEnumname(datanames.CORP.name());
+        issueCORP.setEnumtype("moralissue" + datanames.CORP.name());
         issueCORP.setTitle("Corporate Governance");
         issueCORP.setMdLocation("file:///android_asset/issues/md/governance.md");
         issueCORP.setAudioLocation("sample");
@@ -133,7 +135,7 @@ public class State {
                 "treated unfavourably because of gender, sexuality, race, religion, pregnancy and maternity or" +
                 "disability.");
         issueDISC.setImage("@drawable/discrimination");
-        issueDISC.setEnumname(datanames.DISC.name());
+        issueDISC.setEnumtype("moralissue" + datanames.DISC.name());
         issueDISC.setTitle("Discrimination");
         issueDISC.setMdLocation("file:///android_asset/issues/md/discrimination.md");
         issueDISC.setAudioLocation("sample");
@@ -141,7 +143,7 @@ public class State {
         Issue issueEMP = new Issue();
         issueEMP.setShortDescription("Freedom to discuss the terms and conditions of the employment with other employees and negotiating wages to suit lifestyle as per changing times. Right to ask for safe working conditions and reservation to answering questions on age, religion, nationality, and medical condition.");
         issueEMP.setImage("@drawable/employment");
-        issueEMP.setEnumname(datanames.EMP.name());
+        issueEMP.setEnumtype("moralissue" + datanames.EMP.name());
         issueEMP.setTitle("Employment");
         issueEMP.setMdLocation("file:///android_asset/issues/md/employment.md");
         issueEMP.setAudioLocation("sample");
@@ -151,7 +153,7 @@ public class State {
                 "into account the normal or reasonably foreseeable use of the product and the need to maintain a high" +
                 "level of protection for consumers.");
         issuePROD.setImage("@drawable/productsafety");
-        issuePROD.setEnumname(datanames.PROD.name());
+        issuePROD.setEnumtype("moralissue" + datanames.PROD.name());
         issuePROD.setTitle("Product Safety");
         issuePROD.setMdLocation("file:///android_asset/issues/md/safety.md");
         issuePROD.setAudioLocation("sample");
@@ -162,7 +164,7 @@ public class State {
                 "employee, or group of employees, and where that individual knew, or ought reasonably to have known," +
                 "the behaviour would cause offence or harm.");
         issueSEX.setImage("@drawable/sexualharassment");
-        issueSEX.setEnumname(datanames.SEX.name());
+        issueSEX.setEnumtype("moralissue" + datanames.SEX.name());
         issueSEX.setTitle("Sexual Harassment");
         issueSEX.setMdLocation("file:///android_asset/issues/md/harassment.md");
         issueSEX.setAudioLocation("sample");
@@ -173,7 +175,7 @@ public class State {
                 "audience about illegal and/or immoral conduct in the organization or conduct in the organization" +
                 "that is opposed in some significant way to the public interest.");
         issueWHISTLE.setImage("@drawable/whistleblowing");
-        issueWHISTLE.setEnumname(datanames.WHISTLE.name());
+        issueWHISTLE.setEnumtype("moralissue" + datanames.WHISTLE.name());
         issueWHISTLE.setTitle("Whistleblowing");
         issueWHISTLE.setMdLocation("file:///android_asset/issues/md/whistleblowing.md");
         issueWHISTLE.setAudioLocation("sample");
@@ -292,23 +294,38 @@ public class State {
         theoryUtilitarianism.setTitle("Utilitarianism");
         theoryUtilitarianism.setShortDescription("Utilitarianism is a theory of morality, which advocates actions that foster happiness and oppose actions that cause unhappiness. Utilitarianism promotes \"the greatest amount of good for the greatest number of people.\"");
         theoryUtilitarianism.setImage("@drawable/john");
-        theoryUtilitarianism.setFullContent("theories/md/util.md");
+        theoryUtilitarianism.setMdLocation("file:///android_asset/theories/md/util.md");
+        theoryUtilitarianism.setEnumtype("moraltheory" + datanames.UTIL);
+        theoryUtilitarianism.setAudioLocation("sample");
 
         Theory theoryKantianism = new Theory();
         theoryKantianism.setTitle("Kantianism");
         theoryKantianism.setShortDescription("Kantianism comprises diverse philosophies that share Kant's concern to explore the nature and limits of human knowledge in the hope of raising philosophy to the level of a science. Each submovement of Kantianism has tended to focus on its own selection and reading of Kant's many concerns.");
         theoryKantianism.setImage("@drawable/kant");
-        theoryKantianism.setFullContent("theories/md/kantianism.md");
+        theoryKantianism.setMdLocation("file:///android_asset/theories/md/kantianism.md");
+        theoryKantianism.setEnumtype("moraltheory" + datanames.KANT);
+        theoryKantianism.setAudioLocation("sample");
 
         Theory theoryVirtueEthics = new Theory();
         theoryVirtueEthics.setTitle("Virtue Ethics");
         theoryVirtueEthics.setShortDescription("Virtue ethics mainly deals with the honesty and morality of a person. It states that practicing good habits such as honesty, generosity makes a moral and virtuous person. It guides a person without specific rules for resolving the ethical complexity.");
         theoryVirtueEthics.setImage("@drawable/aristotle");
-        theoryVirtueEthics.setFullContent("theories/md/virtueethics.md");
+        theoryVirtueEthics.setMdLocation("file:///android_asset/theories/md/virtueethics.md");
+        theoryVirtueEthics.setEnumtype("moraltheory" + datanames.VIRTUE);
+        theoryVirtueEthics.setAudioLocation("sample");
 
         theoriesList.add(theoryUtilitarianism);
         theoriesList.add(theoryKantianism);
         theoriesList.add(theoryVirtueEthics);
+    }
+
+    private void initQuestionBankList() {
+        questionBankList.clear();
+        questionBankList.add(new BankQuestion("Mock Test 1", "adsaadsa", datanames.QUESTIONBANK.name()));
+        questionBankList.add(new BankQuestion("Mock Test 2", "aasddsaddsa", datanames.QUESTIONBANK.name()));
+        questionBankList.add(new BankQuestion("Mock Test 3", "asdadsasdadadadadsa", datanames.QUESTIONBANK.name()));
+        questionBankList.add(new BankQuestion("Mock Test 4", "aadadsadadsa", datanames.QUESTIONBANK.name()));
+        questionBankList.add(new BankQuestion("Mock Test 5", "a23123wwwwwdsa", datanames.QUESTIONBANK.name()));
     }
 
     private void initDictionary() {

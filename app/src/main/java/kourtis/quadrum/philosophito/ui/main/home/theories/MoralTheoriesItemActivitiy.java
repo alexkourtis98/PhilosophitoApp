@@ -10,7 +10,6 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,11 +23,13 @@ import org.billthefarmer.markdown.MarkdownView;
 import kourtis.quadrum.philosophito.MainActivity;
 import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.ui.main.data.FavoriteItem;
-import kourtis.quadrum.philosophito.ui.main.data.datanames;
+import kourtis.quadrum.philosophito.ui.main.data.Theory;
 import kourtis.quadrum.philosophito.ui.main.general.AboutActivitiy;
 
 public class MoralTheoriesItemActivitiy extends AppCompatActivity {
     static MediaPlayer mMediaPlayer;
+    private final String mdfile = "";
+    private final Theory theory = new Theory();
     ImageView play;
     SeekBar mSeekBarTime;
     @SuppressLint({"Handler Leak", "HandlerLeak"})
@@ -38,40 +39,23 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
             mSeekBarTime.setProgress(msg.what);
         }
     };
-    private String title = "";
-    private String enumtitle = "";
+
+    private FavoriteItem buildFavoriteItem() {
+        FavoriteItem favoriteItem = new FavoriteItem();
+        favoriteItem.setMdFile(this.theory.getMdLocation());
+        favoriteItem.setTitle(this.theory.getTitle());
+        favoriteItem.setEnumtype(this.theory.getEnumtype());
+        favoriteItem.setAudiofile(this.theory.getAudioLocation());
+        return favoriteItem;
+    }
 
     private void saveItem() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        datanames enumtype;
-        String mdfile = "";
-        if (this.title.equals("Utilitarianism")) {
-            enumtype = datanames.UTIL;
-            this.enumtitle = datanames.UTIL.toString();
-            mdfile = "file:///android_asset/util.md";
-        } else if (this.title.equals("Kantianism")) {
-            enumtype = datanames.KANT;
-            this.enumtitle = datanames.KANT.toString();
-            mdfile = "file:///android_asset/kantianism.md";
-        } else {
-            enumtype = datanames.VIRTUE;
-            this.enumtitle = datanames.VIRTUE.toString();
-            mdfile = "file:///android_asset/virtueethics.md";
-        }
-
-        FavoriteItem favoriteItem = new FavoriteItem();
-        favoriteItem.setId(enumtitle);
-        favoriteItem.setTextcontent("");
-        favoriteItem.setTitle(this.title);
-        favoriteItem.setMdFile(mdfile);
-        favoriteItem.setEnumtype(enumtype.name());
-        String audiofile = "R.raw.sample";
-        favoriteItem.setAudiofile(audiofile);
-
+        FavoriteItem favoriteItem = buildFavoriteItem();
         SharedPreferences.Editor refsEditor = prefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(favoriteItem);
-        refsEditor.putString(favoriteItem.getTitle(), json);
+        refsEditor.putString(favoriteItem.getEnumtype(), json);
         refsEditor.apply();
     }
 
@@ -83,24 +67,23 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
     private void changeIconToBooked() {
         findViewById(R.id.bookmark).setVisibility(View.GONE);
         findViewById(R.id.bookmarkUnmark).setVisibility(View.VISIBLE);
-        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
-        rlp.removeRule(RelativeLayout.LEFT_OF);
-        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmarkUnmark).getId());
+//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
+//        rlp.removeRule(RelativeLayout.LEFT_OF);
+//        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmarkUnmark).getId());
     }
 
     private void changeIconToUnbooked() {
         findViewById(R.id.bookmark).setVisibility(View.VISIBLE);
         findViewById(R.id.bookmarkUnmark).setVisibility(View.GONE);
-        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
-        rlp.removeRule(RelativeLayout.LEFT_OF);
-        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmark).getId());
+//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
+//        rlp.removeRule(RelativeLayout.LEFT_OF);
+//        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmark).getId());
     }
 
     private void removeItem() {
-        // TODO here what ?
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor refsEditor = prefs.edit();
-        refsEditor.remove(this.title);
+        refsEditor.remove(this.theory.getEnumtype());
         refsEditor.apply();
     }
 
@@ -121,16 +104,8 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
     }
 
     private void checkIfBooked() {
-        if (this.title.equals("Utilitarianism")) {
-            this.enumtitle = datanames.UTIL.toString();
-        } else if (this.title.equals("Kantianism")) {
-            this.enumtitle = datanames.KANT.toString();
-        } else {
-            this.enumtitle = datanames.VIRTUE.toString();
-        }
-
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        if (mPrefs.getAll().containsKey(this.title)) {
+        if (mPrefs.getAll().containsKey(this.theory.getEnumtype())) {
             bookMark();
         } else {
             bookUnmark();
@@ -142,19 +117,35 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
         checkIfBooked();
     }
 
+    private void setTheory() {
+        this.theory.setTitle(getIntent().getStringExtra("title"));
+        this.theory.setMdLocation(getIntent().getStringExtra("mdLocation"));
+        this.theory.setAudioLocation(getIntent().getStringExtra("audioLocation"));
+        this.theory.setEnumtype(getIntent().getStringExtra("enumtype"));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_moral_theories_item);
+        setTheory();
+        setUpUI();
+        setBtns();
+        setuptitle();
+//        setupaudio();
+    }
 
-        String content = getIntent().getStringExtra("content");
-        this.title = getIntent().getStringExtra("title");
+    private void setuptitle() {
+        ((TextView) findViewById(R.id.moraltitle)).setText(this.theory.getTitle());
+    }
+
+    private void setUpUI() {
         MarkdownView markdownView = findViewById(R.id.content);
-        markdownView.loadMarkdownFile("file:///android_asset/", "file:///android_asset/" + content, "file:///android_asset/style.css");
+        markdownView.loadMarkdownFile("file:///android_asset/", this.theory.getMdLocation(), "file:///android_asset/style.css");
         bookStuff();
+    }
 
-        TextView textView = findViewById(R.id.theorytitle);
-        textView.setText(getIntent().getStringExtra("title"));
+    private void setBtns() {
         findViewById(R.id.infoBtn).setOnClickListener(click -> {
             Intent startIntent = new Intent(getApplicationContext(), AboutActivitiy.class);
             startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -166,73 +157,71 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
             startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplicationContext().startActivity(startIntent);
         });
-        setupaudio();
-
     }
-
-    private void setupaudio() {
-
-        play = findViewById(R.id.play);
-        mSeekBarTime = findViewById(R.id.seekBarTime);
-
-        mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.sample);
-
-        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
-        play.setOnClickListener(v -> {
-            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-                mMediaPlayer.pause();
-                play.setImageResource(R.drawable.play);
-            } else {
-                mMediaPlayer.start();
-                play.setImageResource(R.drawable.pause);
-            }
-
-            songProgressBar();
-        });
-    }
-
-
-    private void songProgressBar() {
-        // seekbar duration
-        mMediaPlayer.setOnPreparedListener(mp -> {
-            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-            mMediaPlayer.start();
-        });
-
-        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (fromUser) {
-                    mMediaPlayer.seekTo(progress);
-                    mSeekBarTime.setProgress(progress);
-                }
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        new Thread(() -> {
-            while (mMediaPlayer != null) {
-                try {
-                    if (mMediaPlayer.isPlaying()) {
-                        Message message = new Message();
-                        message.what = mMediaPlayer.getCurrentPosition();
-                        handler.sendMessage(message);
-                        Thread.sleep(0);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
+//
+//    private void setupaudio() {
+//
+//        play = findViewById(R.id.play);
+//        mSeekBarTime = findViewById(R.id.seekBarTime);
+//
+//        mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.sample);
+//
+//        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
+//        play.setOnClickListener(v -> {
+//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
+//            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
+//                mMediaPlayer.pause();
+//                play.setImageResource(R.drawable.play);
+//            } else {
+//                mMediaPlayer.start();
+//                play.setImageResource(R.drawable.pause);
+//            }
+//
+//            songProgressBar();
+//        });
+//    }
+//
+//
+//    private void songProgressBar() {
+//        // seekbar duration
+//        mMediaPlayer.setOnPreparedListener(mp -> {
+//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
+//            mMediaPlayer.start();
+//        });
+//
+//        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                if (fromUser) {
+//                    mMediaPlayer.seekTo(progress);
+//                    mSeekBarTime.setProgress(progress);
+//                }
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
+//
+//        new Thread(() -> {
+//            while (mMediaPlayer != null) {
+//                try {
+//                    if (mMediaPlayer.isPlaying()) {
+//                        Message message = new Message();
+//                        message.what = mMediaPlayer.getCurrentPosition();
+//                        handler.sendMessage(message);
+//                        Thread.sleep(0);
+//                    }
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
+//    }
 }

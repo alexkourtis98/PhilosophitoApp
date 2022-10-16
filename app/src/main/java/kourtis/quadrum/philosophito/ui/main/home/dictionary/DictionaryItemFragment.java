@@ -31,20 +31,24 @@ public class DictionaryItemFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    private void saveItem() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
 
+    private FavoriteItem buildFavoriteItem() {
         FavoriteItem favoriteItem = new FavoriteItem();
-        favoriteItem.setId(this.title);
         favoriteItem.setTextcontent(this.definition);
         favoriteItem.setTitle(this.title);
+        favoriteItem.setEnumtype(this.title);
         favoriteItem.setMdFile("");
         favoriteItem.setSource(this.source);
+        return favoriteItem;
+    }
 
+    private void saveItem() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        FavoriteItem favoriteItem = buildFavoriteItem();
         SharedPreferences.Editor refsEditor = prefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(favoriteItem);
-        refsEditor.putString(favoriteItem.getTitle(), json);
+        refsEditor.putString(favoriteItem.getEnumtype(), json);
         refsEditor.apply();
     }
 

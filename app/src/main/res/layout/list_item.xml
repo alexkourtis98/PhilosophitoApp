@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/big"
         android:textAlignment="textStart"
-        android:textSize="@dimen/verybig" />
+        android:textSize="@dimen/big" />
 </LinearLayout>

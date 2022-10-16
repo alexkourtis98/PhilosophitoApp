@@ -63,60 +63,6 @@ public class AboutActivitiy extends AppCompatActivity {
             startActivity(intent);
         });
 
-        activityAboutBinding.soundcloudbtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_link_soundcloud);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
-        activityAboutBinding.myfacebookbtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_me_link_facebook);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
-        activityAboutBinding.mylinkedinbtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_me_link_linkedin);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
-        activityAboutBinding.mytwitterbtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_me_link_twitter);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
-        activityAboutBinding.myinstagrambtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_me_link_instagram);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
-        activityAboutBinding.myyoutubebtn.setOnClickListener(v -> {
-            String link = getResources().getString(R.string.about_me_link_youtube);
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
-            intent.setData(Uri.parse(link));
-            startActivity(intent);
-        });
-
         activityAboutBinding.logoimg.setOnClickListener(click -> {
             Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
             startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

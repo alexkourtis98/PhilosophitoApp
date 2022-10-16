@@ -26,10 +26,6 @@ public class SettingsFragment extends Fragment {
             ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new PrivacyPolicyFragment()).commit();
         });
 
-        this.view.findViewById(R.id.donate).setOnClickListener(item -> {
-            ((AppCompatActivity) container.getContext()).getSupportFragmentManager().beginTransaction().replace(R.id.frame, new DonateFragment()).commit();
-        });
-
         this.view.findViewById(R.id.rateapp).setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);

@@ -9,18 +9,9 @@ public class Issue {
     private String mdLocation;
     private String image;
     private String audioLocation;
-    private String enumname;
+    private String enumtype;
 
     public Issue() {
-    }
-
-    public Issue(String title, String shortDescription, String mdLocation, String image, String audioLocation, String enumname) {
-        this.title = title;
-        this.shortDescription = shortDescription;
-        this.mdLocation = mdLocation;
-        this.image = image;
-        this.audioLocation = audioLocation;
-        this.enumname = enumname;
     }
 
     @Override
@@ -32,16 +23,16 @@ public class Issue {
                 ", mdLocation='" + mdLocation + '\'' +
                 ", image='" + image + '\'' +
                 ", audioLocation='" + audioLocation + '\'' +
-                ", enumname=" + enumname +
+                ", enumtype=" + enumtype +
                 '}';
     }
 
-    public String getEnumname() {
-        return enumname;
+    public String getEnumtype() {
+        return enumtype;
     }
 
-    public void setEnumname(String enumname) {
-        this.enumname = enumname;
+    public void setEnumtype(String enumtype) {
+        this.enumtype = enumtype;
     }
 
     public String getImage() {

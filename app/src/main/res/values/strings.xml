@@ -22,34 +22,35 @@
     <string name="about">About Philosophito</string>
     <string name="view_pager">View pager</string>
     <string name="about_developer_details">Developer details</string>
-    <string name="about_developer_social">Social media of Philosophito</string>
+    <string name="about_developer_social">Follow us</string>
     <string name="about_developer_social_myown">Social media of the Developer</string>
     <string name="about_developer_name">Name: Alexandros Kourtis</string>
     <string name="about_developer_email">Email: <a href="mailto:alexandros.kourtis@acg.edu">alexandros.kourtis@acg.edu</a></string>
     <string name="about_developer_phone">Phone number: <a href="tel:+306989442438">+30 69 8944 2438</a></string>
-    <string name="about_contributors">Contributors/Special Credits</string>
+    <string name="about_contributors">Contributors</string>
     <string name="about_contributors_elias">Elias Emir</string>
+    <string name="about_contributors_dionysios">Dionysios Tzavaras</string>
+    <string name="about_contributors_elina">Elina Gouva</string>
     <string name="dictionary_search_placeholder">Search term…</string>
     <string name="about_update">Update</string>
     <string name="about_searching">Looking for updates</string>
     <string name="about_download">Download and install now</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="about_description">This project was ideated and created by Alexandros Kourtis/Maltezos (IT student at Deree). The purpose of this initiative was to provide a study aid to the students taking the Business Ethics course at college. Feel free to contact the developer at the email below in order to express any comments, improvements, questions, or just to say hi : ) </string>
+    <string name="about_description">This project was ideated and created by Alexandros Kourtis (IT student at Deree). The purpose of this initiative was to provide a study aid to the students taking the Business Ethics course at college. Feel free to contact the developer at the email below in order to express any comments, improvements, questions, or just to say hi : ) </string>
     <string name="moraltheoriestext">A moral theory consists of more or less connected claims arranged to determine what a morally good or right action or stance is, and what it is that makes it either right or good.</string>
-    <string name="readmorebtn">Read more</string>
+    <string name="readmorebtn">READ MORE</string>
     <string name="utilitarianism">Utilitarianism</string>
     <string name="kantianism">Kantianism</string>
     <string name="virtue_ethics">Virtue Ethics</string>
     <string name="about_the_app">About the app</string>
-    <string name="wikipedia_link">Many of the texts used in this app is straight off of <a href="https://www.wikipedia.org/">wikipedia.org</a> and <a href="https://www.encyclopedia.com/">encyclopedia.com</a>. The Moral Issues texts are MY OWN paraphrased summaries from the book called "'Ethics and the Conduct of Business' (2017)" by John R. Boatright. By the way, summarizing something IS NOT copyright infringement (at least based on US Copyright Law), so yea. I did not create the universe and all existence before me, I merely was put here and I do observe, absorb, and then, summarize in my own words MY OWN experience and knowledge. For any copyright-related matters do not hesitate to contact me.</string>
+    <string name="wikipedia_link">Many of the texts used in this app is straight off of <a href="https://www.wikipedia.org/">wikipedia.org</a> and <a href="https://www.encyclopedia.com/">encyclopedia.com</a>. The Moral Issues and Moral Theories texts are paraphrased summaries from the book called "'Ethics and the Conduct of Business' (2017)" by John R. Boatright. For any copyright-related matters do not hesitate to contact me.</string>
     <string name="sources_used">Sources used</string>
     <string name="about_link_facebook">https://www.facebook.com/Philosophito-103166662422236</string>
     <string name="about_link_linkedin">https://www.linkedin.com/groups/9233252/</string>
     <string name="about_link_twitter">https://twitter.com/Philosophito</string>
     <string name="about_link_instagram">https://www.instagram.com/philosophitoapp/</string>
     <string name="about_link_youtube">https://www.youtube.com/channel/UCEXXpqKRW15LlMGDCQOvfGA</string>
-    <string name="about_link_soundcloud">https://soundcloud.com/akourtis-dev/adasadadsd</string>
     <string name="about_me_link_facebook">https://www.facebook.com/alexandros.kourtis.581</string>
     <string name="about_me_link_linkedin">https://www.linkedin.com/in/alexandros-kourtis-3946831aa/</string>
     <string name="about_me_link_youtube">https://www.youtube.com/channel/UC6ZnvrNVDdy8uRWlBursp-A</string>

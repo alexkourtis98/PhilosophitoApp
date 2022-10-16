@@ -48,6 +48,8 @@ public class ListAdapterFavorites extends ArrayAdapter<FavoriteItem> {
         bundle.putString("text", getItem(position).getTextcontent());
         bundle.putString("mdlocation", getItem(position).getMdFile());
         bundle.putString("source", getItem(position).getSource());
+        bundle.putString("enumtype", getItem(position).getEnumtype());
+        bundle.putString("audiolocation", getItem(position).getAudiofile());
         bundle.putString("id", String.valueOf(this.view.getId()));
 
         return bundle;
@@ -74,7 +76,7 @@ public class ListAdapterFavorites extends ArrayAdapter<FavoriteItem> {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         this.view = layoutInflater.inflate(resource, parent, false);
         this.parent = parent;
-        
+
         setIdToThisView();
         setTexts(position);
         setClickListeners(position);

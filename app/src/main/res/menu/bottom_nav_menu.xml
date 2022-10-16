@@ -10,11 +10,6 @@
         android:icon="@drawable/quiz48px"
         android:title="Quiz" />
     <item
-        android:id="@+id/bank"
-        android:icon="@drawable/account_balance48px"
-        android:iconTint="@color/white"
-        android:title="Questions Bank" />
-    <item
         android:id="@+id/favorites"
         android:icon="@drawable/bookmark48px"
         android:iconTint="@color/white"

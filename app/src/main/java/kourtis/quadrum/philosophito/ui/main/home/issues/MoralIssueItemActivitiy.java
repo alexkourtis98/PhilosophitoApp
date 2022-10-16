@@ -10,7 +10,6 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +21,6 @@ import com.google.gson.Gson;
 import org.billthefarmer.markdown.MarkdownView;
 
 import kourtis.quadrum.philosophito.MainActivity;
-import kourtis.quadrum.philosophito.R;
 import kourtis.quadrum.philosophito.databinding.ActivityMoralIssuesItemBinding;
 import kourtis.quadrum.philosophito.ui.main.data.FavoriteItem;
 import kourtis.quadrum.philosophito.ui.main.data.Issue;
@@ -30,6 +28,7 @@ import kourtis.quadrum.philosophito.ui.main.general.AboutActivitiy;
 
 public class MoralIssueItemActivitiy extends AppCompatActivity {
     static MediaPlayer mMediaPlayer;
+    private final Issue moralIssue = new Issue();
     ImageView play;
     SeekBar mSeekBarTime;
     @SuppressLint({"Handler Leak", "HandlerLeak"})
@@ -40,18 +39,19 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
         }
     };
     private ActivityMoralIssuesItemBinding binding;
-    private Issue moralIssue;
+
+    private FavoriteItem buildFavoriteItem() {
+        FavoriteItem favoriteItem = new FavoriteItem();
+        favoriteItem.setTitle(this.moralIssue.getTitle());
+        favoriteItem.setMdFile(this.moralIssue.getMdLocation());
+        favoriteItem.setEnumtype(this.moralIssue.getEnumtype());
+        favoriteItem.setAudiofile(this.moralIssue.getAudioLocation());
+        return favoriteItem;
+    }
 
     private void saveItem() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
-        FavoriteItem favoriteItem = new FavoriteItem();
-        favoriteItem.setId(String.valueOf(this.moralIssue.getEnumname()));
-        favoriteItem.setTitle(this.moralIssue.getTitle());
-        favoriteItem.setMdFile(this.moralIssue.getMdLocation());
-        favoriteItem.setEnumtype(this.moralIssue.getEnumname());
-        favoriteItem.setAudiofile(this.moralIssue.getAudioLocation());
-
+        FavoriteItem favoriteItem = buildFavoriteItem();
         SharedPreferences.Editor refsEditor = prefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(favoriteItem);
@@ -67,23 +67,23 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
     private void changeIconToBooked() {
         binding.bookmark.setVisibility(View.GONE);
         binding.bookmarkUnmark.setVisibility(View.VISIBLE);
-        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) binding.seekBarTime.getLayoutParams();
-        rlp.removeRule(RelativeLayout.LEFT_OF);
-        rlp.addRule(RelativeLayout.LEFT_OF, binding.bookmarkUnmark.getId());
+//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) binding.seekBarTime.getLayoutParams();
+//        rlp.removeRule(RelativeLayout.LEFT_OF);
+//        rlp.addRule(RelativeLayout.LEFT_OF, binding.bookmarkUnmark.getId());
     }
 
     private void changeIconToUnbooked() {
         binding.bookmark.setVisibility(View.VISIBLE);
         binding.bookmarkUnmark.setVisibility(View.GONE);
-        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) binding.seekBarTime.getLayoutParams();
-        rlp.removeRule(RelativeLayout.LEFT_OF);
-        rlp.addRule(RelativeLayout.LEFT_OF, binding.bookmark.getId());
+//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) binding.seekBarTime.getLayoutParams();
+//        rlp.removeRule(RelativeLayout.LEFT_OF);
+//        rlp.addRule(RelativeLayout.LEFT_OF, binding.bookmark.getId());
     }
 
     private void removeItem() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor refsEditor = prefs.edit();
-        refsEditor.remove(this.moralIssue.getEnumname());
+        refsEditor.remove(this.moralIssue.getEnumtype());
         refsEditor.apply();
     }
 
@@ -103,7 +103,7 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
 
     private void checkIfBooked() {
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        if (mPrefs.getAll().containsKey(this.moralIssue.getEnumname())) {
+        if (mPrefs.getAll().containsKey(this.moralIssue.getEnumtype())) {
             bookMark();
         } else {
             bookUnmark();
@@ -119,12 +119,12 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
         String title = getIntent().getStringExtra("title");
         String audiolocation = getIntent().getStringExtra("audiolocation");
         String mdlocation = getIntent().getStringExtra("mdlocation");
-        String enumname = getIntent().getStringExtra("enumname");
-        this.moralIssue = new Issue();
+        String enumtype = getIntent().getStringExtra("enumtype");
+
         this.moralIssue.setTitle(title);
         this.moralIssue.setAudioLocation(audiolocation);
         this.moralIssue.setMdLocation(mdlocation);
-        this.moralIssue.setEnumname(enumname);
+        this.moralIssue.setEnumtype(enumtype);
     }
 
     private void setMD() {
@@ -134,16 +134,15 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
 
     private void setUpUI() {
         setMoralIssue();
-        bookStuff();
         setMD();
-        setupaudio();
         setMenuButtons();
-        setupaudio();
+//        setupaudio();
         setupTitle();
+        bookStuff();
     }
 
     private void setupTitle() {
-        TextView textView = binding.issuetitle;
+        TextView textView = binding.moraltitle;
         textView.setText(this.moralIssue.getTitle());
     }
 
@@ -169,69 +168,69 @@ public class MoralIssueItemActivitiy extends AppCompatActivity {
         });
     }
 
-    private void setupaudio() {
-        play = binding.play;
-        mSeekBarTime = binding.seekBarTime;
-
-        int sound_id = getApplicationContext().getResources().getIdentifier(this.moralIssue.getAudioLocation(), "raw",
-                getApplicationContext().getPackageName());
-
-        mMediaPlayer = MediaPlayer.create(getApplicationContext(), sound_id);
-
-        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
-        play.setOnClickListener(v -> {
-            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-                mMediaPlayer.pause();
-                play.setImageResource(R.drawable.play);
-            } else {
-                mMediaPlayer.start();
-                play.setImageResource(R.drawable.pause);
-            }
-
-            songProgressBar();
-        });
-    }
-
-    private void songProgressBar() {
-        mMediaPlayer.setOnPreparedListener(mp -> {
-            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-            mMediaPlayer.start();
-        });
-
-        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (fromUser) {
-                    mMediaPlayer.seekTo(progress);
-                    mSeekBarTime.setProgress(progress);
-                }
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
-        new Thread(() -> {
-            while (mMediaPlayer != null) {
-                try {
-                    if (mMediaPlayer.isPlaying()) {
-                        Message message = new Message();
-                        message.what = mMediaPlayer.getCurrentPosition();
-                        handler.sendMessage(message);
-                        Thread.sleep(0);
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
+//    private void setupaudio() {
+//        play = binding.play;
+//        mSeekBarTime = binding.seekBarTime;
+//
+//        int sound_id = getApplicationContext().getResources().getIdentifier(this.moralIssue.getAudioLocation(), "raw",
+//                getApplicationContext().getPackageName());
+//
+//        mMediaPlayer = MediaPlayer.create(getApplicationContext(), sound_id);
+//
+//        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
+//        play.setOnClickListener(v -> {
+//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
+//            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
+//                mMediaPlayer.pause();
+//                play.setImageResource(R.drawable.play);
+//            } else {
+//                mMediaPlayer.start();
+//                play.setImageResource(R.drawable.pause);
+//            }
+//
+//            songProgressBar();
+//        });
+//    }
+//
+//    private void songProgressBar() {
+//        mMediaPlayer.setOnPreparedListener(mp -> {
+//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
+//            mMediaPlayer.start();
+//        });
+//
+//        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                if (fromUser) {
+//                    mMediaPlayer.seekTo(progress);
+//                    mSeekBarTime.setProgress(progress);
+//                }
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
+//
+//        new Thread(() -> {
+//            while (mMediaPlayer != null) {
+//                try {
+//                    if (mMediaPlayer.isPlaying()) {
+//                        Message message = new Message();
+//                        message.what = mMediaPlayer.getCurrentPosition();
+//                        handler.sendMessage(message);
+//                        Thread.sleep(0);
+//                    }
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
+//    }
 }

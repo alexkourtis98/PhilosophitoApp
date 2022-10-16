@@ -1,63 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="0dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16sp">
 
     <LinearLayout
-        android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:gravity="bottom"
-        android:orientation="vertical"
-        android:scaleType="fitXY">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/layoutimg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="centerInside" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/theoryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16sp">
+            android:paddingBottom="7sp"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/big" />
 
-            <TextView
-                android:id="@+id/theoryTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="7sp"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big" />
-
-            <TextView
-                android:id="@+id/theoryDesc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5sp"
-                android:textAlignment="textStart"
-                android:textColor="@color/white"
-                android:textSize="@dimen/mid" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/theoryDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5sp"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/mid" />
     </LinearLayout>
 
-    <!--    <Button-->
-    <!--        android:id="@+id/readmorebtn"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/readmorebtn"-->
-    <!--        tools:ignore="TextContrastCheck" />-->
+    <Button
+        android:id="@+id/readmorebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/readmorebtn"
+        tools:ignore="TextContrastCheck" />
 </LinearLayout>

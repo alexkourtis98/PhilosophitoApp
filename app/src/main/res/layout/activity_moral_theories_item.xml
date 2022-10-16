@@ -76,44 +76,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="@dimen/mid">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/theorytitle"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lorabold"
-                    android:text=""
-                    android:textSize="@dimen/big"
-                    android:textStyle="bold" />
+                    android:layout_marginStart="@dimen/verysmall"
+                    android:layout_marginTop="@dimen/verysmall"
+                    android:layout_marginEnd="@dimen/verysmall"
+                    android:orientation="horizontal">
 
-
-                <com.google.android.material.divider.MaterialDivider
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/mid"
-                    android:layout_marginBottom="@dimen/mid" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/play"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_alignParentStart="true"
-                        android:src="@drawable/play" />
-
-                    <SeekBar
-                        android:id="@+id/seekBarTime"
+                    <TextView
+                        android:id="@+id/moraltitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toLeftOf="@id/bookmark"
-                        android:layout_toRightOf="@id/play"
-                        android:foregroundGravity="center" />
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lorabold"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/big" />
 
                     <ImageView
                         android:id="@+id/bookmark"
@@ -129,7 +109,7 @@
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/outline_turned_in_24"
                         android:visibility="gone" />
-                </RelativeLayout>
+                </LinearLayout>
 
                 <org.billthefarmer.markdown.MarkdownView
                     android:id="@+id/content"

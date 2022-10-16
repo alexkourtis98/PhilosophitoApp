@@ -7,8 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,23 +36,18 @@ public class ListAdapterTheory extends ArrayAdapter<Theory> {
         ((TextView) this.view.findViewById(R.id.theoryDesc)).setText(getItem(position).getShortDescription());
     }
 
-    private void setImage(int position) {
-        ImageView layoutimg = this.view.findViewById(R.id.layoutimg);
-        int id = this.view.getResources().getIdentifier(getItem(position).getImage(), "id", getContext().getPackageName());
-        layoutimg.setImageResource(id);
-        layoutimg.setScaleType(ImageView.ScaleType.CENTER_CROP);
-    }
-
     private void goToTheoryActivity(int position) {
         Intent intent = new Intent(this.view.getContext(), MoralTheoriesItemActivitiy.class);
         intent.putExtra("title", getItem(position).getTitle());
-        intent.putExtra("content", getItem(position).getFullContent());
+        intent.putExtra("mdLocation", getItem(position).getMdLocation());
+        intent.putExtra("enumtype", getItem(position).getEnumtype());
+        intent.putExtra("audioLocation", getItem(position).getAudioLocation());
         this.view.getContext().startActivity(intent);
     }
 
     private void setClickListenersToLayout(int position) {
-        LinearLayout item = this.view.findViewById(R.id.item);
-        item.setOnClickListener(click -> {
+        Button button = this.view.findViewById(R.id.readmorebtn);
+        button.setOnClickListener(click -> {
             goToTheoryActivity(position);
         });
     }
@@ -67,7 +61,6 @@ public class ListAdapterTheory extends ArrayAdapter<Theory> {
 
         this.setTexts(position);
         this.setClickListenersToLayout(position);
-        this.setImage(position);
 
         return this.view;
     }

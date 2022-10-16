@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mid"
         android:orientation="horizontal"
         android:weightSum="1">
 
@@ -21,7 +22,7 @@
             android:fontFamily="@font/lorabold"
             android:text="asdasasdas"
             android:textAlignment="textStart"
-            android:textSize="@dimen/verybig" />
+            android:textSize="@dimen/big" />
 
         <TextView
             android:id="@+id/source"
@@ -31,29 +32,24 @@
             android:layout_weight="1"
             android:text="[*]"
             android:textColor="@color/linkblue"
-            android:textSize="29dp"
+            android:textSize="24dp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/bookmark"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/outline_bookmark_add_20" />
 
         <ImageView
             android:id="@+id/bookmarkUnmark"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
             android:layout_alignParentEnd="true"
             android:src="@drawable/outline_turned_in_24"
             android:visibility="gone" />
     </LinearLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/mid" />
 
     <TextView
         android:id="@+id/definition"
