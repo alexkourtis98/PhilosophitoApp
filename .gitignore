@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Security: API keys and service configs
+google-services.json
+app/google-services.json

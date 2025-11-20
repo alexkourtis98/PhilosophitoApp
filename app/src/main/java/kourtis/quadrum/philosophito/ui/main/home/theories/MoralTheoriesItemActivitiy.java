@@ -1,45 +1,123 @@
 package kourtis.quadrum.philosophito.ui.main.home.theories;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 
 import org.billthefarmer.markdown.MarkdownView;
 
+import java.lang.ref.WeakReference;
+
 import kourtis.quadrum.philosophito.MainActivity;
 import kourtis.quadrum.philosophito.R;
+import kourtis.quadrum.philosophito.core.util.AppConstants;
+import kourtis.quadrum.philosophito.core.util.IntentKeys;
 import kourtis.quadrum.philosophito.ui.main.data.FavoriteItem;
 import kourtis.quadrum.philosophito.ui.main.data.Theory;
 import kourtis.quadrum.philosophito.ui.main.general.AboutActivitiy;
 
+/**
+ * Activity for displaying detailed information about a moral theory.
+ * Shows markdown content and allows users to bookmark/favorite the theory.
+ *
+ * <p>Receives the following Intent extras:
+ * <ul>
+ *   <li>{@link IntentKeys#EXTRA_TITLE} - Theory title</li>
+ *   <li>{@link IntentKeys#EXTRA_MD_LOCATION} - Markdown file path</li>
+ *   <li>{@link IntentKeys#EXTRA_ENUM_TYPE} - Theory type enum</li>
+ *   <li>{@link IntentKeys#EXTRA_AUDIO_LOCATION} - Audio file path (optional)</li>
+ * </ul>
+ *
+ * @version 2.0
+ * @see MoralTheoriesFragment
+ * @see Theory
+ */
 public class MoralTheoriesItemActivitiy extends AppCompatActivity {
-    static MediaPlayer mMediaPlayer;
-    private final String mdfile = "";
-    private final Theory theory = new Theory();
-    ImageView play;
-    SeekBar mSeekBarTime;
-    @SuppressLint({"Handler Leak", "HandlerLeak"})
-    Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            mSeekBarTime.setProgress(msg.what);
-        }
-    };
 
+    // Instance variables (not static to avoid memory leaks)
+    private MediaPlayer mMediaPlayer;
+    private final Theory theory = new Theory();
+    private ImageView play;
+    private SeekBar mSeekBarTime;
+    private SeekBarHandler handler;
+
+    /**
+     * Static inner Handler class to prevent memory leaks.
+     * Uses WeakReference to avoid holding strong reference to Activity.
+     */
+    private static class SeekBarHandler extends Handler {
+        private final WeakReference<MoralTheoriesItemActivitiy> activityRef;
+
+        SeekBarHandler(MoralTheoriesItemActivitiy activity) {
+            super(Looper.getMainLooper());
+            this.activityRef = new WeakReference<>(activity);
+        }
+
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            MoralTheoriesItemActivitiy activity = activityRef.get();
+            if (activity != null && activity.mSeekBarTime != null) {
+                activity.mSeekBarTime.setProgress(msg.what);
+            }
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_moral_theories_item);
+
+        handler = new SeekBarHandler(this);
+        setTheory();
+        setUpUI();
+        setBtns();
+        setupTitle();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // Clean up Handler to prevent memory leaks
+        if (handler != null) {
+            handler.removeCallbacksAndMessages(null);
+        }
+
+        // Release MediaPlayer resources
+        releaseMediaPlayer();
+    }
+
+    /**
+     * Properly releases MediaPlayer resources to prevent memory leaks
+     */
+    private void releaseMediaPlayer() {
+        if (mMediaPlayer != null) {
+            if (mMediaPlayer.isPlaying()) {
+                mMediaPlayer.stop();
+            }
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+    }
+
+    /**
+     * Builds a FavoriteItem from the current theory
+     */
     private FavoriteItem buildFavoriteItem() {
         FavoriteItem favoriteItem = new FavoriteItem();
         favoriteItem.setMdFile(this.theory.getMdLocation());
@@ -49,179 +127,151 @@ public class MoralTheoriesItemActivitiy extends AppCompatActivity {
         return favoriteItem;
     }
 
+    /**
+     * Saves the current theory to favorites using SharedPreferences
+     */
     private void saveItem() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences prefs = getSharedPreferences(
+                AppConstants.PREFS_NAME,
+                Context.MODE_PRIVATE
+        );
         FavoriteItem favoriteItem = buildFavoriteItem();
-        SharedPreferences.Editor refsEditor = prefs.edit();
+        SharedPreferences.Editor editor = prefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(favoriteItem);
-        refsEditor.putString(favoriteItem.getEnumtype(), json);
-        refsEditor.apply();
+        editor.putString(favoriteItem.getEnumtype(), json);
+        editor.apply();
     }
 
+    /**
+     * Removes the current theory from favorites
+     */
+    private void removeItem() {
+        SharedPreferences prefs = getSharedPreferences(
+                AppConstants.PREFS_NAME,
+                Context.MODE_PRIVATE
+        );
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.remove(this.theory.getEnumtype());
+        editor.apply();
+    }
+
+    /**
+     * Bookmarks the current theory and updates UI
+     */
     private void bookMark() {
         saveItem();
         changeIconToBooked();
     }
 
-    private void changeIconToBooked() {
-        findViewById(R.id.bookmark).setVisibility(View.GONE);
-        findViewById(R.id.bookmarkUnmark).setVisibility(View.VISIBLE);
-//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
-//        rlp.removeRule(RelativeLayout.LEFT_OF);
-//        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmarkUnmark).getId());
-    }
-
-    private void changeIconToUnbooked() {
-        findViewById(R.id.bookmark).setVisibility(View.VISIBLE);
-        findViewById(R.id.bookmarkUnmark).setVisibility(View.GONE);
-//        RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams) findViewById(R.id.seekBarTime).getLayoutParams();
-//        rlp.removeRule(RelativeLayout.LEFT_OF);
-//        rlp.addRule(RelativeLayout.LEFT_OF, findViewById(R.id.bookmark).getId());
-    }
-
-    private void removeItem() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor refsEditor = prefs.edit();
-        refsEditor.remove(this.theory.getEnumtype());
-        refsEditor.apply();
-    }
-
+    /**
+     * Removes bookmark from current theory and updates UI
+     */
     private void bookUnmark() {
         removeItem();
         changeIconToUnbooked();
     }
 
+    /**
+     * Updates UI to show theory is bookmarked
+     */
+    private void changeIconToBooked() {
+        findViewById(R.id.bookmark).setVisibility(View.GONE);
+        findViewById(R.id.bookmarkUnmark).setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * Updates UI to show theory is not bookmarked
+     */
+    private void changeIconToUnbooked() {
+        findViewById(R.id.bookmark).setVisibility(View.VISIBLE);
+        findViewById(R.id.bookmarkUnmark).setVisibility(View.GONE);
+    }
+
+    /**
+     * Sets up bookmark button click listeners
+     */
     private void setBookMarkListeners() {
         findViewById(R.id.bookmark).setOnClickListener(click -> {
             bookMark();
-            Toast.makeText(getApplicationContext(), "Saved to Favorites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Saved to Favorites", Toast.LENGTH_SHORT).show();
         });
 
-        findViewById(R.id.bookmarkUnmark).setOnClickListener(click -> {
-            bookUnmark();
-        });
+        findViewById(R.id.bookmarkUnmark).setOnClickListener(click -> bookUnmark());
     }
 
+    /**
+     * Checks if current theory is already bookmarked and updates UI accordingly
+     */
     private void checkIfBooked() {
-        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        if (mPrefs.getAll().containsKey(this.theory.getEnumtype())) {
-            bookMark();
+        SharedPreferences prefs = getSharedPreferences(
+                AppConstants.PREFS_NAME,
+                Context.MODE_PRIVATE
+        );
+        if (prefs.getAll().containsKey(this.theory.getEnumtype())) {
+            changeIconToBooked(); // Don't call bookMark() to avoid duplicate save
         } else {
-            bookUnmark();
+            changeIconToUnbooked();
         }
     }
 
+    /**
+     * Initializes bookmark functionality
+     */
     private void bookStuff() {
         setBookMarkListeners();
         checkIfBooked();
     }
 
+    /**
+     * Extracts theory data from Intent extras
+     */
     private void setTheory() {
-        this.theory.setTitle(getIntent().getStringExtra("title"));
-        this.theory.setMdLocation(getIntent().getStringExtra("mdLocation"));
-        this.theory.setAudioLocation(getIntent().getStringExtra("audioLocation"));
-        this.theory.setEnumtype(getIntent().getStringExtra("enumtype"));
+        Intent intent = getIntent();
+        this.theory.setTitle(intent.getStringExtra(IntentKeys.EXTRA_TITLE));
+        this.theory.setMdLocation(intent.getStringExtra(IntentKeys.EXTRA_MD_LOCATION));
+        this.theory.setAudioLocation(intent.getStringExtra(IntentKeys.EXTRA_AUDIO_LOCATION));
+        this.theory.setEnumtype(intent.getStringExtra(IntentKeys.EXTRA_ENUM_TYPE));
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_moral_theories_item);
-        setTheory();
-        setUpUI();
-        setBtns();
-        setuptitle();
-//        setupaudio();
+    /**
+     * Sets the theory title in the UI
+     */
+    private void setupTitle() {
+        TextView titleView = findViewById(R.id.moraltitle);
+        if (titleView != null && this.theory.getTitle() != null) {
+            titleView.setText(this.theory.getTitle());
+        }
     }
 
-    private void setuptitle() {
-        ((TextView) findViewById(R.id.moraltitle)).setText(this.theory.getTitle());
-    }
-
+    /**
+     * Sets up the main UI components
+     */
     private void setUpUI() {
         MarkdownView markdownView = findViewById(R.id.content);
-        markdownView.loadMarkdownFile("file:///android_asset/", this.theory.getMdLocation(), "file:///android_asset/style.css");
+        if (markdownView != null && this.theory.getMdLocation() != null) {
+            markdownView.loadMarkdownFile(
+                    "file:///android_asset/",
+                    this.theory.getMdLocation(),
+                    "file:///android_asset/style.css"
+            );
+        }
         bookStuff();
     }
 
+    /**
+     * Sets up navigation button click listeners
+     */
     private void setBtns() {
         findViewById(R.id.infoBtn).setOnClickListener(click -> {
-            Intent startIntent = new Intent(getApplicationContext(), AboutActivitiy.class);
-            startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getApplicationContext().startActivity(startIntent);
+            Intent intent = new Intent(this, AboutActivitiy.class);
+            startActivity(intent);
         });
 
         findViewById(R.id.logoimg).setOnClickListener(click -> {
-            Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
-            startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getApplicationContext().startActivity(startIntent);
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         });
     }
-//
-//    private void setupaudio() {
-//
-//        play = findViewById(R.id.play);
-//        mSeekBarTime = findViewById(R.id.seekBarTime);
-//
-//        mMediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.sample);
-//
-//        mMediaPlayer.setOnCompletionListener(mediaPlayer -> play.setImageResource(R.drawable.play));
-//        play.setOnClickListener(v -> {
-//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-//            if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-//                mMediaPlayer.pause();
-//                play.setImageResource(R.drawable.play);
-//            } else {
-//                mMediaPlayer.start();
-//                play.setImageResource(R.drawable.pause);
-//            }
-//
-//            songProgressBar();
-//        });
-//    }
-//
-//
-//    private void songProgressBar() {
-//        // seekbar duration
-//        mMediaPlayer.setOnPreparedListener(mp -> {
-//            mSeekBarTime.setMax(mMediaPlayer.getDuration());
-//            mMediaPlayer.start();
-//        });
-//
-//        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//            @Override
-//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//                if (fromUser) {
-//                    mMediaPlayer.seekTo(progress);
-//                    mSeekBarTime.setProgress(progress);
-//                }
-//            }
-//
-//            @Override
-//            public void onStartTrackingTouch(SeekBar seekBar) {
-//
-//            }
-//
-//            @Override
-//            public void onStopTrackingTouch(SeekBar seekBar) {
-//
-//            }
-//        });
-//
-//        new Thread(() -> {
-//            while (mMediaPlayer != null) {
-//                try {
-//                    if (mMediaPlayer.isPlaying()) {
-//                        Message message = new Message();
-//                        message.what = mMediaPlayer.getCurrentPosition();
-//                        handler.sendMessage(message);
-//                        Thread.sleep(0);
-//                    }
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
-//    }
 }
