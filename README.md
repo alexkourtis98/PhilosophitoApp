@@ -9,7 +9,9 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/alexkourtis98/PhilosophitoApp)](https://github.com/alexkourtis98/PhilosophitoApp/commits/master)
 [![GitHub repo size](https://img.shields.io/github/repo-size/alexkourtis98/PhilosophitoApp)](https://github.com/alexkourtis98/PhilosophitoApp)
 
-![Screenshot](./img/1.png)
+<p align="center">
+  <img src="./img/1.png" alt="Philosophito App Screenshot" width="300"/>
+</p>
 
 ## 📱 Overview
 
