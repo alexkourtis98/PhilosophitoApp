@@ -5,6 +5,9 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://developer.android.com)
 [![API](https://img.shields.io/badge/API-20%2B-brightgreen.svg)](https://android-arsenal.com/api?level=20)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Build Status](https://github.com/alexkourtis98/PhilosophitoApp/workflows/Android%20CI/badge.svg)](https://github.com/alexkourtis98/PhilosophitoApp/actions)
+[![GitHub last commit](https://img.shields.io/github/last-commit/alexkourtis98/PhilosophitoApp)](https://github.com/alexkourtis98/PhilosophitoApp/commits/master)
+[![GitHub repo size](https://img.shields.io/github/repo-size/alexkourtis98/PhilosophitoApp)](https://github.com/alexkourtis98/PhilosophitoApp)
 
 ![Screenshot](./img/1.png)
 
