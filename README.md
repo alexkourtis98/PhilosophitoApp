@@ -255,7 +255,21 @@ This project demonstrates:
 ## 👨‍💻 Author
 
 **Alexandros Kourtis**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/alexandros-kourtis-3946831aa/)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter)](https://twitter.com/dreadpirate98)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:alexandros.kourtis@acg.edu)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-green?style=for-the-badge&logo=google-chrome)](https://philosophito.alexandroskourtis.me)
+
 - GitHub: [@alexandroskourtis](https://github.com/alexandroskourtis)
+
+### Connect with Philosophito
+
+[![Facebook](https://img.shields.io/badge/Facebook-Like-1877F2?style=flat&logo=facebook)](https://www.facebook.com/Philosophito-103166662422236)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/groups/9233252/)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat&logo=twitter)](https://twitter.com/Philosophito)
+[![Instagram](https://img.shields.io/badge/Instagram-Follow-E4405F?style=flat&logo=instagram)](https://www.instagram.com/philosophitoapp/)
+[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=flat&logo=youtube)](https://www.youtube.com/channel/UCEXXpqKRW15LlMGDCQOvfGA)
 
 ## 📝 License
 
